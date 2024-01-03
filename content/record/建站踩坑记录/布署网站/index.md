@@ -1,7 +1,7 @@
 ---
 title: "布署网站"
 date: 2023-02-08T19:49:55+08:00
-lastmod: 2024-01-03T15:43:33+08:00
+lastmod: 2024-01-03T16:41:12+08:00
 comments: true
 math: false
 ---
@@ -95,4 +95,4 @@ git submodule add https://github.com/alohaia/hugo-theme-daisilia.git themes/dais
 remote: Permission to git denied to github-actions[bot]
 ```
 
-{{< figure src="workflow_permissions.png" title="workflow_permissions" style="normal" >}}
+{{< figure src="workflow_permissions.png" title="Workflow permissions" style="normal" >}}
