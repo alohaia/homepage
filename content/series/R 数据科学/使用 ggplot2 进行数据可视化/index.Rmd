@@ -1,7 +1,7 @@
 ---
 title: "使用 ggplot2 进行数据可视化"
 date: 2023-12-26T12:48:42+08:00
-lastmod: 2024-01-04T00:44:12+08:00
+lastmod: 2024-01-04T00:53:05+08:00
 comments: true
 math: false
 weight: 10
@@ -26,7 +26,7 @@ library(ggplot2)
 
 要想改变图中的几何对象,需要修改添加在 `ggplot()` 函数中的几何对象函数，如 `geom_point()`、`geom_smooth()`。ggplot2 中的每个几何对象函数都有一个 `mapping` 参数，通过 `aes()` 函数生成参数，如 `mapping = aes(x = displ, y = hwy)`。
 
-### 分类变量
+## 分类变量
 
 通过分配**分类变量**（如下面的 `linetype = drv`），可以对一个几何对象进行分组：
 
@@ -37,7 +37,7 @@ ggplot(data = mpg) +
 
 常用的分类变量包括 `linetype`、`color`、`shape`、`group` 等。
 
-### 使用多个几何对象函数
+## 使用多个几何对象函数
 
 使用全局映射可以方便修改映射，避免遗漏；使用局部映射则可对单个几何对象函数进行修改，实现更细致的操作。
 
@@ -59,7 +59,7 @@ ggplot(data = mpg, mapping = aes(x = displ, y = hwy)) +
 ```
 
 
-### 统计变换（stat，statistical transformation）
+## 统计变换（stat，statistical transformation）
 
 有些几何对象函数可以计算并绘制出新数据，比如 `geom_bar()`。
 
@@ -87,7 +87,7 @@ ggplot(data = diamonds) +
     )
 ```
 
-### 位置调整
+## 位置调整
 
 为 `geom_bar()` 的 `fill` 参数指定不同的变量可以让条形会自动分块堆叠起来：
 
