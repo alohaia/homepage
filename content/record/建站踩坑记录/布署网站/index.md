@@ -1,14 +1,16 @@
 ---
 title: "布署网站"
 date: 2023-02-08T19:49:55+08:00
-lastmod: 2024-01-03T16:41:12+08:00
+lastmod: 2024-01-03T17:02:17+08:00
 comments: true
 math: false
 ---
 
 <!--more-->
 
-## 将仓库子目录作为网站根目录
+## 布署在 GitHub 上
+
+### 将仓库子目录作为网站根目录
 
 如果你已经了解情况，那么参考下面的命令，你的问题就应该解决了：
 
@@ -40,7 +42,7 @@ git subtree push --prefix public daisilia blog
 最后再到 https://github.com/daisilia/daisilia.github.io 进入 Pages 设置界面，将 `blog` 分支设置为要用的分支即可。
 {{< figure src="pages.png" title="Pages 设置" alt="Pages 设置" caption="进入 Pages 设置界面，将 `blog` 分支设置为选定分支" link="" >}}
 
-## 使用 git action 将仓库子目录作为网站根目录
+### 使用 git action 将仓库子目录作为网站根目录
 
 添加文件 `blog.hugo/.github/workflows/gh-pages.yml`：
 
@@ -81,7 +83,7 @@ jobs:
 
 再到 https://github.com/daisilia/daisilia.github.io 进入 Pages 设置界面，将 `gh-pages` 分支设置为要用的分支即可。
 
-## 将主题添加为子模块
+### 将主题添加为子模块
 
 这里已经将远程仓库 https://github.com/alohaia/hugo-theme-daisilia 克隆到 `blog.hugo/themes/daisilia`，执行以下命令即可将其添加为子模块。
 
@@ -89,10 +91,65 @@ jobs:
 git submodule add https://github.com/alohaia/hugo-theme-daisilia.git themes/daisilia
 ```
 
-## github-actions 权限设置
+### github-actions 权限设置
 
 ```xxx
 remote: Permission to git denied to github-actions[bot]
 ```
 
 {{< figure src="workflow_permissions.png" title="Workflow permissions" style="normal" >}}
+
+## 布署在 Netlify 上
+
+### 配置文件
+
+在项目根目录下添加 `netlify.toml` 文件，内容如下：
+
+```toml
+[build]
+  publish = "public"
+  command = "hugo --gc --minify"
+
+  [build.environment]
+    HUGO_VERSION = "0.121.1"
+
+[context.production.environment]
+  HUGO_ENV           = "production"
+  HUGO_ENABLEGITINFO = "true"
+
+[context.split1]
+  command = "hugo --gc --minify --enableGitInfo"
+
+  [context.split1.environment]
+    HUGO_ENV = "production"
+
+[context.deploy-preview]
+  command = "hugo --gc --minify --buildFuture -b $DEPLOY_PRIME_URL"
+
+[context.branch-deploy]
+  command = "hugo --gc --minify -b $DEPLOY_PRIME_URL"
+
+[context.next.environment]
+  HUGO_ENABLEGITINFO = "true"
+
+[[redirects]]
+  from   = "/npmjs/*"
+  to     = "/npmjs/"
+  status = 200
+```
+
+### 设置域名和 SSL 证书
+
+找到“Domain management”，在“Production domains”小节中，修改 Netlify 提供的域名，并添加自定义域名。
+
+{{< figure src="Netlify 域名.png" title="Netlify 域名" style="normal" >}}
+
+在域名提供商那里添加 CNAME 解析记录，解析到 Netlify 域名。
+
+{{< figure src="阿里云域名解析.png" title="阿里云域名解析" style="normal" >}}
+
+在“Domain management”的“HTTPS”小节中，点击“Verify DNS configuration”，等待一段时间即可自动获取免费的 SSL/TLS 证书。
+
+{{< figure src="启用 HTTPS.png" title="启用 HTTPS" style="normal" >}}
+
+
