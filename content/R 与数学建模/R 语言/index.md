@@ -3,7 +3,7 @@ title: R 语言
 comments: true
 mathjax: false
 date: 2021-08-19T18:26:37+08:00
-lastmod: 2023-12-25T17:43:29+08:00
+lastmod: 2023-12-27T08:22:28+08:00
 tags:
     - R
     - 数学建模
@@ -591,8 +591,8 @@ x <- switch(3,
     "weibo"
 )
 print(x)
-you.like <- "runoob"
-switch(you.like,
+you_like <- "runoob"
+switch(you_like,
     google = "www.google.com",
     runoob = "www.runoob.com",
     taobao = "www.taobao.com"
