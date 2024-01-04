@@ -3,10 +3,14 @@ title: "R 数据科学"
 comments: true
 math: true
 date: 2021-09-02T19:12:20+08:00
-lastmod: 2023-12-26T12:49:36+08:00
+lastmod: 2024-01-04T16:00:47+08:00
 tags:
     - R
 ---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
 
 [*R for Data Science*](https://r4ds.had.co.nz/) 中译本《R 数据科学》的读书笔记。
 
@@ -45,7 +49,7 @@ ggplot2::mpg
 
 ### 绘制 ggplot 图形
 
-```{r, "ggplot2-introduction", fig.cap=""}
+```{r, "ggplot2-introduction"}
 ggplot(data = mpg) +
     geom_point(mapping = aes(x = displ, y = hwy))
 ```
@@ -67,7 +71,7 @@ ggplot(data = <DATA>) +
 
 将 `class` 映射为 `color`（或 `colour`），可以清晰地在图中辨别车辆的类型：
 
-```{r, "mapping-color", fig.cap=""}
+```{r, "mapping-color"}
 ggplot(data = mpg) +
     geom_point(mapping = aes(x = displ, y = hwy, color = class))
 ```
@@ -80,7 +84,7 @@ ggplot(data = mpg) +
 
 也可以将 `class` 映射为 `size` 图形属性：
 
-```{r, "mapping-size", fig.cap=""}
+```{r, "mapping-size"}
 ggplot(data = mpg) +
     geom_point(mapping = aes(x = displ, y = hwy, size = class))
 ```
@@ -89,7 +93,7 @@ ggplot(data = mpg) +
 
 或者将 `class` 映射为点的透明度或形状：
 
-```{r, "mapping-alpha,shape", fig.cap="", warning=FALSE}
+```{r, "mapping-alpha,shape", warning=FALSE}
 ggplot(data = mpg) +
     geom_point(mapping = aes(x = displ, y = hwy, alpha = class))
 ggplot(data = mpg) +
@@ -102,14 +106,14 @@ ggplot(data = mpg) +
 
 也可以手动为图形属性指定固定水平：
 
-```{r, "manual-fixed-value", fig.cap=""}
+```{r, "manual-fixed-value"}
 ggplot(data = mpg) +
     geom_point(mapping = aes(x = displ, y = hwy), color = "blue")
 ```
 
 注意不要将固定值放在 `aes()` 函数里，因为此时颜色并不是用来传达变量的信息，而只是改变图的外观。错误示范：
 
-```{r, "manual-fixed-value-wrong", fig.cap=""}
+```{r, "manual-fixed-value-wrong"}
 ggplot(data = mpg) +
     geom_point(mapping = aes(x = displ, y = hwy, color = "blue"))
 ```
@@ -123,7 +127,7 @@ ggplot(data = mpg) +
 
 #### 其他示例
 
-```{r, "other examples", fig.cap=""}
+```{r, "other examples"}
 ggplot(data = mpg, mapping = aes(displ, hwy)) +
     geom_point(shape = 21, fill = "white", size = 5, stroke = 5)
 ggplot(data = mpg) +
@@ -134,7 +138,7 @@ ggplot(data = mpg) +
 
 要在图中添加新的展示变量，除了可以用图形属性，还可以将图分隔成多个**分面**。
 
-```{r, "facet_wrap", fig.cap=""}
+```{r, "facet_wrap"}
 ggplot(data = mpg) +
     geom_point(mapping = aes(x = displ, y = hwy)) +
     facet_wrap(~class, nrow = 2)
@@ -144,7 +148,7 @@ ggplot(data = mpg) +
 
 要通过两个变量对图进行分面，需使用 `facet_grid()` 函数，该函数的公式参数包含由 `~` 分隔的两个变量名。
 
-```{r, "facet_grid", fig.cap=""}
+```{r, "facet_grid"}
 ggplot(data = mpg) +
     geom_point(mapping = aes(x = displ, y = hwy)) +
     facet_grid(drv ~ cyl)
@@ -154,7 +158,7 @@ ggplot(data = mpg) +
 
 ### 几何对象
 
-```{r, "geometry object", fig.cap="", message = FALSE}
+```{r, "geometry object", message = FALSE}
 ggplot(data = mpg) +
     geom_point(mapping = aes(x = displ, y = hwy))
 ggplot(data = mpg) +
@@ -165,7 +169,7 @@ ggplot(data = mpg) +
 
 你可以在同一张图中使用多个几何对象：
 
-```{r, "geom_smooth", fig.cap="", message = FALSE}
+```{r, "geom_smooth", message = FALSE}
 ggplot(data = mpg) +
     geom_point(mapping = aes(x = displ, y = hwy, color = drv), size = 3) +
     geom_smooth(mapping = aes(x = displ, y = hwy, linetype = drv, color = drv))
@@ -182,7 +186,7 @@ ggplot(data = mpg, mapping = aes(x = displ, y = hwy, color = drv)) +
 
 ### 统计变换
 
-```{r, "geom_bar", fig.cap=""}
+```{r, "geom_bar"}
 ggplot(data = diamonds) +
     geom_bar(mapping = aes(x = cut))
 ```

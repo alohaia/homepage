@@ -1,7 +1,7 @@
 ---
 title: "使用 ggplot2 进行数据可视化"
 date: 2023-12-26T12:48:42+08:00
-lastmod: 2024-01-04T00:53:05+08:00
+lastmod: 2024-01-04T16:05:07+08:00
 comments: true
 math: false
 weight: 10
@@ -12,6 +12,10 @@ tags:
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r library}
+# 准备需要用到的包
 library(ggplot2)
 ```
 
@@ -151,7 +155,7 @@ ggplot(data = mpg, mapping = aes(x = cty, y = hwy)) +
 
 可以使用 `geom_jitter()` 函数代替 `position` 参数来对抖动进行更详细的设置。
 
-```{r}
+```{r jitter}
 ggplot(data = mpg, mapping = aes(x = cty, y = hwy)) +
     geom_point() + geom_jitter(width = 0, height = 0)
 
