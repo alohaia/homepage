@@ -1,7 +1,7 @@
 ---
 title: "植体周炎预测模型：Logistic 回归分析及列线图模型"
 date: 2022-02-23T12:55:52+08:00
-lastmod: 2024-01-04T11:34:56+08:00
+lastmod: 2024-01-09T00:12:41+08:00
 comments: true
 math: true
 weight: 1
@@ -28,14 +28,7 @@ tags:
 # 导入 R 库
 library(readxl)
 library(writexl)
-library(lme4)
-```
-
-```
-#> Error in library(lme4): 不存在叫'lme4'这个名字的程辑包
-```
-
-```r
+# library(lme4)
 library(broom)
 library(tidyverse)
 
@@ -57,22 +50,22 @@ names.all <- colnames(data)[-which(colnames(data) == "植体周炎")]
 
 # 再次处理数据细节
 data$口内植体数目 <- as.numeric(data$口内植体数目) # “口内植体数目” 原本是字符串，这里将其转换为数值
-data[which(data$分级 == "B"),]$分级 <- "b"         # 分级 B 和 b 相同
-data[which(data$分级 == "a"),]$分级 <- "b"         # 把分级里a合并到b里面
-data[which(data$骨吸收情况 == "1/2"),]$骨吸收情况 <- ">1/2"
-data[which(as.numeric(data$修复体材料) >= 3),]$修复体材料 <- 3 # 修复体材料 3 以后都合并为一类
+data[which(data$分级 == "B"), ]$分级 <- "b"         # 分级 B 和 b 相同
+data[which(data$分级 == "a"), ]$分级 <- "b"         # 把分级里a合并到b里面
+data[which(data$骨吸收情况 == "1/2"), ]$骨吸收情况 <- ">1/2"
+data[which(as.numeric(data$修复体材料) >= 3), ]$修复体材料 <- 3 # 修复体材料 3 以后都合并为一类
 
 # 处理错误数据
-data[which(data$吸烟 == 2),]$吸烟 <- 0
-data[which(is.na(data$种植系统)),]$种植系统 <- 1
-data[which(is.na(data$用膜明细)),]$用膜明细 <- 1
+data[which(data$吸烟 == 2), ]$吸烟 <- 0
+data[which(is.na(data$种植系统)), ]$种植系统 <- 1
+data[which(is.na(data$用膜明细)), ]$用膜明细 <- 1
 
 # 去除有缺失值的病例
-data <- data[complete.cases(data),]
+data <- data[complete.cases(data), ]
 
 # 计数数据转成因子型变量
-for(name in names.count) {
-  data[[name]] <- factor(data[[name]])
+for (name in names.count) {
+    data[[name]] <- factor(data[[name]])
 }
 ```
 {{% /tab %}}
@@ -286,7 +279,7 @@ options(datadist = ddist.train)
 plot(nomogram(fit.train, fun = plogis, lp = FALSE, funlabel = "预测概率"))
 ```
 
-![列线图预测模型](https://daisilia.com../static/R-figures/R 与数学建模/植体周炎预测模型/unnamed-chunk-9-1.png)
+{{< figure src="/R-figures/R 与数学建模/植体周炎预测模型/unnamed-chunk-9-1.png" group="" alt="" >}}
 
 ## 数据验证
 
@@ -330,7 +323,7 @@ ci.auc(p.roc.train)
 #> 95% CI: 75.2%-88.2% (DeLong)
 ```
 
-![ROC Curve（训练集）](https://daisilia.com../static/R-figures/R 与数学建模/植体周炎预测模型/unnamed-chunk-11-1.png)
+{{< figure src="/R-figures/R 与数学建模/植体周炎预测模型/unnamed-chunk-11-1.png" group="" alt="" >}}
 
 
 ```r
@@ -348,7 +341,7 @@ ci.auc(p.roc.test)
 #> 95% CI: 60.2%-79.8% (DeLong)
 ```
 
-![ROC Curve（测试集）](https://daisilia.com../static/R-figures/R 与数学建模/植体周炎预测模型/unnamed-chunk-12-1.png)
+{{< figure src="/R-figures/R 与数学建模/植体周炎预测模型/unnamed-chunk-12-1.png" group="" alt="" >}}
 训练集 AUC 达 81.7%（95%CI：75.16%-88.25%），测试集 AUC 为 70.0%（95%CI：60.24%-79.76%），提示列线图模型区分度良好。
 
 ### 列线图校准曲线
@@ -364,7 +357,7 @@ plot(cal_train,
      main = "Calibration Curve（训练集）")
 ```
 
-![列线图校准曲线（训练集）](https://daisilia.com../static/R-figures/R 与数学建模/植体周炎预测模型/unnamed-chunk-13-1.png)
+{{< figure src="/R-figures/R 与数学建模/植体周炎预测模型/unnamed-chunk-13-1.png" group="" alt="" >}}
 
 
 ```r
@@ -379,6 +372,6 @@ plot(cal_test,
      main = "Calibration Curve（测试集）")
 ```
 
-![列线图校准曲线（测试集）](https://daisilia.com../static/R-figures/R 与数学建模/植体周炎预测模型/unnamed-chunk-14-1.png)
+{{< figure src="/R-figures/R 与数学建模/植体周炎预测模型/unnamed-chunk-14-1.png" group="" alt="" >}}
 
 通过校验曲线可以看出训练集和测试集的预测值与实际值基本一致。

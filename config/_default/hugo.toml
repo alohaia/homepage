@@ -1,5 +1,5 @@
 title = "Aloha's Blog"
-baseURL = 'https://daisilia.com'
+baseURL = 'https://daisilia.com/' # 需要 trailing slash
 theme = 'daisilia'
 enableEmoji = true
 hasCJKLanguage = true
@@ -25,7 +25,7 @@ defaultContentLanguage = 'zh'
   fullname = "Qihuan Liu"
   nickname = "Aloha"
   avatar = "/images/avatar.jpg"
-  homepage = "https://daisilia.com"
+  homepage = "https://daisilia.com/"
 
 [taxonomies]
   tag = 'tags'
