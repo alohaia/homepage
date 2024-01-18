@@ -1,7 +1,7 @@
 ---
 title: "植体周炎预测模型：Logistic 回归分析及列线图模型"
 date: 2022-02-23T12:55:52+08:00
-lastmod: 2024-01-09T00:12:41+08:00
+lastmod: 2024-01-10T20:59:21+08:00
 comments: true
 math: true
 weight: 1
@@ -375,3 +375,7 @@ plot(cal_test,
 {{< figure src="/R-figures/R 与数学建模/植体周炎预测模型/unnamed-chunk-14-1.png" group="" alt="" >}}
 
 通过校验曲线可以看出训练集和测试集的预测值与实际值基本一致。
+
+[table](#tbl_table-name)
+
+
