@@ -1,7 +1,7 @@
 ---
 title: "植体周炎预测模型：Logistic 回归分析及列线图模型"
 date: 2022-02-23T12:55:52+08:00
-lastmod: 2024-01-10T20:59:21+08:00
+lastmod: 2024-02-06T14:22:59+08:00
 comments: true
 math: true
 weight: 1
@@ -40,7 +40,7 @@ raw_data <- read_excel("data.xlsx")
 
 ```r
 # 选择研究变量
-data <- raw_data[,c(-1,-2,-3,-10,-17,-18,-20)]
+data <- raw_data[, c(-1, -2, -3, -10, -17, -18, -20)]
 data$年龄 <- raw_data$修复体戴入日期 - raw_data$出生日期
 
 # 计数数据
@@ -279,7 +279,7 @@ options(datadist = ddist.train)
 plot(nomogram(fit.train, fun = plogis, lp = FALSE, funlabel = "预测概率"))
 ```
 
-{{< figure src="/R-figures/R 与数学建模/植体周炎预测模型/unnamed-chunk-9-1.png" group="" alt="" >}}
+{{< figure src="/R-figures/R 与数学建模/植体周炎预测模型/unnamed-chunk-9-1.png" group="列线图预测模型" alt="列线图预测模型" >}}
 
 ## 数据验证
 
@@ -323,7 +323,7 @@ ci.auc(p.roc.train)
 #> 95% CI: 75.2%-88.2% (DeLong)
 ```
 
-{{< figure src="/R-figures/R 与数学建模/植体周炎预测模型/unnamed-chunk-11-1.png" group="" alt="" >}}
+{{< figure src="/R-figures/R 与数学建模/植体周炎预测模型/unnamed-chunk-11-1.png" group="ROC Curve（训练集）" alt="ROC Curve（训练集）" >}}
 
 
 ```r
@@ -341,7 +341,7 @@ ci.auc(p.roc.test)
 #> 95% CI: 60.2%-79.8% (DeLong)
 ```
 
-{{< figure src="/R-figures/R 与数学建模/植体周炎预测模型/unnamed-chunk-12-1.png" group="" alt="" >}}
+{{< figure src="/R-figures/R 与数学建模/植体周炎预测模型/unnamed-chunk-12-1.png" group="ROC Curve（测试集）" alt="ROC Curve（测试集）" >}}
 训练集 AUC 达 81.7%（95%CI：75.16%-88.25%），测试集 AUC 为 70.0%（95%CI：60.24%-79.76%），提示列线图模型区分度良好。
 
 ### 列线图校准曲线
@@ -357,7 +357,7 @@ plot(cal_train,
      main = "Calibration Curve（训练集）")
 ```
 
-{{< figure src="/R-figures/R 与数学建模/植体周炎预测模型/unnamed-chunk-13-1.png" group="" alt="" >}}
+{{< figure src="/R-figures/R 与数学建模/植体周炎预测模型/unnamed-chunk-13-1.png" group="列线图校准曲线（训练集）" alt="列线图校准曲线（训练集）" >}}
 
 
 ```r
@@ -372,10 +372,6 @@ plot(cal_test,
      main = "Calibration Curve（测试集）")
 ```
 
-{{< figure src="/R-figures/R 与数学建模/植体周炎预测模型/unnamed-chunk-14-1.png" group="" alt="" >}}
+{{< figure src="/R-figures/R 与数学建模/植体周炎预测模型/unnamed-chunk-14-1.png" group="列线图校准曲线（测试集）" alt="列线图校准曲线（测试集）" >}}
 
 通过校验曲线可以看出训练集和测试集的预测值与实际值基本一致。
-
-[table](#tbl_table-name)
-
-

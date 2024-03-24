@@ -1,7 +1,7 @@
 ---
 title: "植体周炎预测模型：Logistic 回归分析及列线图模型"
 date: 2022-02-23T12:55:52+08:00
-lastmod: 2024-01-10T20:59:29+08:00
+lastmod: 2024-02-06T14:22:59+08:00
 comments: true
 math: true
 weight: 1
@@ -38,7 +38,7 @@ raw_data <- read_excel("data.xlsx")
 {{% tab type="default" summary="根据需要预处理数据" details=true open=false id="tab_根据需要预处理数据" %}}
 ```{r}
 # 选择研究变量
-data <- raw_data[,c(-1,-2,-3,-10,-17,-18,-20)]
+data <- raw_data[, c(-1, -2, -3, -10, -17, -18, -20)]
 data$年龄 <- raw_data$修复体戴入日期 - raw_data$出生日期
 
 # 计数数据
