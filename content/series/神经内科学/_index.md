@@ -1,8 +1,8 @@
 ---
 title: "神经内科学"
 date: 2022-10-20T14:03:06+08:00
-lastmod: 2024-03-25T11:02:04+08:00
-draft: true
+lastmod: 2024-03-25T11:57:26+08:00
+draft: false
 comments: true
 math: false
 weight: 1
