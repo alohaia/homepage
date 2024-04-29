@@ -3,14 +3,17 @@ title: "R 数据科学"
 comments: true
 math: true
 date: 2021-09-02T19:12:20+08:00
-lastmod: 2024-01-04T16:00:47+08:00
+lastmod: 2024-04-29T17:35:54+08:00
 tags:
     - R
 ---
 
 
 
-[*R for Data Science*](https://r4ds.had.co.nz/) 中译本《R 数据科学》的读书笔记。
+参考：
+
+- [*R for Data Science*](https://r4ds.had.co.nz/)
+- 《R 语言实战》
 
 <!--more-->
 
