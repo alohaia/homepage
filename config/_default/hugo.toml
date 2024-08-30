@@ -21,12 +21,6 @@ defaultContentLanguage = 'zh'
   lastmod = ['lastmod', 'date', 'publishDate']
   publishDate = ['publishDate', 'date']
 
-[author]
-  fullname = "Qihuan Liu"
-  nickname = "Aloha"
-  avatar = "/images/avatar.jpg"
-  homepage = "https://daisilia.com/"
-
 [taxonomies]
   tag = 'tags'
   # category = 'categories'

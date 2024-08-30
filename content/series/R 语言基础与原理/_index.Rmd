@@ -3,7 +3,7 @@ title: R 语言基础
 comments: true
 mathjax: false
 date: 2021-08-19T18:26:37+08:00
-lastmod: 2024-01-04T11:48:57+08:00
+lastmod: 2024-05-20T18:11:23+08:00
 tags:
     - R
     - 数学建模
@@ -14,8 +14,6 @@ tags:
 
 -   李东风 [《R 语言教程》](https://www.math.pku.edu.cn/teachers/lidf/docs/Rbook/html/_Rbook)
 -   菜鸟教程 - [R 语言教程](https://www.runoob.com/r/r-tutorial.html)
-
-数据科学相关见 \[R 数据科学\]({{< relref "/series/R 数据科学" >}})。
 
 <!--more-->
 
@@ -257,8 +255,7 @@ format(x, trim = FALSE, digits = NULL, nsmall = 0L,
        zero.print = NULL, drop0trailing = FALSE, ...)
 ```
 
-
-```r
+```{r, "format", results="hold"}
 ## 显示 9 位，最后一位四舍五入
 result <- format(23.123456789, digits = 9)
 print(result)
@@ -286,16 +283,6 @@ print(result)
 ## 居中显示
 result <- format("Runoob", width = 10, justify = "c")
 print(result)
-```
-
-```
-#> [1] "23.1234568"
-#> [1] "6.000e+00" "1.315e+01"
-#> [1] "23.47000"
-#> [1] "6"
-#> [1] "  13.7"
-#> [1] "Runoob   "
-#> [1] "  Runoob  "
 ```
 
 #### 转换
@@ -583,8 +570,7 @@ switch(expression, case1, case2, case3....)
 -   `expression` 如果是字符串，则对应的是 `case` 中的变量名对应的值，没有匹配则没有返回值。
 -   `switch` 没有默认参数可用。
 
-
-```r
+```{r, "switch-example", fig.cap = ""}
 x <- switch(3,
     "google",
     "runoob",
@@ -598,11 +584,6 @@ switch(you_like,
     runoob = "www.runoob.com",
     taobao = "www.taobao.com"
 )
-```
-
-```
-#> [1] "taobao"
-#> [1] "www.runoob.com"
 ```
 
 #### 循环
@@ -652,8 +633,7 @@ repeat {
 
 `repeat` 无法自己退出，需要依靠 `break` 语句退出：
 
-
-```r
+```{r, "control-repeat", fig.cap=""}
 v <- c("Google", "Runoob")
 cnt <- 2
 
@@ -666,17 +646,9 @@ repeat {
 }
 ```
 
-```
-#> [1] "Google" "Runoob"
-#> [1] "Google" "Runoob"
-#> [1] "Google" "Runoob"
-#> [1] "Google" "Runoob"
-```
-
 `repeat` 其实相当于 `while(TRUE)`。以上代码可以写做
 
-
-```r
+```{r, "control-repeat by while", fig.cap=""}
 v <- c("Google", "Runoob")
 cnt <- 2
 
@@ -689,13 +661,6 @@ while (TRUE) {
 }
 ```
 
-```
-#> [1] "Google" "Runoob"
-#> [1] "Google" "Runoob"
-#> [1] "Google" "Runoob"
-#> [1] "Google" "Runoob"
-```
-
 ###### `for` 循环
 
 语法格式如下：
@@ -706,19 +671,11 @@ for (value in vector) {
 }
 ```
 
-
-```r
+```{r, "control-for", fig.cap=""}
 v <- LETTERS[1:4]
 for (i in v) {
     print(i)
 }
-```
-
-```
-#> [1] "A"
-#> [1] "B"
-#> [1] "C"
-#> [1] "D"
 ```
 
 ## R 函数
@@ -738,8 +695,7 @@ function_name <- function(arg_1, arg_2, ...) {
 
 函数参数，可以按函数创建时的参数顺序来传递，也可以按参数名传递：
 
-
-```r
+```{r, "function-arguments"}
 ## 创建函数
 f <- function(a, b, c) {
     result <- a * b + c
@@ -753,17 +709,11 @@ f(5, 3, 11)
 f(a = 11, b = 5, c = 3)
 ```
 
-```
-#> [1] 26
-#> [1] 58
-```
-
 ### 懒惰计算的函数
 
 只有用到某一个参数时，函数才会去查找这个参数，此时如果发现没有传递该参数，函数会报错，否则忽视：
 
-
-```r
+```{r, "function-lazy compute", error = TRUE}
 f <- function(a, b) {
     print(a^2)
     print(a)
@@ -774,21 +724,11 @@ f <- function(a, b) {
 f(6)
 ```
 
-```
-#> Error in f(6): 缺少参数"b",也缺失默认值
-```
-
-```
-#> [1] 36
-#> [1] 6
-```
-
 ## R 数据结构
 
 ### Data Frame
 
-
-```r
+```{r, "dataframe"}
 paths_len <- data.frame(
     row.names = c("A", "B", "C", "D"),
     "1" = c(0, 1, 1, 1),
@@ -798,17 +738,4 @@ paths_len <- data.frame(
 )
 print(paths_len)
 print(as.matrix(paths_len))
-```
-
-```
-#>   X1 X2 X3 X4
-#> A  0  1  1  1
-#> B  1  0  1  2
-#> C  1  1  0  1
-#> D  1  2  1  0
-#>   X1 X2 X3 X4
-#> A  0  1  1  1
-#> B  1  0  1  2
-#> C  1  1  0  1
-#> D  1  2  1  0
 ```
