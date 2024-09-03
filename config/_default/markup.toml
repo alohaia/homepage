@@ -1,23 +1,4 @@
 defaultMarkdownHandler = 'goldmark'
-[goldmark]
-  [goldmark.extensions]
-    definitionList = true
-    footnote = true
-    linkify = true
-    strikethrough = true
-    table = true
-    taskList = true
-    typographer = true
-  [goldmark.parser]
-    autoHeadingID = true
-    autoHeadingIDType = 'github'
-    [goldmark.parser.attribute]
-      block = true
-      title = true
-  [goldmark.renderer]
-    hardWraps = true
-    unsafe = true
-    xhtml = true
 [highlight]
   anchorLineNos = false
   lineAnchors = ''
@@ -34,3 +15,63 @@ defaultMarkdownHandler = 'goldmark'
   ordered = false
   startLevel = 2
   endLevel = 6
+
+[goldmark]
+  duplicateResourceFiles = false
+  [goldmark.extensions]
+    definitionList = true
+    footnote = true
+    linkify = true
+    linkifyProtocol = 'https'
+    strikethrough = true
+    table = true
+    taskList = true
+    [goldmark.extensions.cjk]
+      eastAsianLineBreaks = false
+      eastAsianLineBreaksStyle = 'simple'
+      enable = false
+      escapedSpace = false
+    [goldmark.extensions.extras]
+      [goldmark.extensions.extras.delete]
+        enable = true
+      [goldmark.extensions.extras.insert]
+        enable = true
+      [goldmark.extensions.extras.mark]
+        enable = true
+      [goldmark.extensions.extras.subscript]
+        enable = true
+      [goldmark.extensions.extras.superscript]
+        enable = true
+    [goldmark.extensions.passthrough]
+      enable = true
+      [goldmark.extensions.passthrough.delimiters]
+        block = [['[[', ']]'], ['$$', '$$']]
+        inline = [['$', '$']]
+    [goldmark.extensions.typographer]
+      apostrophe = '&rsquo;'
+      disable = false
+      ellipsis = '&hellip;'
+      emDash = '&mdash;'
+      enDash = '&ndash;'
+      leftAngleQuote = '&laquo;'
+      leftDoubleQuote = '&ldquo;'
+      leftSingleQuote = '&lsquo;'
+      rightAngleQuote = '&raquo;'
+      rightDoubleQuote = '&rdquo;'
+      rightSingleQuote = '&rsquo;'
+  [goldmark.parser]
+    autoHeadingID = true
+    autoHeadingIDType = 'github'
+    wrapStandAloneImageWithinParagraph = true
+    [goldmark.parser.attribute]
+      block = true
+      title = true
+  [goldmark.renderHooks]
+    [goldmark.renderHooks.image]
+      enableDefault = true
+    [goldmark.renderHooks.link]
+      enableDefault = true
+  [goldmark.renderer]
+    hardWraps = false
+    unsafe = true
+    xhtml = true
