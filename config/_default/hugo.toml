@@ -3,8 +3,6 @@ baseURL = 'https://daisilia.com/' # 需要 trailing slash
 theme = 'daisilia'
 enableEmoji = true
 hasCJKLanguage = true
-paginate = 10
-paginatePath = 'page'
 
 # language
 languageCode = 'zh-cn'
@@ -13,6 +11,10 @@ defaultContentLanguage = 'zh'
   languagedirection = 'zh'
   title = "Aloha's Blog"
   weight = 10
+  [pagination]
+    disableAliases = false
+    pagerSize = 10
+    path = 'page'
 
 # enableGitInfo = false
 [frontmatter]
