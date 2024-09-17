@@ -1,7 +1,11 @@
 {
     "更换域名": {
         "title": "更换域名",
-        "type": "warning",
+        "type": "warn",
         "content": "2024-11-24 12:03:58 开始，域名 daisilia.com 过期，新域名为 aya.org.cn。"
+    },
+    "数学公式": {
+        "type": "info",
+        "content": "由于 Hugo 设置变更，最近数学公式中出现多余的逗号。"
     }
 }

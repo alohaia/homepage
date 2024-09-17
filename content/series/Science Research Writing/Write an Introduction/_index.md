@@ -1,7 +1,7 @@
 ---
 title: "Write an Introduction"
 date: 2024-09-01T22:10:04+08:00
-lastmod: 2024-09-03T12:21:06+08:00
+lastmod: 2024-09-17T10:23:40+08:00
 comments: true
 math: true
 weight: 10

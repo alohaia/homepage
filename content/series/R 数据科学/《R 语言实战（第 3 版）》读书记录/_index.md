@@ -1,7 +1,7 @@
 ---
 title: "《R 语言实战（第 3 版）》读书记录"
 date: 2024-05-20T18:06:41+08:00
-lastmod: 2024-05-20T18:09:02+08:00
+lastmod: 2024-09-17T10:04:58+08:00
 comments: true
 math: false
 weight: 1

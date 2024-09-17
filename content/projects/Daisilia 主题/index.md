@@ -1,12 +1,16 @@
 ---
 title: "Daisilia 主题"
 date: 2023-05-21T14:49:37+08:00
-lastmod: 2023-08-01T11:33:48+08:00
+lastmod: 2024-09-17T09:30:56+08:00
 comments: true
 math: false
 ---
 
+<!--more-->
+
 ## Shortcodes
+
+<!--more-->
 
 ### Bilibili 视频 {alias="bilibili"}
 
@@ -203,7 +207,7 @@ id="fig_linus-torvalds" */>}}
 
 - 消息 ID（`id 01`、`02`）：一个任意唯一的字符串。ID 中的空格会被替换为 `-`。
 - `title`（可选）：消息标题，任意字符串。
-- `type`（可选）：消息样式，可用的有 `default`（默认）、`info`、`warning`、`danger`/`error`。
+- `type`（可选）：消息样式，可用的有 `default`（默认）、`info`、`warn`、`danger`/`error`。
 - `content`：消息正文内容，任意字符串，支持 HTML。
 
 {{< tab type="default" summary="" details=true >}}

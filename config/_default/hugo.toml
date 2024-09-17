@@ -2,7 +2,6 @@ title = "Aloha's Blog"
 baseURL = 'https://daisilia.com/' # 需要 trailing slash
 theme = 'daisilia'
 enableEmoji = true
-hasCJKLanguage = true
 
 # language
 languageCode = 'zh-cn'
