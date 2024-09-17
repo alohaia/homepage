@@ -24,7 +24,7 @@ tags:
 导入需要用到的 R 程序包并导入数据：
 
 
-```r
+``` r
 # 导入 R 库
 library(readxl)
 library(writexl)
@@ -38,7 +38,7 @@ raw_data <- read_excel("data.xlsx")
 
 {{% tab type="default" summary="根据需要预处理数据" details=true open=false id="tab_根据需要预处理数据" %}}
 
-```r
+``` r
 # 选择研究变量
 data <- raw_data[, c(-1, -2, -3, -10, -17, -18, -20)]
 data$年龄 <- raw_data$修复体戴入日期 - raw_data$出生日期
@@ -95,7 +95,7 @@ for (name in names.count) {
 通过以下代码随机选取 7/10 的数据作为训练集，并将抽样方案保存在 [sample.txt](./sample.txt) 文件中。
 
 
-```r
+``` r
 smp <- sample(seq_len(nrow(data)), round(nrow(data) * 0.7))
 write(smp, file = "sample.txt")
 ```
@@ -103,7 +103,7 @@ write(smp, file = "sample.txt")
 代码编写过程中可能需要多次运行代码，为保持多次运行之间的一致性，在选取合适的抽样（[单因素 Logistic 回归](#单因素-logistic-回归)）后，之后的抽样选取就通过读取 [sample.txt](./sample.txt) 文件完成。
 
 
-```r
+``` r
 # 随机抽取训练集，其他作为测试集
 smp <- scan(file = "sample.txt")
 data.train <- data[smp, ]
@@ -115,7 +115,7 @@ data.test <- data[-smp, ]
 使用 `glm` 函数，对训练集数据的每个预测变量进行单因素分析，获取 P 值，并选出 P \< 0.05 的预测变量（抽样的不同会对这一步造成较大影响）。
 
 
-```r
+``` r
 p.values <- data.frame()
 names.selected <- c()
 for (name in names.all) {
@@ -146,7 +146,7 @@ names.selected
 用单因素 Logistic 回归筛选出的危险因素，同样使用 `glm` 函数，进行多因素 Logistic 回归分析。
 
 
-```r
+``` r
 names.05 <- names.selected
 f.05 <- as.formula(paste(collapse = "~",
    c(
@@ -201,7 +201,7 @@ summary(model.05)
 为了控制更多的细节，这里使用 `boot` 程序包的 `boot` 函数计算 OR，并使用同属于 `boot` 程序包的 `boot.ci` 函数计算置信区间。
 
 
-```r
+``` r
 library(boot)
 set.seed(1645248416) # unclass(Sys.time())
 
@@ -243,7 +243,7 @@ head(table2.05)
 #### `confint` 函数
 
 
-```r
+``` r
 table_simple <- data.frame(
   "OR" = exp(coef(model.05)),
   "OR.CI" = exp(confint(model.05)),
@@ -269,7 +269,7 @@ OR 和 P 值与之前的结果相同，但置信区间有少许差别。
 `rms` 程序包提供了用来建立列线图预测模型的函数。
 
 
-```r
+``` r
 library(rms)
 
 # 使用训练集建立列线图预测模型
@@ -279,7 +279,7 @@ options(datadist = ddist.train)
 plot(nomogram(fit.train, fun = plogis, lp = FALSE, funlabel = "预测概率"))
 ```
 
-{{< figure src="/R-figures/R 与数学建模/植体周炎预测模型/unnamed-chunk-9-1.png" group="列线图预测模型" alt="列线图预测模型" >}}
+{{< figure src="/R-figures/R 语言与数学建模/植体周炎预测模型/unnamed-chunk-9-1.png" group="列线图预测模型" alt="列线图预测模型" >}}
 
 ## 数据验证
 
@@ -303,12 +303,12 @@ AUC 全称**曲线下面积**（Area Under Curve），在 Logistic 回归中，A
 使用 ROC 曲线检验数据的区分度，`pROC` 程序包提供了这里所需要的函数，其中 `plot.roc` 用于绘制 ROC 曲线，`ci.auc` 用于获取 AUC 的置信区间。
 
 
-```r
+``` r
 library(pROC)
 ```
 
 
-```r
+``` r
 pre.train <- predict(model.05, data.train, type = c("response"))
 p.roc.train <- plot.roc(data.train$植体周炎, pre.train,
                         main = "ROC Curve（训练集）", percent = TRUE,
@@ -323,10 +323,10 @@ ci.auc(p.roc.train)
 #> 95% CI: 75.2%-88.2% (DeLong)
 ```
 
-{{< figure src="/R-figures/R 与数学建模/植体周炎预测模型/unnamed-chunk-11-1.png" group="ROC Curve（训练集）" alt="ROC Curve（训练集）" >}}
+{{< figure src="/R-figures/R 语言与数学建模/植体周炎预测模型/unnamed-chunk-11-1.png" group="ROC Curve（训练集）" alt="ROC Curve（训练集）" >}}
 
 
-```r
+``` r
 pre.test <- predict(model.05, data.test, type = c("response"))
 p.roc.test <- plot.roc(data.test$植体周炎, pre.test,
                         main = "ROC Curve（测试集）", percent = TRUE,
@@ -341,7 +341,7 @@ ci.auc(p.roc.test)
 #> 95% CI: 60.2%-79.8% (DeLong)
 ```
 
-{{< figure src="/R-figures/R 与数学建模/植体周炎预测模型/unnamed-chunk-12-1.png" group="ROC Curve（测试集）" alt="ROC Curve（测试集）" >}}
+{{< figure src="/R-figures/R 语言与数学建模/植体周炎预测模型/unnamed-chunk-12-1.png" group="ROC Curve（测试集）" alt="ROC Curve（测试集）" >}}
 训练集 AUC 达 81.7%（95%CI：75.16%-88.25%），测试集 AUC 为 70.0%（95%CI：60.24%-79.76%），提示列线图模型区分度良好。
 
 ### 列线图校准曲线
@@ -349,7 +349,7 @@ ci.auc(p.roc.test)
 使用列线图校准曲线检验数据的校准度。绘制列线图校准曲线用到的 `calibrate` 也是 `rms` 包中的函数。这里使用 Bootstrap 法（`method = "boot"`），重复 1000 次（`B = 1000`）。其他常用的 `method` 还有 `"crossvalidation"`、`".632"` 及 `"randomization"`。
 
 
-```r
+``` r
 cal_train <- calibrate(fit.train,  method = "boot", B = 1000)
 plot(cal_train,
      xlab = "Nomogram Predicted",
@@ -357,10 +357,10 @@ plot(cal_train,
      main = "Calibration Curve（训练集）")
 ```
 
-{{< figure src="/R-figures/R 与数学建模/植体周炎预测模型/unnamed-chunk-13-1.png" group="列线图校准曲线（训练集）" alt="列线图校准曲线（训练集）" >}}
+{{< figure src="/R-figures/R 语言与数学建模/植体周炎预测模型/unnamed-chunk-13-1.png" group="列线图校准曲线（训练集）" alt="列线图校准曲线（训练集）" >}}
 
 
-```r
+``` r
 fit.test <- lrm(f.05, data.test, x = TRUE, y = TRUE)
 ddist.test <- datadist(data.test)
 options(datadist = ddist.test)
@@ -372,6 +372,6 @@ plot(cal_test,
      main = "Calibration Curve（测试集）")
 ```
 
-{{< figure src="/R-figures/R 与数学建模/植体周炎预测模型/unnamed-chunk-14-1.png" group="列线图校准曲线（测试集）" alt="列线图校准曲线（测试集）" >}}
+{{< figure src="/R-figures/R 语言与数学建模/植体周炎预测模型/unnamed-chunk-14-1.png" group="列线图校准曲线（测试集）" alt="列线图校准曲线（测试集）" >}}
 
 通过校验曲线可以看出训练集和测试集的预测值与实际值基本一致。
