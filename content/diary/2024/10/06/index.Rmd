@@ -14,8 +14,7 @@ math: false
 
 数据框和列表均可以直接添加新项：
 
-
-``` r
+```{r}
 df <- data.frame(
     a = c(1, 2, 3),
     b = c("b")
@@ -24,15 +23,8 @@ df$c <- c("a", "b", "c")
 df
 ```
 
-```
-#>   a b c
-#> 1 1 b a
-#> 2 2 b b
-#> 3 3 b c
-```
+```{r, "chunk name", fig.cap=""}
 
-
-``` r
 lt <- list(
     a <- matrix(1:10, nrow = 2),
     b <- "test_string"
@@ -41,23 +33,9 @@ lt[["c"]] <- "additional entry"
 lt
 ```
 
-```
-#> [[1]]
-#>      [,1] [,2] [,3] [,4] [,5]
-#> [1,]    1    3    5    7    9
-#> [2,]    2    4    6    8   10
-#> 
-#> [[2]]
-#> [1] "test_string"
-#> 
-#> $c
-#> [1] "additional entry"
-```
-
 向量可以使用 `c()` 或 `append()` 插入新项：
 
-
-``` r
+```{r}
 vc <- c(1, 2, 3)
 c(vc, 4)
 c(4, vc)
@@ -66,20 +44,11 @@ append(vc, after = length(vc), 4)   # 在最后面插入
 append(vc, 4)                       # 默认在最后面插入
 ```
 
-```
-#> [1] 1 2 3 4
-#> [1] 4 1 2 3
-#> [1] 0 1 2 3
-#> [1] 1 2 3 4
-#> [1] 1 2 3 4
-```
-
 ### 选取操作
 
 对于列表，`$` 和 `[[]]` 几乎一样，返回值是子项；而 `[]` 的返回值则是子集，类型仍然是列表。
 
-
-``` r
+```{r}
 lt <- list(
     a = c(1, 2, 3),
     b = "string"
@@ -95,23 +64,6 @@ cat("lt[1:2]:\n")
 lt[1:2]
 ```
 
-```
-#> lt$a:
-#> [1] 1 2 3
-#> lt[["a"]]:
-#> [1] 1 2 3
-#> lt["a"]:
-#> $a
-#> [1] 1 2 3
-#> 
-#> lt[1:2]:
-#> $a
-#> [1] 1 2 3
-#> 
-#> $b
-#> [1] "string"
-```
-
 ### 管道
 
 除了 `%>%`，R 语言（4.1+）提供了原生的管道运算符 `|>`。在 Rstudio 中，通过 “Tools” → “Global Options...” → “Editing” → “Use native pipe operator, |> (requires R 4.1+)” 来启用。
@@ -123,8 +75,7 @@ lt[1:2]
 
 同时绘制几个 plot：
 
-
-``` r
+```{r}
 # 设置绘图区域为 2 行 2 列
 par(mfrow = c(2, 2))
 
@@ -137,12 +88,9 @@ plot(1:10, runif(10, 0, 5), main = "Plot 4", col = "purple", pch = 16)
 par(mfrow = c(1, 1))
 ```
 
-{{< figure src="/R-figures/diary/2024/10/06/unnamed-chunk-4-1.png" group="unnamed-chunk-4" alt="unnamed-chunk-4" >}}
-
 使用 `mfcol` 参数会先填充列：
 
-
-``` r
+```{r}
 # 设置绘图区域为 2 列 2 行
 par(mfcol = c(2, 2))
 
@@ -154,8 +102,6 @@ plot(1:10, runif(10, 0, 5), main = "Plot 4", col = "purple", pch = 16)
 # 恢复默认的单个图形布局
 par(mfrow = c(1, 1))
 ```
-
-{{< figure src="/R-figures/diary/2024/10/06/unnamed-chunk-5-1.png" group="unnamed-chunk-5" alt="unnamed-chunk-5" >}}
 
 ### 常用绘图函数
 
@@ -174,8 +120,7 @@ par(mfrow = c(1, 1))
 - 使用 `patchwork` 包可以方便的用 `+`、`|`、`/` 来排列图像。
 - `cowplot` 与 `ggplot2` 集成良好。函数 `plot_grid()` 可用来布局，功能类似 `gridExtra::grid.arrange()`，但语法更加简洁。
 
-
-``` r
+```{r, "使用 cowplot 自动排列 plots", fig.cap="使用 cowplot 自动排列 plots"}
 library(ggplot2)
 library(cowplot)
 
@@ -192,8 +137,6 @@ combined_plot
 plot_grid(plotlist = plot_list, ncol = 2)
 ```
 
-{{< figure src="/R-figures/diary/2024/10/06/使用 cowplot 自动排列 plots-1.png" group="使用 cowplot 自动排列 plots" alt="使用 cowplot 自动排列 plots" >}}{{< figure src="/R-figures/diary/2024/10/06/使用 cowplot 自动排列 plots-2.png" group="使用 cowplot 自动排列 plots" alt="使用 cowplot 自动排列 plots" >}}
-
 ### 控制坐标轴
 
 - `coord_fixed(ratio = 1)`：设置 x、y 坐标比例为 1:1。
@@ -202,8 +145,7 @@ plot_grid(plotlist = plot_list, ncol = 2)
 - `scale_x_continuous(transform = "log10")`（`trans` 已被废弃）：设置坐标轴转换。
   > Built-in transformations include "asn", "atanh", "boxcox", "date", "exp", "hms", "identity", "log", "log10", "log1p", "log2", "logit", "modulus", "probability", "probit", "pseudo_log", "reciprocal", "reverse", "sqrt" and "time".
 
-
-``` r
+```{r, "模仿 log10 坐标变换", fig.cap="模仿 log10 坐标变换"}
 # 注意命名方式，scale_x_continuous 会自动查找 transform_xxx 函数
 transform_log10 <- scales::trans_new(
     name = "trans_log10",
@@ -219,8 +161,6 @@ ggplot(data.frame(x = xs, y = xs ^ 2 - 20 * xs)) +
     geom_smooth(mapping = aes(x, y)) +
     scale_x_continuous(transform = "log10")
 ```
-
-{{< figure src="/R-figures/diary/2024/10/06/模仿 log10 坐标变换-1.png" group="模仿 log10 坐标变换" alt="模仿 log10 坐标变换" >}}{{< figure src="/R-figures/diary/2024/10/06/模仿 log10 坐标变换-2.png" group="模仿 log10 坐标变换" alt="模仿 log10 坐标变换" >}}
 
 
 ## 其他
