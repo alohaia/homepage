@@ -1,7 +1,7 @@
 ---
 title: 2024-10-06 R tips
 date: 2024-10-06T15:14:37+08:00
-lastmod: 2024-10-07T17:42:24+08:00
+lastmod: 2024-10-18T23:18:44+08:00
 comments: true
 math: false
 ---
@@ -117,6 +117,32 @@ lt[1:2]
 除了 `%>%`，R 语言（4.1+）提供了原生的管道运算符 `|>`。在 Rstudio 中，通过 “Tools” → “Global Options...” → “Editing” → “Use native pipe operator, |> (requires R 4.1+)” 来启用。
 默认快捷键是 <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>m</kbd>。
 
+### 将数据储存在 Excel 表的不同 Sheets
+
+可以使用 `xlsx` 包，但这个包依赖 Java。因此，推荐使用 `openxlsx` 包。
+
+```r
+library(openxlsx)
+
+# Create a blank workbook
+OUT <- createWorkbook()
+
+# Add some sheets to the workbook
+addWorksheet(OUT, "Sheet 1 Name")
+addWorksheet(OUT, "Sheet 2 Name")
+
+# Write the data to the sheets
+writeData(OUT, sheet = "Sheet 1 Name", x = dataframe1)
+writeData(OUT, sheet = "Sheet 2 Name", x = dataframe2)
+
+# Reorder worksheets
+worksheetOrder(OUT) <- rev(1:3)
+
+# Export the file
+saveWorkbook(OUT, "My output file.xlsx")
+```
+
+
 ## 绘图
 
 ### 绘图布局
@@ -228,3 +254,12 @@ ggplot(data.frame(x = xs, y = xs ^ 2 - 20 * xs)) +
 ### 图形交互界面
 
 - `shiny`
+
+### R 语言小特点
+
+- 索引从 1 开始
+- 没有 `continue`，取而代之的是 `next`
+- 没有 `return` 关键字，取而代之的是 `return()` 函数
+- 函数默认会返回函数体中的最后一个输出
+
+
