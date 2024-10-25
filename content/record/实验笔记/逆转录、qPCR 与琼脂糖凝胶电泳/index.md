@@ -1,9 +1,9 @@
 ---
 title: "逆转录、qPCR 与琼脂糖凝胶电泳"
 date: 2024-10-25T09:20:56+08:00
-lastmod: 2024-10-25T12:32:32+08:00
+lastmod: 2024-10-25T13:22:26+08:00
 comments: true
-math: false
+math: true
 tags:
 ---
 
@@ -65,6 +65,40 @@ qPCR 结果评价指标：
     - 普通的溶解曲线是逐渐下降的 S 形曲线，Y 轴是荧光信号强度。
     - 通常所说的溶解曲线是指普通溶解曲线的负一阶导数曲线，Y 轴是指熔解曲线的荧光信号强度随温度变化的斜率的负值。这个曲线中的峰对应的温度即为解链温度 Tm——一半 DNA 变性时的温度。
     {{< figure src="溶解曲线.png" title="溶解曲线" style="normal" >}}
+
+qPCR 数据分析：
+
+https://www.bilibili.com/video/BV1eU4y1o7uR
+
+$$\Delta CT_{目的} = CT_{目的}-Mean(CT_{内参})
+\,.$$
+
+$$\Delta \Delta CT_{实验组目的} = \Delta CT_{实验组目的}-Mean(\Delta CT_{对照组目的})
+\,.$$
+
+最后得到目的基因相对表达量：
+
+$$Rel_Expr = 2^{-\Delta \Delta CT_{实验组目的}}
+\,.$$
+
+另一种方法：
+
+$$X = 2^{-(CT_{目的}-CT_{内参})}
+\,.$$
+
+$$Y = X - Mean(X)
+\,.$$
+
+应该满足：各组的 $Mean(Y)=1$。
+
+各实验组计算相对表达量：
+
+$$Rel_Expr = Mean(X - Mean(X_{对照}))
+\,.$$
+
+## 梯度 PCR
+
+- https://m.ebiotrade.com/newsf/2024-8/202488100017280.htm
 
 ## 琼脂糖凝胶电泳
 
