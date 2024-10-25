@@ -1,7 +1,7 @@
 ---
 title: "逆转录、qPCR 与琼脂糖凝胶电泳"
 date: 2024-10-25T09:20:56+08:00
-lastmod: 2024-10-25T13:22:26+08:00
+lastmod: 2024-10-25T13:25:17+08:00
 comments: true
 math: true
 tags:
@@ -78,7 +78,7 @@ $$\Delta \Delta CT_{实验组目的} = \Delta CT_{实验组目的}-Mean(\Delta C
 
 最后得到目的基因相对表达量：
 
-$$Rel_Expr = 2^{-\Delta \Delta CT_{实验组目的}}
+$$RelExpr = 2^{-\Delta \Delta CT_{实验组目的}}
 \,.$$
 
 另一种方法：
@@ -93,7 +93,7 @@ $$Y = X - Mean(X)
 
 各实验组计算相对表达量：
 
-$$Rel_Expr = Mean(X - Mean(X_{对照}))
+$$RelExpr = Mean(X - Mean(X_{对照}))
 \,.$$
 
 ## 梯度 PCR
