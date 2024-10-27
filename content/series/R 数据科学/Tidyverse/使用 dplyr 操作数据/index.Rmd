@@ -1,0 +1,163 @@
+---
+title: "使用 dplyr 操作数据"
+date: 2024-10-27T20:19:46+08:00
+lastmod: 2024-10-28T01:20:23+08:00
+comments: true
+math: false
+weight: 1
+tags:
+    - R
+    - Tidyverse
+---
+
+`dplyr` 是一种数据操作语法（“A Grammar of Data Manipulation”），提供了一组连贯的*动词*来帮助处理常见的数据操作。
+
+<!--more-->
+
+- [“single-table” 动词](#单表格动词)（见 `vignette("dplyr")`）：
+    1. `mutate()` adds new variables that are functions of existing variables.
+    1. `select()` picks variables based on their names.
+    1. `filter()` picks cases based on their values.
+    1. `summarise()` reduces multiple values down to a single summary.
+    1. `arrange()` changes the ordering of the rows.
+- “two-table” 动词（见 `vignette("two-table")`）
+
+和 `group_by()` 组合使用这些函数，可以“by group”地进行任何操作。
+
+> If you are new to dplyr, the best place to start is the [data transformation chapter](https://r4ds.hadley.nz/data-transform) in R for Data Science.
+
+{{< tab style="success" summary="使用其他 backends 处理大型数据" details=false >}}
+In addition to data frames/tibbles, dplyr makes working with other computational backends accessible and efficient. Below is a list of alternative backends:
+
+1. `arrow` for larger-than-memory datasets, including on remote cloud storage like AWS S3, using the Apache Arrow C++ engine, Acero.
+1. `dtplyr` for large, in-memory datasets. Translates your dplyr code to high performance data.table code.
+1. `dbplyr` for data stored in a relational database. Translates your dplyr code to SQL.
+1. `duckplyr` for using duckdb on large, in-memory datasets with zero extra copies. Translates your dplyr code to high performance duckdb queries with an automatic R fallback when translation isn’t possible.
+1. `duckdb` for large datasets that are still small enough to fit on your computer.
+1. `sparklyr` for very large datasets stored in Apache Spark.
+{{< /tab >}}
+
+## 准备
+
+```{r, "load libraries", fig.cap="load libraries"}
+library(dplyr)
+```
+
+示例数据 `starwars`：
+
+```{r}
+typeof(starwars)
+glimpse(starwars)
+```
+
+## 单表格动词
+
+dplyr 旨在为数据操作的每个基础动词提供一个函数。这些动词可以根据其使用的数据集成分分为三类：
+
+- 行：
+    - `filter()` 根据列的值选择行。
+    - `slice()` 根据位置选择行。
+    - `arrange()` 更改行的顺序。
+- 列：
+    - `select()` 选择列。
+    - `rename()` 更改列名。
+    - `mutate()` 更改列的值并创建新列。
+    - `relocate()` 更改列的顺序。
+- 行组（groups of rows）：
+    - `summarise()` 将一个组压缩为一行。
+{.wrap}
+
+{{< tab style="success" summary="管道操作符" details=false >}}
+`magrittr` 包提供了管道操作符 `%>%`。相比于 R 的原生管道操作符 `|>`，`%>%` 使用时处理可以默认传递数据到函数的第一个参数，还可以通过 `.` 明确指定要传递的位置。
+
+```{r}
+mtcars %>% .[.$mpg > 20, ]
+```
+{{< /tab >}}
+
+### 操纵行的单表格动词
+
+#### 使用 `filter()` 过滤行 {#filter}
+
+```{r}
+starwars %>% filter(skin_color == "light", eye_color == "brown")
+```
+
+和所有单表动词一样，`filter()` 的第一个参数是一个 `tibble` 或 `data.frame` 对象，后续参数会引用第一个参数中的变量。
+
+{{< tab style="success" summary="`filter()` 中不能使用 `select()` 的帮助函数" details=true >}}
+`ends_with()`、`contains()` 等帮助函数只能在 `select()` 中使用，可以用 `stringr` 中的函数替代：
+
+```{r}
+starwars %>% filter(stringr::str_starts(name, "L"))
+starwars %>% filter(stringr::str_detect(name, "an"))
+```
+{{< /tab >}}
+
+#### 使用 `arrange()` 根据列值（变量）排序行 {#arrange}
+
+```{r}
+starwars %>% arrange(height)
+```
+
+可以同时使用多个变量排序，第一个用于排序的变量的优先级最高：
+
+```{r}
+testib <- tibble(
+    a = c(1, 1, 1, 2, 2, 2, 3, 3, 3),
+    b = c(4, 9, 3, 2, 1, 8, 5, 7, 6)
+)
+testib %>% arrange(a, b)
+```
+
+`arrange()` 默认是升序，使用 `desc()` 可降序排列：
+
+```{r}
+testib <- tibble(
+    a = c(1, 1, 1, 2, 2, 2, 3, 3, 3),
+    b = c(4, 9, 3, 2, 1, 8, 5, 7, 6)
+)
+testib %>% arrange(desc(a), b)
+```
+{{< tab style="info" >}}
+无论是升序还是降序，`NA` 值都会被放在末尾：
+
+```{r}
+starwars %>% arrange(hair_color) %>% slice_tail(n = 8)
+starwars %>% arrange(desc(hair_color)) %>% slice_tail(n = 8)
+```
+
+{{< /tab >}}
+
+#### 使用 `slice()` 根据行的位置选择行 {#slice}
+
+使用 `slice()` 可以选择、删除和复制行：
+
+```{r}
+starwars %>% slice(seq(1, nrow(.), 2)) # 选择奇数行
+starwars %>% slice(-seq(1, nrow(.), 2)) # 去除奇数行
+starwars %>% slice(rep(1, 10)) # 复制第 1 行 10 次
+```
+
+可以指定多个位置条件，效果就像是将多个条件合并一样：
+
+```{r}
+starwars %>% slice(-seq(1, nrow(.), 2), -c(1:10))
+```
+
+{{< tab style="error" >}}
+不能混合使用正、负位置。
+{{< /tab >}}
+
+注意相比之前的 `slice(seq(1, nrow(.), 2))`，这里只少了 `r nrow(starwars %>% slice(-seq(1, nrow(.), 2))) - nrow(starwars %>% slice(-seq(1, nrow(.), 2), -c(1:10)))` 行，而不是 10 行。
+
+其他特化的 helper 函数：
+
+- `slice_head()` 和 `slice_tail()` 分别选择头、尾数行，使用 `n` 参数指定行数。
+- `slice_sample()` 随机选择数行，使用 `n` 参数指定行数或使用 `prop` 参数按比例指定行数。
+    - 和 `sample()` 一样，可以使用 `replace` 参数指定放回（`TRUE`）或不放回（`FALSE`，默认）。
+    - 使用 `weight_by` 参数可以进行加权抽样，改变行被抽中的概率。权重变量会被自动标准化以使得总和为 1（注意要先用 `filter()` 去除 `NA`）。
+
+### 操纵列的单表格动词
+
+TODO: https://dplyr.tidyverse.org/articles/dplyr.html#select-columns-with-select

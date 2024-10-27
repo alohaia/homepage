@@ -1,7 +1,7 @@
 ---
 title: 2024-10-06 R tips
 date: 2024-10-06T15:14:37+08:00
-lastmod: 2024-10-18T23:18:44+08:00
+lastmod: 2024-10-27T21:25:06+08:00
 comments: true
 math: false
 ---
@@ -9,6 +9,15 @@ math: false
 <!--more-->
 
 ## 数据操作
+
+### 检查数据
+
+- `glimpse()` 可以将数据框“逆时针旋转 90°”，以便能尽可能多地展示更多数据。
+- 使用 `tibble` 代替 `data.frame`。`tibble` 的展示函数更加友好。
+
+{{< tab style="success" >}}
+`tibble` 被认为是 `data.frame` 的现代化版本，主要特点是正确性和便利性，但数据处理性能方面似乎不显著优于 `data.frame`。如何想要更好的性能，可以使用 `data.table`。
+{{< /tab >}}
 
 ### 添加新项
 
