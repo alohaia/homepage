@@ -1,7 +1,7 @@
 ---
 title: "免疫共沉淀"
 date: 2024-09-28T10:36:13+08:00
-lastmod: 2024-09-28T19:53:36+08:00
+lastmod: 2024-10-31T21:48:47+08:00
 comments: true
 math: false
 tags:

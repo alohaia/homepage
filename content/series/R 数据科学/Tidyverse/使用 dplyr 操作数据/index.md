@@ -1,7 +1,7 @@
 ---
 title: "使用 dplyr 操作数据"
 date: 2024-10-27T20:19:46+08:00
-lastmod: 2024-10-28T01:20:23+08:00
+lastmod: 2024-10-29T09:42:24+08:00
 comments: true
 math: false
 weight: 1
@@ -26,11 +26,11 @@ tags:
 
 > If you are new to dplyr, the best place to start is the [data transformation chapter](https://r4ds.hadley.nz/data-transform) in R for Data Science.
 
-{{< tab style="success" summary="使用其他 backends 处理大型数据" details=false >}}
+{{< tab style="success" summary="使用其他 backends 处理大型数据" details=false id="tab_处理大型数据" >}}
 In addition to data frames/tibbles, dplyr makes working with other computational backends accessible and efficient. Below is a list of alternative backends:
 
 1. `arrow` for larger-than-memory datasets, including on remote cloud storage like AWS S3, using the Apache Arrow C++ engine, Acero.
-1. `dtplyr` for large, in-memory datasets. Translates your dplyr code to high performance data.table code.
+1. `dtplyr` for large, in-memory datasets. Translates your dplyr code to high performance `data.table` code.
 1. `dbplyr` for data stored in a relational database. Translates your dplyr code to SQL.
 1. `duckplyr` for using duckdb on large, in-memory datasets with zero extra copies. Translates your dplyr code to high performance duckdb queries with an automatic R fallback when translation isn’t possible.
 1. `duckdb` for large datasets that are still small enough to fit on your computer.
@@ -49,17 +49,11 @@ library(dplyr)
 
 ``` r
 typeof(starwars)
-```
-
-```
-#> [1] "list"
-```
-
-``` r
 glimpse(starwars)
 ```
 
 ```
+#> [1] "list"
 #> Rows: 87
 #> Columns: 14
 #> $ name       <chr> "Luke Skywalker", "C-3PO", "R2-D2", "Darth Vader", "Leia Or…
@@ -154,6 +148,7 @@ starwars %>% filter(skin_color == "light", eye_color == "brown")
 
 ``` r
 starwars %>% filter(stringr::str_starts(name, "L"))
+starwars %>% filter(stringr::str_detect(name, "an"))
 ```
 
 ```
@@ -168,13 +163,6 @@ starwars %>% filter(stringr::str_starts(name, "L"))
 #> 6 Lama Su      229  88   none       grey       black             NA male  mascu…
 #> # ℹ 5 more variables: homeworld <chr>, species <chr>, films <list>,
 #> #   vehicles <list>, starships <list>
-```
-
-``` r
-starwars %>% filter(stringr::str_detect(name, "an"))
-```
-
-```
 #> # A tibble: 9 × 14
 #>   name      height  mass hair_color skin_color eye_color birth_year sex   gender
 #>   <chr>      <int> <dbl> <chr>      <chr>      <chr>          <dbl> <chr> <chr> 
@@ -275,6 +263,7 @@ testib %>% arrange(desc(a), b)
 
 ``` r
 starwars %>% arrange(hair_color) %>% slice_tail(n = 8)
+starwars %>% arrange(desc(hair_color)) %>% slice_tail(n = 8)
 ```
 
 ```
@@ -291,13 +280,6 @@ starwars %>% arrange(hair_color) %>% slice_tail(n = 8)
 #> 8 Jabba De…    175  1358 <NA>       green-tan… orange           600 herm… mascu…
 #> # ℹ 5 more variables: homeworld <chr>, species <chr>, films <list>,
 #> #   vehicles <list>, starships <list>
-```
-
-``` r
-starwars %>% arrange(desc(hair_color)) %>% slice_tail(n = 8)
-```
-
-```
 #> # A tibble: 8 × 14
 #>   name      height  mass hair_color skin_color eye_color birth_year sex   gender
 #>   <chr>      <int> <dbl> <chr>      <chr>      <chr>          <dbl> <chr> <chr> 
@@ -322,6 +304,8 @@ starwars %>% arrange(desc(hair_color)) %>% slice_tail(n = 8)
 
 ``` r
 starwars %>% slice(seq(1, nrow(.), 2)) # 选择奇数行
+starwars %>% slice(-seq(1, nrow(.), 2)) # 去除奇数行
+starwars %>% slice(rep(1, 10)) # 复制第 1 行 10 次
 ```
 
 ```
@@ -341,13 +325,6 @@ starwars %>% slice(seq(1, nrow(.), 2)) # 选择奇数行
 #> # ℹ 34 more rows
 #> # ℹ 5 more variables: homeworld <chr>, species <chr>, films <list>,
 #> #   vehicles <list>, starships <list>
-```
-
-``` r
-starwars %>% slice(-seq(1, nrow(.), 2)) # 去除奇数行
-```
-
-```
 #> # A tibble: 43 × 14
 #>    name     height  mass hair_color skin_color eye_color birth_year sex   gender
 #>    <chr>     <int> <dbl> <chr>      <chr>      <chr>          <dbl> <chr> <chr> 
@@ -364,13 +341,6 @@ starwars %>% slice(-seq(1, nrow(.), 2)) # 去除奇数行
 #> # ℹ 33 more rows
 #> # ℹ 5 more variables: homeworld <chr>, species <chr>, films <list>,
 #> #   vehicles <list>, starships <list>
-```
-
-``` r
-starwars %>% slice(rep(1, 10)) # 复制第 1 行 10 次
-```
-
-```
 #> # A tibble: 10 × 14
 #>    name     height  mass hair_color skin_color eye_color birth_year sex   gender
 #>    <chr>     <int> <dbl> <chr>      <chr>      <chr>          <dbl> <chr> <chr> 
@@ -429,4 +399,29 @@ starwars %>% slice(-seq(1, nrow(.), 2), -c(1:10))
 
 ### 操纵列的单表格动词
 
-TODO: https://dplyr.tidyverse.org/articles/dplyr.html#select-columns-with-select
+#### 使用 `select()` 选择列
+
+可以使用变量名（`height`）或变量名字符串（`"height"`）、作为一个向量（`select(c(height, "mass"))`）或作为多个参数（`starwars %>% select(height, "mass")`）指定要选择的列：
+
+
+``` r
+starwars %>% select(height, "mass")
+```
+
+```
+#> # A tibble: 87 × 2
+#>    height  mass
+#>     <int> <dbl>
+#>  1    172    77
+#>  2    167    75
+#>  3     96    32
+#>  4    202   136
+#>  5    150    49
+#>  6    178   120
+#>  7    165    75
+#>  8     97    32
+#>  9    183    84
+#> 10    182    77
+#> # ℹ 77 more rows
+```
+

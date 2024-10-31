@@ -1,9 +1,12 @@
 ---
-title: 2024-10-06 R tips
+title: "R Tips"
 date: 2024-10-06T15:14:37+08:00
-lastmod: 2024-10-27T21:25:06+08:00
+lastmod: 2024-10-29T09:36:40+08:00
 comments: true
 math: false
+weight: 99
+tags:
+    - R
 ---
 
 <!--more-->
@@ -151,6 +154,32 @@ worksheetOrder(OUT) <- rev(1:3)
 saveWorkbook(OUT, "My output file.xlsx")
 ```
 
+### 数据降维
+
+一个 list，包含多个 vectors，需要将其变为一个 vector。
+
+
+``` r
+l <- list(
+    a = c(1, 2, 3, 4, 5, 6, 7),
+    b = c(3, 4, 5, 6, 7, 8, 9)
+)
+
+# 获取在任一 vector 中出现的元素
+do.call(c, l)
+# 获取在所有 vector 中都出现的元素
+Reduce(intersect, l)
+```
+
+```
+#> a1 a2 a3 a4 a5 a6 a7 b1 b2 b3 b4 b5 b6 b7 
+#>  1  2  3  4  5  6  7  3  4  5  6  7  8  9 
+#> [1] 3 4 5 6 7
+```
+
+### 处理大型数据
+
+见[使用 dplyr 操作数据#tab_处理大型数据]({{< relref "/series/R 数据科学/tidyverse/使用 dplyr 操作数据#tab_处理大型数据" >}})。
 
 ## 绘图
 
@@ -172,7 +201,7 @@ plot(1:10, runif(10, 0, 5), main = "Plot 4", col = "purple", pch = 16)
 par(mfrow = c(1, 1))
 ```
 
-{{< figure src="/R-figures/diary/2024/10/06/unnamed-chunk-4-1.png" group="unnamed-chunk-4" alt="unnamed-chunk-4" >}}
+{{< figure src="/R-figures/series/R 数据科学/R Tips/unnamed-chunk-5-1.png" group="unnamed-chunk-5" alt="unnamed-chunk-5" >}}
 
 使用 `mfcol` 参数会先填充列：
 
@@ -190,7 +219,7 @@ plot(1:10, runif(10, 0, 5), main = "Plot 4", col = "purple", pch = 16)
 par(mfrow = c(1, 1))
 ```
 
-{{< figure src="/R-figures/diary/2024/10/06/unnamed-chunk-5-1.png" group="unnamed-chunk-5" alt="unnamed-chunk-5" >}}
+{{< figure src="/R-figures/series/R 数据科学/R Tips/unnamed-chunk-6-1.png" group="unnamed-chunk-6" alt="unnamed-chunk-6" >}}
 
 ### 常用绘图函数
 
@@ -227,7 +256,7 @@ combined_plot
 plot_grid(plotlist = plot_list, ncol = 2)
 ```
 
-{{< figure src="/R-figures/diary/2024/10/06/使用 cowplot 自动排列 plots-1.png" group="使用 cowplot 自动排列 plots" alt="使用 cowplot 自动排列 plots" >}}{{< figure src="/R-figures/diary/2024/10/06/使用 cowplot 自动排列 plots-2.png" group="使用 cowplot 自动排列 plots" alt="使用 cowplot 自动排列 plots" >}}
+{{< figure src="/R-figures/series/R 数据科学/R Tips/使用 cowplot 自动排列 plots-1.png" group="使用 cowplot 自动排列 plots" alt="使用 cowplot 自动排列 plots" >}}{{< figure src="/R-figures/series/R 数据科学/R Tips/使用 cowplot 自动排列 plots-2.png" group="使用 cowplot 自动排列 plots" alt="使用 cowplot 自动排列 plots" >}}
 
 ### 控制坐标轴
 
@@ -255,7 +284,7 @@ ggplot(data.frame(x = xs, y = xs ^ 2 - 20 * xs)) +
     scale_x_continuous(transform = "log10")
 ```
 
-{{< figure src="/R-figures/diary/2024/10/06/模仿 log10 坐标变换-1.png" group="模仿 log10 坐标变换" alt="模仿 log10 坐标变换" >}}{{< figure src="/R-figures/diary/2024/10/06/模仿 log10 坐标变换-2.png" group="模仿 log10 坐标变换" alt="模仿 log10 坐标变换" >}}
+{{< figure src="/R-figures/series/R 数据科学/R Tips/模仿 log10 坐标变换-1.png" group="模仿 log10 坐标变换" alt="模仿 log10 坐标变换" >}}{{< figure src="/R-figures/series/R 数据科学/R Tips/模仿 log10 坐标变换-2.png" group="模仿 log10 坐标变换" alt="模仿 log10 坐标变换" >}}
 
 
 ## 其他
