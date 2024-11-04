@@ -1,7 +1,7 @@
 ---
 title: "R Tips"
 date: 2024-10-06T15:14:37+08:00
-lastmod: 2024-10-29T09:36:40+08:00
+lastmod: 2024-11-04T23:25:19+08:00
 comments: true
 math: false
 weight: 99
@@ -181,6 +181,48 @@ Reduce(intersect, l)
 
 见[使用 dplyr 操作数据#tab_处理大型数据]({{< relref "/series/R 数据科学/tidyverse/使用 dplyr 操作数据#tab_处理大型数据" >}})。
 
+### 稀疏矩阵
+
+
+``` r
+library(Matrix)
+
+mat_a <- as(regMat, "sparseMatrix")       # see also `vignette("Intro2Matrix")`
+```
+
+```
+#> Error: 找不到对象'regMat'
+```
+
+``` r
+mat_b <- Matrix(regMat, sparse = TRUE)    # Thanks to Aaron for pointing this out
+```
+
+```
+#> Error: 找不到对象'regMat'
+```
+
+``` r
+identical(mat_a, mat_b)
+```
+
+```
+#> Error: 找不到对象'mat_a'
+```
+
+``` r
+mat_a
+```
+
+```
+#> Error: 找不到对象'mat_a'
+```
+
+
+### 移除变量
+
+`remove()` 或 `rm()`。
+
 ## 绘图
 
 ### 绘图布局
@@ -201,7 +243,7 @@ plot(1:10, runif(10, 0, 5), main = "Plot 4", col = "purple", pch = 16)
 par(mfrow = c(1, 1))
 ```
 
-{{< figure src="/R-figures/series/R 数据科学/R Tips/unnamed-chunk-5-1.png" group="unnamed-chunk-5" alt="unnamed-chunk-5" >}}
+{{< figure src="/R-figures/series/R 数据科学/R Tips/unnamed-chunk-6-1.png" group="unnamed-chunk-6" alt="unnamed-chunk-6" >}}
 
 使用 `mfcol` 参数会先填充列：
 
@@ -219,7 +261,7 @@ plot(1:10, runif(10, 0, 5), main = "Plot 4", col = "purple", pch = 16)
 par(mfrow = c(1, 1))
 ```
 
-{{< figure src="/R-figures/series/R 数据科学/R Tips/unnamed-chunk-6-1.png" group="unnamed-chunk-6" alt="unnamed-chunk-6" >}}
+{{< figure src="/R-figures/series/R 数据科学/R Tips/unnamed-chunk-7-1.png" group="unnamed-chunk-7" alt="unnamed-chunk-7" >}}
 
 ### 常用绘图函数
 
