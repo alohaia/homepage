@@ -1,7 +1,7 @@
 ---
 title: "R Tips"
 date: 2024-10-06T15:14:37+08:00
-lastmod: 2024-11-04T23:25:19+08:00
+lastmod: 2024-12-09T17:12:20+08:00
 comments: true
 math: false
 weight: 99
@@ -223,6 +223,11 @@ mat_a
 
 `remove()` 或 `rm()`。
 
+### 计算每一行或列的和
+
+- 简单计算：`rowSums()`、`colSums()`
+- 根据一个分组变量（grouping variable）计算行的和：`rowsum()`
+
 ## 绘图
 
 ### 绘图布局
@@ -277,7 +282,7 @@ par(mfrow = c(1, 1))
 
 ### 排列多个图像
 
-- 使用 `patchwork` 包可以方便的用 `+`、`|`、`/` 来排列图像。
+- 使用 [`patchwork` 包](https://patchwork.data-imaginist.com/)可以方便的用 `+`、`|`、`/`、`()` 来排列图像。
 - `cowplot` 与 `ggplot2` 集成良好。函数 `plot_grid()` 可用来布局，功能类似 `gridExtra::grid.arrange()`，但语法更加简洁。
 
 
@@ -299,6 +304,22 @@ plot_grid(plotlist = plot_list, ncol = 2)
 ```
 
 {{< figure src="/R-figures/series/R 数据科学/R Tips/使用 cowplot 自动排列 plots-1.png" group="使用 cowplot 自动排列 plots" alt="使用 cowplot 自动排列 plots" >}}{{< figure src="/R-figures/series/R 数据科学/R Tips/使用 cowplot 自动排列 plots-2.png" group="使用 cowplot 自动排列 plots" alt="使用 cowplot 自动排列 plots" >}}
+> base graphics and ggplot2 can sit side by side;[^knit manual]
+
+[^knit manual]: https://yihui.org/knitr/demo/manual/
+
+
+``` r
+fit <- lm(dist ~ speed, data = cars) # linear regression
+par(mar = c(4, 4, 1, 0.1), mgp = c(2, 1, 0))
+with(cars, plot(speed, dist, panel.last = abline(fit)))
+text(10, 100, "$Y = \\beta_0 + \\beta_1x + \\epsilon$")
+library(ggplot2)
+qplot(speed, dist, data = cars) + geom_smooth()
+```
+
+{{< figure src="/R-figures/series/R 数据科学/R Tips/unnamed-chunk-8-1.png" group="unnamed-chunk-8" alt="unnamed-chunk-8" >}}{{< figure src="/R-figures/series/R 数据科学/R Tips/unnamed-chunk-8-2.png" group="unnamed-chunk-8" alt="unnamed-chunk-8" >}}
+
 
 ### 控制坐标轴
 
@@ -331,6 +352,99 @@ ggplot(data.frame(x = xs, y = xs ^ 2 - 20 * xs)) +
 
 ## 其他
 
+### Rmarkdown 选项
+
+- https://yihui.org/knitr/options/
+- [knitr manual](https://yihui.org/knitr/demo/manual/)
+
+进阶设置——Hooks：
+
+根据其他选项决定某一选项：
+
+```r
+knitr::opts_hooks$set(fig.width = function(options) {
+  if (options$fig.width < options$fig.height) {
+    options$fig.width = options$fig.height
+  }
+  options
+})
+```
+
+
+``` r
+str(knitr::opts_chunk$get())
+```
+
+```
+#> List of 55
+#>  $ eval               : logi TRUE
+#>  $ echo               : logi TRUE
+#>  $ results            : chr "hold"
+#>  $ tidy               : logi FALSE
+#>  $ tidy.opts          : NULL
+#>  $ collapse           : logi FALSE
+#>  $ prompt             : logi FALSE
+#>  $ comment            : chr "#>"
+#>  $ highlight          : logi TRUE
+#>  $ size               : chr "normalsize"
+#>  $ background         : chr "#F7F7F7"
+#>  $ strip.white        : 'AsIs' logi TRUE
+#>  $ cache              : logi TRUE
+#>  $ cache.path         : chr "../.cache/series/R 数据科学/R Tips/"
+#>  $ cache.vars         : NULL
+#>  $ cache.lazy         : logi TRUE
+#>  $ dependson          : NULL
+#>  $ autodep            : logi FALSE
+#>  $ cache.rebuild      : logi FALSE
+#>  $ fig.keep           : chr "high"
+#>  $ fig.show           : chr "hold"
+#>  $ fig.align          : chr "default"
+#>  $ fig.path           : chr "../static/R-figures/series/R 数据科学/R Tips/"
+#>  $ dev                : chr "png"
+#>  $ dev.args           : NULL
+#>  $ dpi                : num 120
+#>  $ fig.ext            : NULL
+#>  $ fig.width          : num 10
+#>  $ fig.height         : num 6
+#>  $ fig.env            : chr "figure"
+#>  $ fig.cap            : NULL
+#>  $ fig.scap           : NULL
+#>  $ fig.lp             : chr "fig:"
+#>  $ fig.subcap         : NULL
+#>  $ fig.pos            : chr ""
+#>  $ out.width          : NULL
+#>  $ out.height         : NULL
+#>  $ out.extra          : NULL
+#>  $ fig.retina         : num 1
+#>  $ external           : logi TRUE
+#>  $ sanitize           : logi FALSE
+#>  $ interval           : num 1
+#>  $ aniopts            : chr "controls,loop"
+#>  $ warning            : logi FALSE
+#>  $ error              : logi TRUE
+#>  $ message            : logi FALSE
+#>  $ render             : NULL
+#>  $ ref.label          : NULL
+#>  $ child              : NULL
+#>  $ engine             : chr "R"
+#>  $ split              : logi FALSE
+#>  $ include            : logi TRUE
+#>  $ purl               : logi TRUE
+#>  $ tiry               : logi TRUE
+#>  $ unnamed.chunk.label: chr ""
+```
+
+#### 设置 RMarkdown 的根目录
+
+在 Rstudio 中，不同于普通的 R script，RMarkdown 的默认的工作目录是其所在目录。使用 `opts_knit$set()`（注意不是 `opts_chunk$set()`）设置根目录为项目根目录：
+
+``rmarkdown
+
+``` r
+knitr::opts_knit$set(root.dir = rprojroot::find_rstudio_root_file())
+```
+``
+
 ### 图形交互界面
 
 - `shiny`
@@ -341,5 +455,3 @@ ggplot(data.frame(x = xs, y = xs ^ 2 - 20 * xs)) +
 - 没有 `continue`，取而代之的是 `next`
 - 没有 `return` 关键字，取而代之的是 `return()` 函数
 - 函数默认会返回函数体中的最后一个输出
-
-

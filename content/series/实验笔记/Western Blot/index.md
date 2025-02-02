@@ -1,7 +1,7 @@
 ---
 title: "Western Blot"
 date: 2024-10-31T21:47:18+08:00
-lastmod: 2024-11-01T02:25:51+08:00
+lastmod: 2024-11-11T00:12:10+08:00
 comments: true
 math: true
 tags:
@@ -131,4 +131,4 @@ $$\lg(Mr) = K - b \times mR
 
 ## 常见问题
 
-
+1. 常用内参：WB 内参蛋白包括 GAPDH、β-actin 和 α-tubulin

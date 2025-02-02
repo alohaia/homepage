@@ -1,5 +1,6 @@
 resources/
 public/
+content/record/local/
 
 .$*
 *.drawio.bkp

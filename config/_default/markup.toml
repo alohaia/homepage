@@ -29,7 +29,7 @@ defaultMarkdownHandler = 'goldmark'
     [goldmark.extensions.cjk]
       eastAsianLineBreaks = false
       eastAsianLineBreaksStyle = 'simple'
-      enable = false
+      enable = true
       escapedSpace = false
     [goldmark.extensions.extras]
       [goldmark.extensions.extras.delete]

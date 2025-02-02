@@ -1,15 +1,15 @@
 ---
 title: "逆转录、qPCR 与琼脂糖凝胶电泳"
 date: 2024-10-25T09:20:56+08:00
-lastmod: 2024-11-01T02:25:52+08:00
+lastmod: 2024-11-29T16:31:50+08:00
 comments: true
 math: true
 tags:
 ---
 
-RT-PCR = 逆转录 + PCR 或 qPCR（Real-time PCR）
+RT-PCR = 逆转录 + [PCR 或 qPCR（Real-time PCR）] ≠ Real-time PCR
 
-- RT-PCR：逆转录 PCR
+- RT-PCR：逆转录（reverse transcription）PCR
 - qPCR：定量（quantitative）PCR
 - Real-time PCR：即时 PCR
 
