@@ -40,7 +40,6 @@ Conda 会修改 \$CC、\$LD 等环境变量，导致 xmake 使用 conda 指定�
 {{< /tab >}}
 
 
-- C++20 实现了[新的格式化方法](https://zh.cppreference.com/w/cpp/utility/format/format)
 - C++ 的输入/输出操纵符（流修饰符）可改变流的一些行为，如 `std::boolalpha` 可将布尔值输出为字符串（默认输出为 0 或 1）。注意修饰符的作用是会在多个语句中持续的：
   ```cpp
   {
@@ -59,7 +58,30 @@ Conda 会修改 \$CC、\$LD 等环境变量，导致 xmake 使用 conda 指定�
     - `>` 后面的文件描述符需要前接一个 `&` 符号，避免被错误地识别为文件名。
     - `>` 前面的 `&` 有特殊作用：`command &> output.txt` 是 `command > output.txt 2>&1` 的简写形式，会将标准输出和标准错误都写入 output.txt。
     - **顺序很重要：**`command 2>&1 > output.txt` 会先将文件描述符 2 绑定到文件描述符 1 的当前目标（终端）（实际没有改变什么），再将默认的文件描述符 1 绑定到 output.txt。
-- 形参是 parameter，实参是 argument。
+- [声明](https://zh.cppreference.com/w/cpp/language/declarations)：示例中指出了复杂声明的解读法，建议认真阅读。
+- [由内而外读法的机翻解释](https://learn.microsoft.com/zh-cn/cpp/c-language/interpreting-more-complex-declarators?view=msvc-170)。
+- C++20 实现了[新的格式化方法](https://zh.cppreference.com/w/cpp/utility/format/format)
+- 参数传递方式：
+    - [形参与实参](https://stackoverflow.com/questions/156767/whats-the-difference-between-an-argument-and-a-parameter)：形参是 parameter，实参是 argument。
+    - 按值传递：`int`，`int *`（地址也是值）
+    - 按引用传递：
+        - `int &`（左值引用，不可以是右值，否则传递之后临时变量就立即销毁了），`int const &`（左值常引用，可以接受右值，会延长临时变量的生命周期）
+        - `int &&`：只能绑定到右值（即临时对象或不具名值），不能绑定到左值。没有普通引用和常引用之分。常用于移动语义和完美转发，提高程序性能。
+- `static` 关键字：
+    - 修饰函数：表示函数仅在当前编译单元（源文件）中可见。
+    - 修饰变量：表示变量具有静态的存储周期，`static` 变量只初始化一次。且程序离开其作用域时，`static` 变量不会被销毁。全局变量一般都具有静态存储期。
+- 编译期计算：
+    - 常见情况：
+        - 常量传播：当决定一个运行期变量值的其他变量（或函数）都是 `constexpr`，那么在编译期就会计算该变量的值。
+        - `constexpr` 关键字：表示函数计算**可能**在编译期进行（使函数可用于初始化 `constexpr` 变量）或变量计算**必须**在编译期进行。
+    - 注意：
+        - 编译期计算通过编译期创建的“虚拟栈”完成，而栈有大小和（递归）深度的限制。
+        - 函数各个参数，以及表达式的各个子表达式的求值顺序在编译期是不确定的、由编译期决定的（C++ 允许编译器以任何顺序求值子表达式，短路求值的操作符—— `&&` 和 `||` 例外），所以依赖这种顺序的表达式（如 `i++ + ++i`）和函数不应该放在编译期计算。
+- [纯函数](https://zh.wikipedia.org/wiki/%E7%BA%AF%E5%87%BD%E6%95%B0)
+    - 相同的输入总是返回相同的输出；
+    - 没有副作用：纯函数不修改外部状态，也不依赖于外部状态。它不会修改全局变量、静态变量，或执行任何 I/O 操作（例如文件读写、打印输出等）。它的行为仅仅取决于输入参数。
+        - 如果函数使用（可能修改了）的 `static` 变量是在函数内初始化，且不会使得函数在输出相同时的返回值。这时虽然在外部来看函数的行为与纯函数基本一致，但严格来说这个函数还是产生了副作用，可能在多线程环境中导致竞态条件（race condition）。
+- [数组到指针的退化](https://zh.cppreference.com/w/cpp/language/array#%E6%95%B0%E7%BB%84%E5%88%B0%E6%8C%87%E9%92%88%E7%9A%84%E9%80%80%E5%8C%96)
 
 ### Rust 基础
 
