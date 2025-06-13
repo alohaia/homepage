@@ -1,7 +1,7 @@
 ---
 title: "R Tips"
 date: 2024-10-06T15:14:37+08:00
-lastmod: 2024-12-09T17:12:20+08:00
+lastmod: 2025-05-18T17:36:13+08:00
 comments: true
 math: false
 weight: 99
@@ -147,6 +147,20 @@ mat_a
 
 - 简单计算：`rowSums()`、`colSums()`
 - 根据一个分组变量（grouping variable）计算行的和：`rowsum()`
+
+### Reduce 函数
+
+```{r}
+Reduce(
+    function(init, xi) {
+        print(sprintf("%d + %d", init, xi))
+        init + xi
+    },
+    c(1, 2, 3),
+    10
+)
+```
+
 
 ## 绘图
 

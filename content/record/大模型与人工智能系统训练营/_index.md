@@ -1,7 +1,7 @@
 ---
 title: "大模型与人工智能系统训练营"
 date: 2025-01-23T15:05:54+08:00
-lastmod: 2025-01-24T10:04:06+08:00
+lastmod: 2025-03-12T17:21:47+08:00
 comments: true
 math: false
 ---
@@ -41,6 +41,10 @@ math: false
 Conda 会修改 \$CC、\$LD 等环境变量，导致 xmake 使用 conda 指定的程序。要使用系统默认程序可以使用 `xmake f --toolchain=gcc` 修改 xmake 设置或在 xmake.lua 中添加 `set_toolchains("gcc")`。
 {{< /tab >}}
 
+{{< tab style="success" summary="习题参考资料" details=true >}}
+1. **存储类说明符**（`static`）：是名字的[声明语法](https://zh.cppreference.com/w/cpp/language/declarations)中的声明说明符序列的一部分。它与名字的[作用域](https://zh.cppreference.com/w/cpp/language/scope)一同控制名字的两个独立性质：它的“存储期”和它的“链接”。
+2. [C++ 基本概念](https://learn.microsoft.com/en-us/cpp/cpp/basic-concepts-cpp?view=msvc-170)
+{{< /tab >}}
 
 - [表达式](https://zh.cppreference.com/w/cpp/language/expressions)，[运算符和优先级](https://zh.cppreference.com/w/cpp/language/operator_precedence)，[运算符重载](https://zh.cppreference.com/w/cpp/language/operators)
 - C++ 的输入/输出操纵符（流修饰符）可改变流的一些行为，如 `std::boolalpha` 可将布尔值输出为字符串（默认输出为 0 或 1）。注意修饰符的作用是会在多个语句中持续的：
@@ -94,6 +98,10 @@ Conda 会修改 \$CC、\$LD 等环境变量，导致 xmake 使用 conda 指定�
 - [枚举](https://zh.cppreference.com/w/cpp/language/enum)：`enum class Color : int { /* ... */ };`
 - [普通、标准布局、POD 和文本类型](https://learn.microsoft.com/en-us/cpp/cpp/trivial-standard-layout-and-pod-types)
 - [各种初始化](https://zh.cppreference.com/w/cpp/language/initialization)
+    - 列表初始化为指定的值：
+        - 全局/静态数组：零初始化。
+        - 局部自动数组：未定义（危险！访问可能导致未定义行为）。
+        - 动态数组：默认未定义，但可通过()强制零初始化。
 - [成员函数（cv 限定符）](https://zh.cppreference.com/w/cpp/language/member_functions)：`constexpr` 或 `const` 结构体只能调用 `const` 成员函数，如 `int get(int i) const { /* ... */ }`
   > 本质上，方法是隐藏了 this 参数的函数。`const` 修饰作用在 this 上。
 - C++ 中，`class` 和 `struct` 之间的**唯一区别**是：`class` 默认访问控制符是 `private`，`struct` 默认访问控制符是 `public`。
@@ -118,7 +126,11 @@ Conda 会修改 \$CC、\$LD 等环境变量，导致 xmake 使用 conda 指定�
     - 移动构造和移动赋值应该首先检查是否是移动自己；移动赋值应该先释放原对象动态分配的内存。此外，赋值操作最后都应该返回自己的左值引用 `return *this;`（连续的赋值表达式，规定要从右到左进行）。
 - `= delete`：显示弃置。`int f() = delete;` 表示显示弃置函数 `f`。常用于模板函数的示例，显示地禁止使用模板函数的某一实例。
 
+#### 格式化输出
 
+```cpp
+std::format();
+```
 
 ### Rust 基础
 

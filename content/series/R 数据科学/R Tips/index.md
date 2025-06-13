@@ -1,7 +1,7 @@
 ---
 title: "R Tips"
 date: 2024-10-06T15:14:37+08:00
-lastmod: 2024-12-09T17:12:20+08:00
+lastmod: 2025-05-18T17:36:13+08:00
 comments: true
 math: false
 weight: 99
@@ -228,6 +228,28 @@ mat_a
 - 简单计算：`rowSums()`、`colSums()`
 - 根据一个分组变量（grouping variable）计算行的和：`rowsum()`
 
+### Reduce 函数
+
+
+``` r
+Reduce(
+    function(init, xi) {
+        print(sprintf("%d + %d", init, xi))
+        init + xi
+    },
+    c(1, 2, 3),
+    10
+)
+```
+
+```
+#> [1] "10 + 1"
+#> [1] "11 + 2"
+#> [1] "13 + 3"
+#> [1] 16
+```
+
+
 ## 绘图
 
 ### 绘图布局
@@ -248,7 +270,7 @@ plot(1:10, runif(10, 0, 5), main = "Plot 4", col = "purple", pch = 16)
 par(mfrow = c(1, 1))
 ```
 
-{{< figure src="/R-figures/series/R 数据科学/R Tips/unnamed-chunk-6-1.png" group="unnamed-chunk-6" alt="unnamed-chunk-6" >}}
+{{< figure src="/R-figures/series/R 数据科学/R Tips/unnamed-chunk-7-1.png" group="unnamed-chunk-7" alt="unnamed-chunk-7" >}}
 
 使用 `mfcol` 参数会先填充列：
 
@@ -266,7 +288,7 @@ plot(1:10, runif(10, 0, 5), main = "Plot 4", col = "purple", pch = 16)
 par(mfrow = c(1, 1))
 ```
 
-{{< figure src="/R-figures/series/R 数据科学/R Tips/unnamed-chunk-7-1.png" group="unnamed-chunk-7" alt="unnamed-chunk-7" >}}
+{{< figure src="/R-figures/series/R 数据科学/R Tips/unnamed-chunk-8-1.png" group="unnamed-chunk-8" alt="unnamed-chunk-8" >}}
 
 ### 常用绘图函数
 
@@ -318,7 +340,7 @@ library(ggplot2)
 qplot(speed, dist, data = cars) + geom_smooth()
 ```
 
-{{< figure src="/R-figures/series/R 数据科学/R Tips/unnamed-chunk-8-1.png" group="unnamed-chunk-8" alt="unnamed-chunk-8" >}}{{< figure src="/R-figures/series/R 数据科学/R Tips/unnamed-chunk-8-2.png" group="unnamed-chunk-8" alt="unnamed-chunk-8" >}}
+{{< figure src="/R-figures/series/R 数据科学/R Tips/unnamed-chunk-9-1.png" group="unnamed-chunk-9" alt="unnamed-chunk-9" >}}{{< figure src="/R-figures/series/R 数据科学/R Tips/unnamed-chunk-9-2.png" group="unnamed-chunk-9" alt="unnamed-chunk-9" >}}
 
 
 ### 控制坐标轴
