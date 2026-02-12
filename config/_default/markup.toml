@@ -68,9 +68,9 @@ defaultMarkdownHandler = 'goldmark'
       title = true
   [goldmark.renderHooks]
     [goldmark.renderHooks.image]
-      enableDefault = true
+      useEmbedded = "fallback"
     [goldmark.renderHooks.link]
-      enableDefault = true
+      useEmbedded = "fallback"
   [goldmark.renderer]
     hardWraps = false
     unsafe = true

@@ -1,0 +1,14 @@
+ERROR error building site: render: [zh v1.0.0 guest] failed to render pages:
+render of "/home/qihuan/homepage/content/record/_index.md" failed:
+"/home/qihuan/homepage/themes/daisilia/layouts/_default/list.html:11:30":
+execute of template failed:
+template: list.html:11:30: executing "main" at <partial "components/page-list" .ByLastmod>:
+    error calling partial: "/home/qihuan/homepage/themes/daisilia/layouts/partials/components/page-list.html:5:49":
+        execute of template failed: template: _partials/components/page-list.html:5:49:
+            executing "_partials/components/page-list.html" at <partial "components/metadata" .>:
+                error calling partial: "/home/qihuan/homepage/themes/daisilia/layouts/partials/components/metadata.html:53:7": execute of template failed:
+                    template: _partials/components/metadata.html:53:7: executing "_partials/components/metadata.html" at <.Content>:
+                        error calling Content: "/home/qihuan/homepage/content/record/大模型与人工智能系统训练营/_index.md:7:28":
+                            "/home/qihuan/homepage/themes/daisilia/layouts/_default/_markup/render-link.html:7:28":
+                                execute of template failed: template: _markup/render-link.html:7:28: executing "_markup/render-link.html" at <urls.Parse>:
+                                    error calling Parse: parse "<code>std::bit_cast</code>": first path segment in URL cannot contain colon
