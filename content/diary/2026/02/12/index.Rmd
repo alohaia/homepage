@@ -1,7 +1,7 @@
 ---
 title: ggplot2 中的尺寸
 date: 2026-02-12T12:05:45+08:00
-lastmod: 2026-02-12T19:33:31+08:00
+lastmod: 2026-02-12T22:42:34+08:00
 comments: true
 math: false
 ---
@@ -41,7 +41,7 @@ for short), where 1 pt = 0.35mm. In `geom_text()` and `geom_label()`, you can se
 to use points instead of millimeters. In addition, ggplot2 provides a conversion factor as the 
 variable .pt, so if you want to draw 12pt text, you can also set `size = 12 / .pt`.
 
-```{r size_test}
+```{r}
 library(ggplot2)
 # Source - https://stackoverflow.com/q/75894278
 # Posted by D Ogle, modified by community. See post 'Timeline' for change history
@@ -69,4 +69,4 @@ ggplot() +
 
 https://discourse.gohugo.io/t/solved-destination-from-rel-or-relref-does-has-unexpect-prefix/42848/2
 
-
+使用 `urls.PathUnescape` 以显示 URL 中的中文字符等。

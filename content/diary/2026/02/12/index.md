@@ -1,7 +1,7 @@
 ---
 title: ggplot2 中的尺寸
 date: 2026-02-12T12:05:45+08:00
-lastmod: 2026-02-12T19:33:31+08:00
+lastmod: 2026-02-12T22:42:34+08:00
 comments: true
 math: false
 ---
@@ -65,11 +65,11 @@ ggplot() +
   theme_void()
 ```
 
-{{< figure src="/R-figures/diary/2026/02/12/size_test-1.png" group="size_test" alt="size_test" >}}
+{{< figure src="/R-figures/diary/2026/02/12/unnamed-chunk-1-1.png" group="unnamed-chunk-1" alt="unnamed-chunk-1" >}}
 
 
 ## 调试 render-link.html
 
 https://discourse.gohugo.io/t/solved-destination-from-rel-or-relref-does-has-unexpect-prefix/42848/2
 
-
+使用 `urls.PathUnescape` 以显示 URL 中的中文字符等。
