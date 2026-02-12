@@ -1,59 +1,14 @@
 ---
 title: ggplot2 中的尺寸
 date: 2026-02-12T12:05:45+08:00
-lastmod: 2026-02-12T19:09:41+08:00
+lastmod: 2026-02-12T19:33:31+08:00
 comments: true
 math: false
 ---
 
-
-
-    [大模型与人工智能系统训练营（*2024冬季*）](https://opencamp.cn/InfiniTensor/camp/2024winter 
-    "test_alt")
-
-    https://opencamp.cn/InfiniTensor/camp/2024winter
-
-    [Snippet 语法]({{< relref "/record/nvim-snippy-插件的-snippet-语法/" >}} "test_alt2")
-
-
-[大模型与人工智能系统训练营（*2024冬季*）](https://opencamp.cn/InfiniTensor/camp/2024winter 
-"test_alt")
-
-https://opencamp.cn/InfiniTensor/camp/2024winter
-
-[Snippet 语法]({{< relref "/record/nvim-snippy-插件的-snippet-语法/" >}} "test_alt2")
-
-```txt
-Treesitter
-  - @spell.markdown links to @spell   priority: 100   language: markdown
-  - @_label.markdown_inline links to @_label   priority: 100   language: markdown_inline
-  - @markup.link.markdown_inline links to Underlined   priority: 100   language: markdown_inline
-  - @_url.markdown_inline links to @_url   priority: 100   language: markdown_inline
-  - @markup.link.url.markdown_inline links to @markup.link.url   priority: 100   language: markdown_inline
-  - @nospell.markdown_inline links to @nospell   priority: 100   language: markdown_inline
-
-Treesitter
-  - @spell.markdown links to @spell   priority: 100   language: markdown
-  - @_label.markdown_inline links to @_label   priority: 100   language: markdown_inline
-  - @markup.link.label.markdown_inline links to @markup.link.label   priority: 100   language: 
-markdown_inline
-```
-
-```txt
-Treesitter
-  - @spell.markdown links to @spell   priority: 100   language: markdown
-
-Syntax
-  - HWrelref links to @markup.link.url
-```
-
-
-
-
-
-
-
 <!--more-->
+
+## ggplot2 中的尺寸
 
 `ggplot2` 中 `linewidth` 和 `size` 的单位是 mm，`lwd`（line width）是一个无单位的缩放系数。于是
  `ggplot2` 提供了`.pt` 和 `.stroke` 两个用于单位转换的常量：
@@ -62,7 +17,9 @@ Syntax
 - `.stroke`：不推荐用户使用。
 
 
-https://ggplot2.tidyverse.org/articles/ggplot2-specs.html
+[测试](https://ggplot2.tidyverse.org/articles/ggplot2-测试specs.html)
+
+https://ggplot2.tidyverse.org/articles/ggplot2-%e6%b5%8b%e8%af%95specs.html
 
 - 线条：
 
@@ -111,5 +68,8 @@ ggplot() +
 {{< figure src="/R-figures/diary/2026/02/12/size_test-1.png" group="size_test" alt="size_test" >}}
 
 
+## 调试 render-link.html
+
+https://discourse.gohugo.io/t/solved-destination-from-rel-or-relref-does-has-unexpect-prefix/42848/2
 
 
