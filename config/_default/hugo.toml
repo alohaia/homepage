@@ -80,5 +80,5 @@ defaultContentLanguage = 'zh'
 [[module.mounts]]
   source = 'content'
   target = 'content'
-  # exclude Rmarkdown files
-  excludeFiles = ['**.Rmd', '**.Rmarkdown', '**.drawio']
+  # exclude Rmarkdown files, etc.
+  files = ['! **.Rmd', '! **.Rmarkdown', '! **.drawio']

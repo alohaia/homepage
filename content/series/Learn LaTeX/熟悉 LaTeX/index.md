@@ -1,7 +1,7 @@
 ---
 title: "熟悉 LaTeX"
 date: 2026-02-22T11:53:19+08:00
-lastmod: 2026-02-22T20:26:25+08:00
+lastmod: 2026-03-09T11:05:18+08:00
 comments: true
 math: true
 weight: 1
@@ -109,7 +109,6 @@ Text objects：
                      \]                    \end{equation}
 - `tsd`（`g:vimtex_delim_toggle_mod_list`）：切换 surrounding delimiters
 - `tsf`：切换 surrounding fractions，`\frac{a}{b}` 和 `a/b`
-  ```
 
 “移动”命令：
 
@@ -137,6 +136,6 @@ Vimtex 通过使用 SyncTex 与 Zathura 同步。设置位置在 `g:vimtex_compi
       command = "VimtexView", -- 注意其实是跳转到当前光标对应位置，而不是修改的位置。
     })
     ```
-- 逆向同步：Zathura 支持 SyncTex，默认快捷键为 <kbd>Ctrl</kbd>+鼠标左键（见 `man 5 zathurarc`, synctex-edit-modifier 选项）。
+- 逆向同步：Zathura 支持 SyncTex，默认快捷键为 <kbd>Ctrl</kbd>+鼠标左键（见 `man 5 zathurarc`, `synctex-edit-modifier` 选项）。
 
 
