@@ -1,0 +1,77 @@
+defaultMarkdownHandler = 'goldmark'
+[highlight]
+  anchorLineNos = false
+  lineAnchors = ''
+  codeFences = true
+  guessSyntax = true
+  lineNos = true
+  lineNumbersInTable = true
+  noClasses = true
+  style = 'monokailight' # see https://xyproto.github.io/splash/docs/all.html
+  tabWidth = 4
+  hl_Lines = ''
+  lineNoStart = 1
+[tableOfContents]
+  ordered = false
+  startLevel = 2
+  endLevel = 6
+
+[goldmark]
+  duplicateResourceFiles = false
+  [goldmark.extensions]
+    definitionList = true
+    footnote = true
+    linkify = true
+    linkifyProtocol = 'https'
+    strikethrough = true
+    table = true
+    taskList = true
+    [goldmark.extensions.cjk]
+      eastAsianLineBreaks = false
+      eastAsianLineBreaksStyle = 'simple'
+      enable = true
+      escapedSpace = false
+    [goldmark.extensions.extras]
+      [goldmark.extensions.extras.delete]
+        enable = true
+      [goldmark.extensions.extras.insert]
+        enable = true
+      [goldmark.extensions.extras.mark]
+        enable = true
+      [goldmark.extensions.extras.subscript]
+        enable = true
+      [goldmark.extensions.extras.superscript]
+        enable = true
+    [goldmark.extensions.passthrough]
+      enable = true
+      [goldmark.extensions.passthrough.delimiters]
+        block = [['[[', ']]'], ['$$', '$$']]
+        inline = [['$', '$']]
+    [goldmark.extensions.typographer]
+      apostrophe = '&rsquo;'
+      disable = false
+      ellipsis = '&hellip;'
+      emDash = '&mdash;'
+      enDash = '&ndash;'
+      leftAngleQuote = '&laquo;'
+      leftDoubleQuote = '&ldquo;'
+      leftSingleQuote = '&lsquo;'
+      rightAngleQuote = '&raquo;'
+      rightDoubleQuote = '&rdquo;'
+      rightSingleQuote = '&rsquo;'
+  [goldmark.parser]
+    autoHeadingID = true
+    autoHeadingIDType = 'github'
+    wrapStandAloneImageWithinParagraph = true
+    [goldmark.parser.attribute]
+      block = true
+      title = true
+  [goldmark.renderHooks]
+    [goldmark.renderHooks.image]
+      useEmbedded = "fallback"
+    [goldmark.renderHooks.link]
+      useEmbedded = "fallback"
+  [goldmark.renderer]
+    hardWraps = false
+    unsafe = true
+    xhtml = true

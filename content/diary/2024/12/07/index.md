@@ -1,7 +1,7 @@
 ---
 title: 2024-12-07
 date: 2024-12-07T16:59:31+08:00
-lastmod: 2024-12-08T21:34:55+08:00
+lastmod: 2026-03-16T13:52:51+08:00
 comments: true
 math: false
 ---
@@ -98,3 +98,6 @@ No fsck helpers found. fsck will not be run on boot.
 > fsck 钩子用于在挂载根分区之前 fsck 根分区，这样你就不必挂载 ro，然后在发现错误时可能等待另一次启动。在那个时候 fsck 更有意义。但是如果你对根文件系统使用 btrfs，那么你可能应该完全删除 fsck 钩子。没有理由尝试 fsck unfsckable，systemd-fsck@.service 将处理您可能拥有的任何其他 fsckable 文件系统。
 
 
+## 登录卡在 SDDM，不显示 GUI
+
+只需让 SDDM 也使用 Wayland 即可（默认是使用 X Window）,见 [ArchWiki - SDDM#Wayland](https://wiki.archlinux.org/title/SDDM#Wayland)。
