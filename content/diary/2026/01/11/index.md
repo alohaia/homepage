@@ -1,22 +1,23 @@
 ---
 title: Kitty scrollback intregated with Neovim
 date: 2025-12-05T13:54:14+08:00
+lastmod: 2026-03-21T00:58:07+08:00
 comments: true
 math: false
 ---
 
 Features: https://github.com/mikesmithgh/kitty-scrollback.nvim?tab=readme-ov-file#-features
 
-- <kbd><C-S-h></kbd>: scrollback
-- <kbd><C-S-g></kbd>: output of last command
-- <kbd><C-S><Rightclick></kbd>: output of selected command
-- <kbd><C-x><C-e></kbd>: content of current kitty commandline
+- `<C-S-h>`: scrollback
+- `<C-S-g>`: output of last command
+- `<C-S><Rightclick>`: output of selected command
+- `<C-x><C-e>`: content of current kitty commandline
 
 
 Sub-mappings:
 
-- <kbd><S-CR></kbd>: Quit Neovim and send visual selection to kitty directly
-- <kbd><C-CR></kbd>: Quit Neovim, send and execute visual selection to kitty directly
-- Copy (<kbd>y</kbd>) or <kbd>i</kbd> / <kbd>a</kbd>: Edit content or start with a empty window
-  <kbd><S-CR></kbd> and <kbd><C-CR></kbd> are also available in this window
+- `<S-CR>`: Quit Neovim and send visual selection to kitty directly
+- `<C-CR>`: Quit Neovim, send and execute visual selection to kitty directly
+- Copy (`y`) or `i` / `a`: Edit content or start with a empty window
+  `<S-CR>` and `<C-CR>` are also available in this window
 
