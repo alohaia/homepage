@@ -1,13 +1,15 @@
 ---
 title: "完整游戏"
 date: 2026-03-23T12:36:20+08:00
-lastmod: 2026-03-24T14:09:17+08:00
+lastmod: 2026-03-24T14:52:07+08:00
 comments: true
 math: false
 weight: 1
 tags:
     - R Packages
 ---
+
+{{< figure src="workflow.png" title="devtools 包的开发工作流" attr="https://r-pkgs.org/whole-game.html#fig-package-dev-workflow" >}}
 
 <!--more-->
 
@@ -266,7 +268,8 @@ use_package("stringr")
 
 ```r
 str_split_one <- function(string, pattern, n = Inf) {
-    stopifnot(is.character(string), length(string) <= 1) if (length(string) == 1) {
+    stopifnot(is.character(string), length(string) <= 1)
+    if (length(string) == 1) {
         stringr::str_split(string = string, pattern = pattern, n = n)[[1]]
     } else {
         character()
