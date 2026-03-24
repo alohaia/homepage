@@ -7,7 +7,7 @@ defaultMarkdownHandler = 'goldmark'
   lineNos = true
   lineNumbersInTable = true
   noClasses = true
-  style = 'monokailight' # see https://xyproto.github.io/splash/docs/all.html
+  style = 'friendly' # see https://xyproto.github.io/splash/docs/all.html
   tabWidth = 4
   hl_Lines = ''
   lineNoStart = 1
@@ -75,3 +75,4 @@ defaultMarkdownHandler = 'goldmark'
     hardWraps = false
     unsafe = true
     xhtml = true
+
