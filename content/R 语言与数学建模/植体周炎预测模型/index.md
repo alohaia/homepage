@@ -3,7 +3,6 @@ title: "植体周炎预测模型：Logistic 回归分析及列线图模型"
 date: 2022-02-23T12:55:52+08:00
 lastmod: 2024-02-06T14:22:59+08:00
 comments: true
-math: true
 weight: 1
 tags:
     - R
@@ -28,6 +27,13 @@ tags:
 # 导入 R 库
 library(readxl)
 library(writexl)
+```
+
+```
+#> Error in library(writexl): 不存在叫'writexl'这个名称的程序包
+```
+
+``` r
 # library(lme4)
 library(broom)
 library(tidyverse)
@@ -271,15 +277,44 @@ OR 和 P 值与之前的结果相同，但置信区间有少许差别。
 
 ``` r
 library(rms)
+```
 
+```
+#> Error in library(rms): 不存在叫'rms'这个名称的程序包
+```
+
+``` r
 # 使用训练集建立列线图预测模型
 fit.train <- lrm(f.05, data.train, x = TRUE, y = TRUE)
+```
+
+```
+#> Error in lrm(f.05, data.train, x = TRUE, y = TRUE): 没有"lrm"这个函数
+```
+
+``` r
 ddist.train <- datadist(data.train)
+```
+
+```
+#> Error in datadist(data.train): 没有"datadist"这个函数
+```
+
+``` r
 options(datadist = ddist.train)
+```
+
+```
+#> Error: 找不到对象'ddist.train'
+```
+
+``` r
 plot(nomogram(fit.train, fun = plogis, lp = FALSE, funlabel = "预测概率"))
 ```
 
-{{< figure src="/R-figures/R 语言与数学建模/植体周炎预测模型/unnamed-chunk-9-1.png" group="列线图预测模型" alt="列线图预测模型" >}}
+```
+#> Error in nomogram(fit.train, fun = plogis, lp = FALSE, funlabel = "预测概率"): 没有"nomogram"这个函数
+```
 
 ## 数据验证
 
@@ -307,6 +342,10 @@ AUC 全称**曲线下面积**（Area Under Curve），在 Logistic 回归中，A
 library(pROC)
 ```
 
+```
+#> Error in library(pROC): 不存在叫'pROC'这个名称的程序包
+```
+
 
 ``` r
 pre.train <- predict(model.05, data.train, type = c("response"))
@@ -316,14 +355,19 @@ p.roc.train <- plot.roc(data.train$植体周炎, pre.train,
                         ci = TRUE, of = "thresholds",
                         thresholds = "best",
                         print.thres = "best")
+```
+
+```
+#> Error in plot.roc(data.train$植体周炎, pre.train, main = "ROC Curve（训练集）", : 没有"plot.roc"这个函数
+```
+
+``` r
 ci.auc(p.roc.train)
 ```
 
 ```
-#> 95% CI: 75.2%-88.2% (DeLong)
+#> Error in ci.auc(p.roc.train): 没有"ci.auc"这个函数
 ```
-
-{{< figure src="/R-figures/R 语言与数学建模/植体周炎预测模型/unnamed-chunk-11-1.png" group="ROC Curve（训练集）" alt="ROC Curve（训练集）" >}}
 
 
 ``` r
@@ -334,14 +378,19 @@ p.roc.test <- plot.roc(data.test$植体周炎, pre.test,
                         ci = TRUE, of = "thresholds",
                         thresholds = "best",
                         print.thres = "best")
+```
+
+```
+#> Error in plot.roc(data.test$植体周炎, pre.test, main = "ROC Curve（测试集）", : 没有"plot.roc"这个函数
+```
+
+``` r
 ci.auc(p.roc.test)
 ```
 
 ```
-#> 95% CI: 60.2%-79.8% (DeLong)
+#> Error in ci.auc(p.roc.test): 没有"ci.auc"这个函数
 ```
-
-{{< figure src="/R-figures/R 语言与数学建模/植体周炎预测模型/unnamed-chunk-12-1.png" group="ROC Curve（测试集）" alt="ROC Curve（测试集）" >}}
 训练集 AUC 达 81.7%（95%CI：75.16%-88.25%），测试集 AUC 为 70.0%（95%CI：60.24%-79.76%），提示列线图模型区分度良好。
 
 ### 列线图校准曲线
@@ -351,27 +400,65 @@ ci.auc(p.roc.test)
 
 ``` r
 cal_train <- calibrate(fit.train,  method = "boot", B = 1000)
+```
+
+```
+#> Error in calibrate(fit.train, method = "boot", B = 1000): 没有"calibrate"这个函数
+```
+
+``` r
 plot(cal_train,
      xlab = "Nomogram Predicted",
      ylab = "Actual",
      main = "Calibration Curve（训练集）")
 ```
 
-{{< figure src="/R-figures/R 语言与数学建模/植体周炎预测模型/unnamed-chunk-13-1.png" group="列线图校准曲线（训练集）" alt="列线图校准曲线（训练集）" >}}
+```
+#> Error: 找不到对象'cal_train'
+```
 
 
 ``` r
 fit.test <- lrm(f.05, data.test, x = TRUE, y = TRUE)
-ddist.test <- datadist(data.test)
-options(datadist = ddist.test)
+```
 
+```
+#> Error in lrm(f.05, data.test, x = TRUE, y = TRUE): 没有"lrm"这个函数
+```
+
+``` r
+ddist.test <- datadist(data.test)
+```
+
+```
+#> Error in datadist(data.test): 没有"datadist"这个函数
+```
+
+``` r
+options(datadist = ddist.test)
+```
+
+```
+#> Error: 找不到对象'ddist.test'
+```
+
+``` r
 cal_test <- calibrate(fit.test,  method = "boot", B = 1000)
+```
+
+```
+#> Error in calibrate(fit.test, method = "boot", B = 1000): 没有"calibrate"这个函数
+```
+
+``` r
 plot(cal_test,
      xlab = "Nomogram Predicted",
      ylab = "Actual",
      main = "Calibration Curve（测试集）")
 ```
 
-{{< figure src="/R-figures/R 语言与数学建模/植体周炎预测模型/unnamed-chunk-14-1.png" group="列线图校准曲线（测试集）" alt="列线图校准曲线（测试集）" >}}
+```
+#> Error: 找不到对象'cal_test'
+```
 
 通过校验曲线可以看出训练集和测试集的预测值与实际值基本一致。

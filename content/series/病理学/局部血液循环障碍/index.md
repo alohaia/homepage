@@ -3,7 +3,6 @@ title: "局部血液循环障碍"
 date: 2023-10-03T22:42:06+08:00
 lastmod: 2023-11-05T21:29:14+08:00
 comments: true
-math: false
 weight: 30
 tags:
     - 病理学

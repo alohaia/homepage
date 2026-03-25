@@ -3,7 +3,6 @@ title: "绪论"
 date: 2023-08-04T20:42:18+08:00
 lastmod: 2023-11-09T16:10:58+08:00
 comments: true
-math: false
 weight: 10
 tags:
     - 生理学

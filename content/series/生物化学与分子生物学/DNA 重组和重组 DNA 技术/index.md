@@ -3,7 +3,6 @@ title: "DNA 重组和重组 DNA 技术"
 date: 2023-10-01T20:19:01+08:00
 lastmod: 2023-11-01T19:48:35+08:00
 comments: true
-math: false
 weight: 230
 tags:
     - 生物化学与分子生物学

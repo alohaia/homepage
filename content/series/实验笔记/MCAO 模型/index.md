@@ -3,7 +3,6 @@ title: "MCAO 模型"
 date: 2024-11-14T22:42:54+08:00
 lastmod: 2024-11-15T01:18:41+08:00
 comments: true
-math: false
 weight: 1
 ---
 

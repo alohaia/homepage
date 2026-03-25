@@ -3,7 +3,6 @@ title: 2023-06-30 关于 Table 元素的几个问题
 date: 2023-06-30T22:17:00+08:00
 lastmod: 2023-06-30T22:52:51+08:00
 comments: true
-math: false
 ---
 
 ## `table` 元素的滚动和宽度的矛盾

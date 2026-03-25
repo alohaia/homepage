@@ -3,7 +3,6 @@ title: "风湿性疾病"
 date: 2023-07-11T21:03:59+08:00
 lastmod: 2023-07-19T11:41:31+08:00
 comments: true
-math: false
 weight: 80000
 tags:
     - 内科学

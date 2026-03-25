@@ -3,7 +3,6 @@ title: "肾小球滤过功能"
 date: 2023-07-31T13:23:25+08:00
 lastmod: 2023-10-19T21:30:57+08:00
 comments: true
-math: true
 weight: 82
 tags:
     - 生理学

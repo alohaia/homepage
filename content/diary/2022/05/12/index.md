@@ -3,7 +3,6 @@ title: 诊断学- 神经系统查体
 date: 2022-05-12T21:32:02+08:00
 lastmod: 2022-11-24T19:43:48+08:00
 comments: true
-math: false
 tags:
     - 诊断学
     - 神经系统

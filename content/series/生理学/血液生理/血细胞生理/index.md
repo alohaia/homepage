@@ -3,7 +3,6 @@ title: "血细胞生理"
 date: 2023-07-10T18:24:56+08:00
 lastmod: 2024-09-17T10:05:27+08:00
 comments: true
-math: false
 weight: 32
 tags:
     - 生理学

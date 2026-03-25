@@ -3,7 +3,6 @@ title: "脑的高级功能"
 date: 2023-07-27T18:59:10+08:00
 lastmod: 2023-11-12T18:12:19+08:00
 comments: true
-math: false
 weight: 106
 tags:
     - 生理学

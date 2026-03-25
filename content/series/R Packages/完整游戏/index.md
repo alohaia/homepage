@@ -1,9 +1,8 @@
 ---
 title: "完整游戏"
 date: 2026-03-23T12:36:20+08:00
-lastmod: 2026-03-24T14:52:07+08:00
+lastmod: 2026-03-24T19:54:06+08:00
 comments: true
-math: false
 weight: 1
 tags:
     - R Packages
@@ -351,7 +350,7 @@ document()
 
 这里不做讨论。
 
-## 软件包的门面：`use_readme_rmd()`
+## 包的门面：`use_readme_rmd()`
 
 使用 `use_readme_rmd()` 创建一个模板 `README.Rmd` 文件：
 

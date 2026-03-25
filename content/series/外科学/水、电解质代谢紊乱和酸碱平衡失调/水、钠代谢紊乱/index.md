@@ -3,7 +3,6 @@ title: "水、钠代谢紊乱"
 date: 2023-09-16T12:08:17+08:00
 lastmod: 2023-09-16T15:15:54+08:00
 comments: true
-math: true
 weight: 32
 tags:
     - 外科学

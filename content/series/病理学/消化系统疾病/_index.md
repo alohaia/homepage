@@ -3,7 +3,6 @@ title: "消化系统疾病"
 date: 2021-11-02T17:58:44+08:00
 lastmod: 2023-11-07T22:09:16+08:00
 comments: true
-math: false
 weight: 110
 tags:
     - 病理学

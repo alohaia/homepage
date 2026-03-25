@@ -3,7 +3,6 @@ title: "细胞受体介导的细胞内信号转导"
 date: 2023-09-29T23:54:19+08:00
 lastmod: 2023-11-04T17:29:11+08:00
 comments: true
-math: false
 weight: 173
 tags:
     - 生物化学与分子生物学

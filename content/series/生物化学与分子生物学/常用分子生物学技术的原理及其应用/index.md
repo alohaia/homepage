@@ -3,7 +3,6 @@ title: "常用分子生物学技术的原理及其应用"
 date: 2023-10-01T21:13:54+08:00
 lastmod: 2023-11-04T22:19:23+08:00
 comments: true
-math: false
 weight: 240
 tags:
     - 生物化学与分子生物学

@@ -3,7 +3,6 @@ title: "R Tips"
 date: 2024-10-06T15:14:37+08:00
 lastmod: 2025-05-18T17:36:13+08:00
 comments: true
-math: false
 weight: 99
 tags:
     - R

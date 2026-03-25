@@ -3,7 +3,6 @@ title: "感染性心内膜炎"
 date: 2023-10-08T21:36:14+08:00
 lastmod: 2023-11-07T14:57:46+08:00
 comments: true
-math: false
 weight: 95
 tags:
     - 病理学

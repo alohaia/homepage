@@ -3,7 +3,6 @@ title: "介入放射学"
 date: 2022-05-23T12:44:52+08:00
 lastmod: 2023-09-19T10:00:32+08:00
 comments: true
-math: false
 weight: 10
 tags:
     - 医学影像学

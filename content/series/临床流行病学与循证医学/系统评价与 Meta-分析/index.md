@@ -3,7 +3,6 @@ title: "系统评价与 Meta-分析"
 date: 2022-11-13T10:16:02+08:00
 lastmod: 2023-05-21T18:00:12+08:00
 comments: true
-math: false
 weight: 70
 tags:
     - 临床流行病学

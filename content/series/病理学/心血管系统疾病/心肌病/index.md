@@ -3,7 +3,6 @@ title: "心肌病"
 date: 2023-10-08T21:36:22+08:00
 lastmod: 2023-11-07T15:10:40+08:00
 comments: true
-math: false
 weight: 97
 tags:
     - 病理学

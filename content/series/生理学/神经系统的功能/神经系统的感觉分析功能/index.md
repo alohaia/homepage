@@ -3,7 +3,6 @@ title: "神经系统的感觉分析功能"
 date: 2023-07-26T19:05:41+08:00
 lastmod: 2024-03-23T23:34:37+08:00
 comments: true
-math: false
 weight: 102
 tags:
     - 生理学

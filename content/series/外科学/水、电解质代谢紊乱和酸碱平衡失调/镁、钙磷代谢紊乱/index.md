@@ -3,7 +3,6 @@ title: "镁、钙磷代谢紊乱"
 date: 2023-09-16T15:12:51+08:00
 lastmod: 2023-09-16T21:03:34+08:00
 comments: true
-math: false
 weight: 34
 tags:
     - 外科学

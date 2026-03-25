@@ -3,7 +3,6 @@ title: "血红蛋白病"
 date: 2023-07-11T19:52:59+08:00
 lastmod: 2023-07-14T08:57:52+08:00
 comments: true
-math: false
 weight: 60604
 tags:
     - 内科学

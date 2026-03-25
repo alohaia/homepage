@@ -3,7 +3,6 @@ title: "出血性疾病"
 date: 2023-07-12T21:05:51+08:00
 lastmod: 2023-08-30T12:25:21+08:00
 comments: true
-math: false
 weight: 61400
 tags:
     - 内科学

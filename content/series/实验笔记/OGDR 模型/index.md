@@ -3,7 +3,6 @@ title: "OGD/R 模型"
 date: 2024-11-10T20:22:49+08:00
 lastmod: 2024-11-11T00:11:32+08:00
 comments: true
-math: false
 weight: 1
 tags:
     - 细胞技术

@@ -3,7 +3,6 @@ title: "内分泌与激素"
 date: 2023-07-27T19:32:51+08:00
 lastmod: 2023-10-27T00:24:46+08:00
 comments: true
-math: false
 weight: 110
 tags:
     - 生理学

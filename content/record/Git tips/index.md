@@ -3,7 +3,6 @@ title: "Git Tips"
 date: 2024-11-30T00:20:58+08:00
 lastmod: 2024-11-30T01:30:02+08:00
 comments: true
-math: false
 tags:
 ---
 

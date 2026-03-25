@@ -3,7 +3,6 @@ title: "常见问题处理"
 date: 2023-01-13T17:08:03+08:00
 lastmod: 2023-05-21T18:02:21+08:00
 comments: true
-math: false
 tags:
     - Blender
 ---

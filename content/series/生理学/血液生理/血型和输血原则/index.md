@@ -3,7 +3,6 @@ title: "血型和输血原则"
 date: 2023-07-19T16:59:34+08:00
 lastmod: 2023-10-01T17:19:35+08:00
 comments: true
-math: false
 weight: 34
 tags:
     - 生理学

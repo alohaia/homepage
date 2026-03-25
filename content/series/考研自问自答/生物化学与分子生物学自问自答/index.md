@@ -3,7 +3,6 @@ title: "生物化学与分子生物学自问自答"
 date: 2023-11-27T22:35:02+08:00
 lastmod: 2023-11-27T22:40:17+08:00
 comments: true
-math: false
 weight: 120
 features:
     - clickableHiddenText

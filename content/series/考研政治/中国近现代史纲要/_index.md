@@ -3,7 +3,6 @@ title: "中国近现代史纲要"
 date: 2023-10-17T11:28:34+08:00
 lastmod: 2023-12-08T16:38:04+08:00
 comments: true
-math: false
 weight: 300
 tags:
     - 政治

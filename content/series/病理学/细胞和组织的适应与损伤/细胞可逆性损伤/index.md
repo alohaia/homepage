@@ -3,7 +3,6 @@ title: "细胞可逆性损伤"
 date: 2023-08-14T13:15:45+08:00
 lastmod: 2023-11-05T15:16:18+08:00
 comments: true
-math: false
 weight: 13
 tags:
     - 病理学

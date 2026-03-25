@@ -3,7 +3,6 @@ title: "血管生理"
 date: 2023-07-19T19:38:46+08:00
 lastmod: 2023-11-11T16:41:25+08:00
 comments: true
-math: false
 weight: 43
 tags:
     - 生理学

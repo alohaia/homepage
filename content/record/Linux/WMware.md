@@ -3,7 +3,6 @@ title: "WMware 安装"
 date: 2026-01-22T10:13:14+08:00
 lastmod: 2026-01-22T10:14:20+08:00
 comments: true
-math: false
 tags:
     - Linux
 ---

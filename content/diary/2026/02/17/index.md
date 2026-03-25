@@ -3,7 +3,6 @@ title: 2026-02-17 Neovim Snippets
 date: 2026-02-17T10:26:43+08:00
 lastmod: 2026-02-27T15:01:11+08:00
 comments: true
-math: false
 ---
 
 <!--more-->

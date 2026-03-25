@@ -3,7 +3,6 @@ title: ZDock；NTFS 文件系统的权限
 date: 2025-01-23T13:58:25+08:00
 lastmod: 2025-01-24T21:02:58+08:00
 comments: true
-math: false
 ---
 
 <!--more-->

@@ -3,7 +3,6 @@ title: "变量类型与特殊值"
 date: 2024-05-04T16:55:28+08:00
 lastmod: 2024-05-04T17:16:35+08:00
 comments: true
-math: false
 tags:
     - R
 ---

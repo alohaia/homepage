@@ -3,7 +3,6 @@ title: "心电图"
 date: 2022-05-09T14:02:47+08:00
 lastmod: 2023-06-01T12:48:58+08:00
 comments: true
-math: true
 weight: 1
 tags:
     - 心电图

@@ -3,7 +3,6 @@ title: "SICP"
 date: 2026-03-23T11:10:27+08:00
 lastmod: 2026-03-23T11:45:16+08:00
 comments: true
-math: false
 weight: 1
 tags:
     - SICP

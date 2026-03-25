@@ -3,7 +3,6 @@ title: "心脏的泵血功能"
 date: 2023-07-19T19:43:38+08:00
 lastmod: 2023-10-29T15:25:43+08:00
 comments: true
-math: false
 weight: 41
 tags:
     - 生理学

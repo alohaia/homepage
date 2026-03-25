@@ -3,7 +3,6 @@ title: "炎症"
 date: 2023-10-06T23:02:26+08:00
 lastmod: 2023-11-05T23:26:15+08:00
 comments: true
-math: false
 weight: 40
 tags:
     - 病理学

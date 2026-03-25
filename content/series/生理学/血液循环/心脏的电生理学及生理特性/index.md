@@ -3,7 +3,6 @@ title: "心脏的电生理学及生理特性"
 date: 2023-07-19T19:36:53+08:00
 lastmod: 2023-11-11T16:41:25+08:00
 comments: true
-math: false
 weight: 42
 tags:
     - 生理学

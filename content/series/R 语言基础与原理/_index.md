@@ -1,7 +1,6 @@
 ---
 title: R 语言基础
 comments: true
-mathjax: false
 date: 2021-08-19T18:26:37+08:00
 lastmod: 2024-05-20T18:11:23+08:00
 tags:
@@ -256,7 +255,7 @@ format(x, trim = FALSE, digits = NULL, nsmall = 0L,
 ```
 
 
-```r
+``` r
 ## 显示 9 位，最后一位四舍五入
 result <- format(23.123456789, digits = 9)
 print(result)
@@ -582,7 +581,7 @@ switch(expression, case1, case2, case3....)
 -   `switch` 没有默认参数可用。
 
 
-```r
+``` r
 x <- switch(3,
     "google",
     "runoob",
@@ -651,7 +650,7 @@ repeat {
 `repeat` 无法自己退出，需要依靠 `break` 语句退出：
 
 
-```r
+``` r
 v <- c("Google", "Runoob")
 cnt <- 2
 
@@ -674,7 +673,7 @@ repeat {
 `repeat` 其实相当于 `while(TRUE)`。以上代码可以写做
 
 
-```r
+``` r
 v <- c("Google", "Runoob")
 cnt <- 2
 
@@ -705,7 +704,7 @@ for (value in vector) {
 ```
 
 
-```r
+``` r
 v <- LETTERS[1:4]
 for (i in v) {
     print(i)
@@ -737,7 +736,7 @@ function_name <- function(arg_1, arg_2, ...) {
 函数参数，可以按函数创建时的参数顺序来传递，也可以按参数名传递：
 
 
-```r
+``` r
 ## 创建函数
 f <- function(a, b, c) {
     result <- a * b + c
@@ -761,7 +760,7 @@ f(a = 11, b = 5, c = 3)
 只有用到某一个参数时，函数才会去查找这个参数，此时如果发现没有传递该参数，函数会报错，否则忽视：
 
 
-```r
+``` r
 f <- function(a, b) {
     print(a^2)
     print(a)
@@ -786,7 +785,7 @@ f(6)
 ### Data Frame
 
 
-```r
+``` r
 paths_len <- data.frame(
     row.names = c("A", "B", "C", "D"),
     "1" = c(0, 1, 1, 1),

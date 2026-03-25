@@ -3,7 +3,6 @@ title: "Git 常用操作"
 date: 2026-03-16T15:15:34+08:00
 lastmod: 2026-03-16T15:25:22+08:00
 comments: true
-math: false
 tags:
     - Git
 ---

@@ -3,7 +3,6 @@ title: "ANCA 相关血管炎"
 date: 2023-07-19T12:26:15+08:00
 lastmod: 2023-07-19T12:48:12+08:00
 comments: true
-math: false
 weight: 80901
 tags:
     - 内科学

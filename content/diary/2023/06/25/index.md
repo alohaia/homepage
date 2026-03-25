@@ -3,7 +3,6 @@ title: 2023-06-25 法医学期末
 date: 2023-06-25T22:05:24+08:00
 lastmod: 2023-06-26T01:24:36+08:00
 comments: true
-math: false
 ---
 
 法医学 | 法庭医学（Forensic Medicine）| 裁判医学（Medical Jurisprudence）| 法律医学（Legal Medicine）

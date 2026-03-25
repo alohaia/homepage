@@ -2,9 +2,7 @@
 title: 病理生理学
 date: 2021-09-03 08:37:10
 lastmod: 2023-09-17T22:45:04+08:00
-draft: false
 comments: true
-math: false
 tags:
     - 病理生理学
 categories:

@@ -3,7 +3,6 @@ title: "清除率"
 date: 2023-08-01T13:37:18+08:00
 lastmod: 2023-11-12T00:24:16+08:00
 comments: true
-math: true
 weight: 96
 tags:
     - 生理学

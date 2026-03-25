@@ -3,7 +3,6 @@ title: "口腔医学"
 date: 2022-05-25T20:43:02+08:00
 lastmod: 2022-05-25T20:52:06+08:00
 comments: true
-math: false
 weight: 1
 tags:
     - 口腔医学

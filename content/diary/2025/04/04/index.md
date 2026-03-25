@@ -2,9 +2,7 @@
 title: 2025-04-04
 date: 2025-04-04T12:36:42+08:00
 lastmod: 2025-04-04T14:05:53+08:00
-draft: true
 comments: true
-math: false
 ---
 
 <!--more-->

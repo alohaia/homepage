@@ -3,7 +3,6 @@ title: "脑电活动及睡眠与觉醒"
 date: 2023-07-27T16:07:27+08:00
 lastmod: 2023-10-25T20:53:36+08:00
 comments: true
-math: false
 weight: 105
 tags:
     - 生理学

@@ -3,7 +3,6 @@ title: "现象或谚语背后的哲理"
 date: 2023-08-26T21:28:08+08:00
 lastmod: 2023-10-30T22:39:20+08:00
 comments: true
-math: false
 weight: 101
 tags:
     - 政治

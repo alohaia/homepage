@@ -3,7 +3,6 @@ title: 2023-06-04 眼科学期末
 date: 2023-06-04T09:09:37+08:00
 lastmod: 2023-06-28T19:25:57+08:00
 comments: true
-math: false
 ---
 
 {{< tab type="warning" summary="" details=true open=true >}}

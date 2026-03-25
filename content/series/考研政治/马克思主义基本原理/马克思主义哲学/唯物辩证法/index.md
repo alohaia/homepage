@@ -3,7 +3,6 @@ title: "唯物辩证法"
 date: 2023-10-30T22:38:50+08:00
 lastmod: 2023-11-13T16:54:40+08:00
 comments: true
-math: false
 weight: 112
 tags:
     - 政治

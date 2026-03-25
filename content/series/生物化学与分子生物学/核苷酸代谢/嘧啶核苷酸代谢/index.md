@@ -3,7 +3,6 @@ title: "嘧啶核苷酸代谢"
 date: 2023-08-09T12:10:17+08:00
 lastmod: 2023-11-03T15:26:27+08:00
 comments: true
-math: false
 weight: 93
 tags:
     - 生物化学与分子生物学

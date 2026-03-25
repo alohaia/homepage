@@ -3,7 +3,6 @@ title: "投稿要求"
 date: 2026-03-09T11:18:49+08:00
 lastmod: 2026-03-12T14:59:40+08:00
 comments: true
-math: false
 tags:
     - 科研
     - 投稿

@@ -3,7 +3,6 @@ title: 2023-12-26 Lintr
 date: 2023-12-26T12:37:15+08:00
 lastmod: 2023-12-26T12:38:33+08:00
 comments: true
-math: false
 ---
 
 https://lintr.r-lib.org/articles/lintr.html#using-arguments-to-lint

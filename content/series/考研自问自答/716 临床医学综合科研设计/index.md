@@ -3,7 +3,6 @@ title: "716 临床医学综合科研设计"
 date: 2023-12-07T21:13:33+08:00
 lastmod: 2023-12-08T21:16:37+08:00
 comments: true
-math: false
 features:
     - clickableHiddenText
 weight: 203

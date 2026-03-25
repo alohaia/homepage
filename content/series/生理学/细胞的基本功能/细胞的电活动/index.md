@@ -3,7 +3,6 @@ title: "细胞的电活动"
 date: 2023-01-26T12:08:15+08:00
 lastmod: 2023-11-10T22:29:54+08:00
 comments: true
-math: true
 weight: 23
 tags:
     - 生理学

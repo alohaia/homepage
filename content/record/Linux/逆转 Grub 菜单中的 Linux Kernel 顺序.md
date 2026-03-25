@@ -3,7 +3,6 @@ title: "逆转 Grub 菜单中的 Linux Kernel 顺序"
 date: 2022-11-23T00:22:02+08:00
 lastmod: 2022-12-04T16:14:41+08:00
 comments: true
-math: false
 tags:
     - Linux
     - Grub

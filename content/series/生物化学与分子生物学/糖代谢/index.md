@@ -3,7 +3,6 @@ title: "糖代谢"
 date: 2023-09-24T10:56:31+08:00
 lastmod: 2023-11-02T21:40:49+08:00
 comments: true
-math: true
 weight: 50
 tags:
     - 生物化学与分子生物学

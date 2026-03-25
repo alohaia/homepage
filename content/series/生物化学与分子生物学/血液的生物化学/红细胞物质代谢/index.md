@@ -3,7 +3,6 @@ title: "红细胞物质代谢"
 date: 2023-09-26T22:38:14+08:00
 lastmod: 2023-10-27T18:11:57+08:00
 comments: true
-math: false
 weight: 183
 tags:
     - 生物化学与分子生物学

@@ -3,7 +3,6 @@ title: "Blender"
 date: 2023-01-10T21:01:11+08:00
 lastmod: 2023-01-11T17:31:09+08:00
 comments: true
-math: false
 tags:
     - Blender
 ---

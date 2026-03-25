@@ -3,7 +3,6 @@ title: "肾的功能解剖和肾血流量"
 date: 2023-07-31T13:20:51+08:00
 lastmod: 2023-10-20T00:10:41+08:00
 comments: true
-math: false
 weight: 81
 tags:
     - 生理学

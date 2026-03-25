@@ -2,9 +2,7 @@
 title: "考研注意事项"
 date: 2023-07-08T19:29:49+08:00
 lastmod: 2023-08-04T13:39:17+08:00
-draft: true
 comments: true
-math: false
 ---
 
 ## 英语

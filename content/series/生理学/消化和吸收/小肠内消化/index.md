@@ -3,7 +3,6 @@ title: "小肠内消化"
 date: 2023-07-30T20:53:09+08:00
 lastmod: 2023-10-16T23:52:47+08:00
 comments: true
-math: false
 weight: 64
 tags:
     - 生理学

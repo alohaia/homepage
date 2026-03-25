@@ -3,7 +3,6 @@ title: "法治篇"
 date: 2023-11-17T13:23:42+08:00
 lastmod: 2023-12-01T15:55:43+08:00
 comments: true
-math: false
 weight: 230
 tags:
     - 政治

@@ -3,7 +3,6 @@ title: "胃内消化"
 date: 2023-03-19T15:38:35+08:00
 lastmod: 2023-10-16T23:47:31+08:00
 comments: true
-math: false
 weight: 63
 tags:
     - 生理学

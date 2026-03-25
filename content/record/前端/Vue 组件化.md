@@ -3,7 +3,6 @@ title: "Vue 组件化"
 date: 2022-01-04T16:55:54+08:00
 lastmod: 2022-01-04T18:21:05+08:00
 comments: true
-math: false
 weight: 1
 tags:
     - Vue

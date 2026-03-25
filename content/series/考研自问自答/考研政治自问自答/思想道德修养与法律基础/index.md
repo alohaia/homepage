@@ -3,7 +3,6 @@ title: "思想道德修养与法律基础"
 date: 2023-11-21T20:05:40+08:00
 lastmod: 2023-12-01T15:59:09+08:00
 comments: true
-math: false
 features:
     - clickableHiddenText
 weight: 320

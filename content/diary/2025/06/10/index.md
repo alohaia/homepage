@@ -3,7 +3,6 @@ title: 2025-06-10 Count，GeneRatio，BgRatio，RichFactor 和 FoldEnrichment
 date: 2025-06-10T21:44:44+08:00
 lastmod: 2025-06-11T14:12:58+08:00
 comments: true
-math: false
 ---
 
 <!--more-->

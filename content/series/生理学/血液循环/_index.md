@@ -3,7 +3,6 @@ title: "血液循环"
 date: 2021-10-19T20:14:45+08:00
 lastmod: 2023-07-19T19:48:10+08:00
 comments: true
-math: false
 weight: 40
 tags:
     - 生理学

@@ -3,7 +3,6 @@ title: "AJAX 杂记"
 date: 2021-12-31T16:35:23+08:00
 lastmod: 2021-12-31T16:48:02+08:00
 comments: true
-math: false
 weight: 1
 tags:
     - AJAX

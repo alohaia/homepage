@@ -3,7 +3,6 @@ title: "卫生法"
 date: 2022-06-13T12:27:47+08:00
 lastmod: 2023-05-21T16:29:01+08:00
 comments: true
-math: false
 weight: 1
 tags:
     - 卫生法

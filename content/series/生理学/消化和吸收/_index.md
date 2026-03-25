@@ -3,7 +3,6 @@ title: "消化和吸收"
 date: 2023-03-19T13:02:44+08:00
 lastmod: 2023-11-11T22:19:34+08:00
 comments: true
-math: false
 weight: 60
 tags:
     - 生理学

@@ -4,7 +4,6 @@ type: diary
 date: 2022-04-03T20:57:01+08:00
 lastmod: 2022-05-25T21:44:46+08:00
 comments: true
-math: false
 tags:
     - 手术
     - 无菌术

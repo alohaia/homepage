@@ -3,7 +3,6 @@ title: "血红素的合成"
 date: 2023-09-26T22:37:48+08:00
 lastmod: 2023-11-01T15:12:43+08:00
 comments: true
-math: false
 weight: 182
 tags:
     - 生物化学与分子生物学

@@ -3,7 +3,6 @@ title: "超声成像"
 date: 2022-05-23T12:41:03+08:00
 lastmod: 2023-05-21T17:03:01+08:00
 comments: true
-math: true
 weight: 30
 tags:
     - 医学影像学

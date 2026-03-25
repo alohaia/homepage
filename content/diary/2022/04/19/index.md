@@ -3,7 +3,6 @@ title: 病历书写
 date: 2022-04-19T13:53:00+08:00
 lastmod: 2023-05-21T18:07:57+08:00
 comments: true
-math: false
 tags:
 ---
 

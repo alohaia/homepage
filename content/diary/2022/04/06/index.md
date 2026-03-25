@@ -3,7 +3,6 @@ title: 诊断学-肝脏疾病常用实验室检查
 date: 2022-04-06T18:57:44+08:00
 lastmod: 2022-04-07T16:46:25+08:00
 comments: true
-math: false
 tags:
     - 诊断学
     - 肝脏

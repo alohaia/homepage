@@ -1,7 +1,6 @@
 ---
 title: 细菌
 comments: true
-mathjax: false
 date: 2021-03-21 13:22:41
 lastmod: 2023-05-21T18:06:05+08:00
 weight: 10

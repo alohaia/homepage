@@ -3,7 +3,6 @@ title: 2023-09-27
 date: 2023-09-27T15:30:08+08:00
 lastmod: 2023-09-27T15:33:13+08:00
 comments: true
-math: false
 ---
 
 KDE window tiling

@@ -3,7 +3,6 @@ title: 无菌术
 date: 2023-09-16T11:50:35+08:00
 lastmod: 2023-09-16T11:51:51+08:00
 comments: true
-math: false
 ---
 
 {{< tab style="info" summary="" details=false >}}

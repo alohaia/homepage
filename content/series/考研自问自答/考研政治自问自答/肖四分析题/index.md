@@ -3,7 +3,6 @@ title: "肖四分析题"
 date: 2023-12-12T17:18:03+08:00
 lastmod: 2023-12-12T19:15:40+08:00
 comments: true
-math: false
 features:
     - clickableHiddenText
 weight: 350

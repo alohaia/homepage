@@ -3,7 +3,6 @@ title: "细胞膜的物质转运功能"
 date: 2022-07-15T14:58:19+08:00
 lastmod: 2023-11-09T23:51:13+08:00
 comments: true
-math: false
 weight: 21
 tags:
     - 生理学

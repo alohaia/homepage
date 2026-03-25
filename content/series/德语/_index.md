@@ -2,9 +2,7 @@
 title: "德语"
 date: 2022-01-27T15:47:51+08:00
 lastmod: 2023-05-21T17:03:00+08:00
-draft: true
 comments: true
-math: false
 weight: 1
 tags:
     - 德语

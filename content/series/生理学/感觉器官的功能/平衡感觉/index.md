@@ -3,7 +3,6 @@ title: "平衡感觉"
 date: 2023-08-01T21:13:44+08:00
 lastmod: 2023-10-21T15:17:15+08:00
 comments: true
-math: false
 weight: 95
 tags:
     - 生理学

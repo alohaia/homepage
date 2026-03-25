@@ -3,7 +3,6 @@ title: "水、电解质代谢紊乱和酸碱平衡失调"
 date: 2022-05-25T22:07:35+08:00
 lastmod: 2024-08-30T19:30:32+08:00
 comments: true
-math: false
 weight: 30
 tags:
     - 外科学

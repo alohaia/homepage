@@ -3,7 +3,6 @@ title: "资本主义的发展及其趋势"
 date: 2023-11-06T22:38:37+08:00
 lastmod: 2023-11-16T15:38:11+08:00
 comments: true
-math: true
 weight: 122
 tags:
     - 政治

@@ -3,7 +3,6 @@ title: "Treesitter"
 date: 2026-03-12T00:48:45+08:00
 lastmod: 2026-03-12T17:54:58+08:00
 comments: true
-math: false
 tags:
     - Neovim
 ---

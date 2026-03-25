@@ -3,7 +3,6 @@ title: "呼吸系统疾病"
 date: 2023-10-09T16:39:01+08:00
 lastmod: 2023-11-26T23:44:30+08:00
 comments: true
-math: false
 weight: 100
 tags:
     - 病理学

@@ -3,7 +3,6 @@ title: "大肠的功能"
 date: 2023-07-31T09:02:13+08:00
 lastmod: 2023-11-13T22:37:07+08:00
 comments: true
-math: false
 weight: 66
 tags:
     - 生理学

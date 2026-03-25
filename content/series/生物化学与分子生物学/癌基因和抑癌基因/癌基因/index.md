@@ -3,7 +3,6 @@ title: "癌基因"
 date: 2023-09-30T22:57:03+08:00
 lastmod: 2023-11-01T19:53:46+08:00
 comments: true
-math: false
 weight: 221
 tags:
     - 生物化学与分子生物学

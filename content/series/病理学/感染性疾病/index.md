@@ -3,7 +3,6 @@ title: "感染性疾病"
 date: 2023-10-13T23:53:14+08:00
 lastmod: 2023-11-09T14:34:14+08:00
 comments: true
-math: false
 weight: 170
 tags:
     - 病理学

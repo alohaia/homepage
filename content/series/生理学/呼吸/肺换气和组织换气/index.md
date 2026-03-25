@@ -3,7 +3,6 @@ title: "肺换气和组织换气"
 date: 2023-07-30T09:49:33+08:00
 lastmod: 2023-11-13T21:17:49+08:00
 comments: true
-math: true
 weight: 52
 tags:
     - 生理学

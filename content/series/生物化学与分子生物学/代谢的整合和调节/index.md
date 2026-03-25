@@ -3,7 +3,6 @@ title: "代谢的整合和调节"
 date: 2023-09-27T11:20:39+08:00
 lastmod: 2023-11-02T21:37:03+08:00
 comments: true
-math: false
 weight: 100
 tags:
     - 生物化学与分子生物学

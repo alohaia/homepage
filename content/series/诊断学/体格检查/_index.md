@@ -3,7 +3,6 @@ title: "体格检查"
 date: 2022-06-26T13:15:36+08:00
 lastmod: 2023-05-21T18:02:20+08:00
 comments: true
-math: false
 weight: 30
 tags:
 ---

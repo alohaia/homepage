@@ -3,7 +3,6 @@ title: "溶血性贫血"
 date: 2023-07-11T10:25:42+08:00
 lastmod: 2023-07-14T11:07:33+08:00
 comments: true
-math: false
 weight: 60600
 tags:
     - 内科学

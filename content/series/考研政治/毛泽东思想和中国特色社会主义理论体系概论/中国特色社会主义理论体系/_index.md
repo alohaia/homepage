@@ -3,7 +3,6 @@ title: "中国特色社会主义理论体系"
 date: 2023-11-23T15:59:11+08:00
 lastmod: 2023-11-26T17:36:16+08:00
 comments: true
-math: false
 weight: 430
 tags:
     - 毛泽东思想和中国特色社会主义理论体系概论

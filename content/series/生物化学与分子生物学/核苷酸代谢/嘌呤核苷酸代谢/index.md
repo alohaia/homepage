@@ -3,7 +3,6 @@ title: "嘌呤核苷酸代谢"
 date: 2023-08-09T12:09:58+08:00
 lastmod: 2023-11-03T15:32:40+08:00
 comments: true
-math: true
 weight: 92
 tags:
     - 生物化学与分子生物学

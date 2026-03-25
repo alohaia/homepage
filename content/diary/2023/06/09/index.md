@@ -3,7 +3,6 @@ title: 2023-06-09
 date: 2023-06-09T08:35:44+08:00
 lastmod: 2023-06-14T12:19:02+08:00
 comments: true
-math: false
 ---
 
 {{< tab type="default" summary="重点一览" details=true open=false >}}

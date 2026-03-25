@@ -3,7 +3,6 @@ title: "甲状腺内分泌"
 date: 2023-08-03T20:59:03+08:00
 lastmod: 2023-11-12T19:29:12+08:00
 comments: true
-math: false
 weight: 113
 tags:
     - 生理学

@@ -3,7 +3,6 @@ title: "神经系统对内脏活动、本能行动和情绪的调节"
 date: 2023-07-27T14:52:31+08:00
 lastmod: 2023-10-26T20:24:16+08:00
 comments: true
-math: false
 weight: 104
 tags:
     - 生理学

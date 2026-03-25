@@ -3,7 +3,6 @@ title: "能量代谢"
 date: 2023-07-31T10:26:54+08:00
 lastmod: 2023-11-13T23:18:27+08:00
 comments: true
-math: true
 weight: 71
 tags:
     - 生理学

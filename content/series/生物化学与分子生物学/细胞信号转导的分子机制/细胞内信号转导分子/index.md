@@ -3,7 +3,6 @@ title: "细胞内信号转导分子"
 date: 2023-09-29T23:37:08+08:00
 lastmod: 2023-11-04T17:29:11+08:00
 comments: true
-math: false
 weight: 172
 tags:
     - 生物化学与分子生物学

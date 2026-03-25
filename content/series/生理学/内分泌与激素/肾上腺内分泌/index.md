@@ -3,7 +3,6 @@ title: "肾上腺内分泌"
 date: 2023-08-03T20:14:54+08:00
 lastmod: 2023-10-27T00:18:20+08:00
 comments: true
-math: false
 weight: 116
 tags:
     - 生理学

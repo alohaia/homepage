@@ -3,7 +3,6 @@ title: "肺通气"
 date: 2023-07-30T09:48:58+08:00
 lastmod: 2023-11-09T23:13:53+08:00
 comments: true
-math: true
 weight: 51
 tags:
     - 生理学

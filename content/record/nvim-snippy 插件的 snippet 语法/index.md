@@ -3,7 +3,6 @@ title: "nvim-snippy 插件的 Snippet 语法"
 date: 2023-06-09T18:06:22+08:00
 lastmod: 2023-06-09T19:55:28+08:00
 comments: true
-math: false
 tags:
     - NeoVim
 ---

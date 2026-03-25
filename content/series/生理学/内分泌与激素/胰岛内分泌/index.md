@@ -3,7 +3,6 @@ title: "胰岛内分泌"
 date: 2023-08-04T15:59:36+08:00
 lastmod: 2023-10-27T23:21:27+08:00
 comments: true
-math: false
 weight: 115
 tags:
     - 生理学

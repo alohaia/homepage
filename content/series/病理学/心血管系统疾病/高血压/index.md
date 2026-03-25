@@ -3,7 +3,6 @@ title: "高血压"
 date: 2023-10-08T21:35:15+08:00
 lastmod: 2023-11-07T15:39:09+08:00
 comments: true
-math: false
 weight: 92
 tags:
     - 病理学

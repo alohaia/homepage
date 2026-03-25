@@ -2,7 +2,6 @@
 title: 2025-11-11
 date: 2025-12-05T13:54:14+08:00
 comments: true
-math: false
 ---
 
 <!--more-->

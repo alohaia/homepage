@@ -3,7 +3,6 @@ title: "听觉"
 date: 2023-08-01T21:13:33+08:00
 lastmod: 2023-10-21T15:14:35+08:00
 comments: true
-math: false
 weight: 94
 tags:
     - 生理学

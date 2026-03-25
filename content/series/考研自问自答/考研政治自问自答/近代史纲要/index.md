@@ -3,7 +3,6 @@ title: "近代史纲要"
 date: 2023-11-21T20:06:44+08:00
 lastmod: 2023-12-08T17:17:18+08:00
 comments: true
-math: false
 features:
     - clickableHiddenText
 weight: 330

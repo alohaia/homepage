@@ -3,7 +3,6 @@ title: "血液生理"
 date: 2023-07-10T15:52:41+08:00
 lastmod: 2023-11-10T22:49:42+08:00
 comments: true
-math: false
 weight: 30
 tags:
     - 生理学

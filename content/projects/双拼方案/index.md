@@ -3,7 +3,6 @@ title: "双拼方案"
 date: 2023-08-26T14:56:26+08:00
 lastmod: 2023-08-26T15:00:50+08:00
 comments: true
-math: false
 ---
 
 {{< figure src="双拼方案.svg" embed=true title="双拼方案" >}}

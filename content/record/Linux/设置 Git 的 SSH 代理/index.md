@@ -3,7 +3,6 @@ title: "设置 Git 的 SSH 代理"
 date: 2022-12-06T19:39:17+08:00
 lastmod: 2023-05-21T18:02:20+08:00
 comments: true
-math: false
 tags:
     - Git
     - 代理

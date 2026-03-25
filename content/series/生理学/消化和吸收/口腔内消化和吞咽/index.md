@@ -3,7 +3,6 @@ title: "口腔内消化和吞咽"
 date: 2023-07-30T16:49:45+08:00
 lastmod: 2023-10-15T22:44:47+08:00
 comments: true
-math: false
 weight: 62
 tags:
     - 生理学

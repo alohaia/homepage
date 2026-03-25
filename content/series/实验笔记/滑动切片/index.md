@@ -3,7 +3,6 @@ title: "滑动切片"
 date: 2024-11-06T12:05:40+08:00
 lastmod: 2024-11-06T12:34:31+08:00
 comments: true
-math: false
 weight: 1
 tags:
 ---

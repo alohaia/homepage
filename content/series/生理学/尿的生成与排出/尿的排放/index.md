@@ -3,7 +3,6 @@ title: "尿的排放"
 date: 2023-10-18T23:15:45+08:00
 lastmod: 2023-10-19T23:55:36+08:00
 comments: true
-math: false
 weight: 97
 tags:
     - 生理学

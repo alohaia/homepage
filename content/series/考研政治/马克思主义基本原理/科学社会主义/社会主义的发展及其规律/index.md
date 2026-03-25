@@ -3,7 +3,6 @@ title: "社会主义的发展及其规律"
 date: 2023-11-06T23:39:07+08:00
 lastmod: 2023-11-16T23:42:43+08:00
 comments: true
-math: false
 weight: 131
 tags:
     - 政治

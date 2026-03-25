@@ -3,7 +3,6 @@ title: "真核基因表达调控"
 date: 2023-09-29T22:58:36+08:00
 lastmod: 2023-10-31T18:04:37+08:00
 comments: true
-math: false
 weight: 163
 tags:
     - 生物化学与分子生物学

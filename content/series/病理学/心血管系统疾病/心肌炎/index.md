@@ -3,7 +3,6 @@ title: "心肌炎"
 date: 2023-10-08T21:36:29+08:00
 lastmod: 2023-10-09T00:11:36+08:00
 comments: true
-math: false
 weight: 98
 tags:
     - 病理学

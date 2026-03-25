@@ -3,7 +3,6 @@ title: "资本主义的本质及规律"
 date: 2023-11-06T19:53:16+08:00
 lastmod: 2023-11-15T16:39:49+08:00
 comments: true
-math: true
 weight: 121
 tags:
     - 政治

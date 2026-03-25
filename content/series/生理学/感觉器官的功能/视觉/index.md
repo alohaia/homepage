@@ -3,7 +3,6 @@ title: "视觉"
 date: 2023-08-01T21:13:25+08:00
 lastmod: 2023-11-12T14:13:40+08:00
 comments: true
-math: false
 weight: 93
 tags:
     - 生理学

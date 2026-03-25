@@ -3,7 +3,6 @@ title: "临床流行病学与循证医学"
 date: 2022-11-11T18:24:27+08:00
 lastmod: 2022-11-13T22:46:50+08:00
 comments: true
-math: false
 weight: 10
 tags:
     - 临床流行病学

@@ -3,7 +3,6 @@ title: "Tidyverse"
 date: 2024-10-27T20:24:34+08:00
 lastmod: 2024-10-27T20:25:14+08:00
 comments: true
-math: false
 weight: 1
 tags:
     - R

@@ -3,7 +3,6 @@ title: "DNA 的合成与损伤修复"
 date: 2023-09-27T22:37:30+08:00
 lastmod: 2023-11-04T14:56:46+08:00
 comments: true
-math: false
 weight: 120
 tags:
     - 生物化学与分子生物学

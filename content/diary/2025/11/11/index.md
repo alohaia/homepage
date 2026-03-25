@@ -1,9 +1,7 @@
 ---
 title: 2025-11-11
 date: 2025-11-11T12:39:14+08:00
-draft: true
 comments: true
-math: false
 ---
 
 <!--more-->

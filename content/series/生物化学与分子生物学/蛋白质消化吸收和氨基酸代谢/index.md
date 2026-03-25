@@ -3,7 +3,6 @@ title: "蛋白质消化吸收和氨基酸代谢"
 date: 2023-08-09T11:05:51+08:00
 lastmod: 2023-11-26T23:13:30+08:00
 comments: true
-math: ture
 weight: 80
 tags:
     - 生物化学与分子生物学

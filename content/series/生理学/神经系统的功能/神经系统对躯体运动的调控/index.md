@@ -3,7 +3,6 @@ title: "神经系统对躯体运动的调控"
 date: 2023-07-26T20:03:06+08:00
 lastmod: 2023-11-12T16:35:47+08:00
 comments: true
-math: false
 weight: 103
 tags:
     - 生理学

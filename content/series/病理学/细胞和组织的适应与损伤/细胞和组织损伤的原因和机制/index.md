@@ -3,7 +3,6 @@ title: "细胞和组织损伤的原因和机制"
 date: 2023-10-02T23:46:52+08:00
 lastmod: 2023-10-06T22:06:52+08:00
 comments: true
-math: false
 weight: 12
 tags:
     - 病理学

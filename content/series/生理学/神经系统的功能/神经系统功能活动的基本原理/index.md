@@ -3,7 +3,6 @@ title: "神经系统功能活动的基本原理"
 date: 2023-07-25T10:20:32+08:00
 lastmod: 2023-11-27T00:11:34+08:00
 comments: true
-math: false
 weight: 101
 tags:
     - 生理学

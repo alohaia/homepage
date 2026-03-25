@@ -3,7 +3,6 @@ title: "马克思主义原理"
 date: 2023-11-21T20:03:47+08:00
 lastmod: 2023-12-01T16:02:24+08:00
 comments: true
-math: false
 features:
     - clickableHiddenText
 weight: 310

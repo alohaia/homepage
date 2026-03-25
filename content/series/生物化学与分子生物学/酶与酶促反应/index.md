@@ -3,7 +3,6 @@ title: "酶与酶促反应"
 date: 2023-04-07T20:10:24+08:00
 lastmod: 2023-11-02T15:35:00+08:00
 comments: true
-math: true
 weight: 30
 tags:
     - 生物化学与分子生物学

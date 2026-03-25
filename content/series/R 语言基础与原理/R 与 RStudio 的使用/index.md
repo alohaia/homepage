@@ -3,7 +3,6 @@ title: "R 与 RStudio 的使用"
 date: 2024-05-04T16:39:57+08:00
 lastmod: 2024-05-11T20:56:47+08:00
 comments: true
-math: false
 tags:
     - R
 ---

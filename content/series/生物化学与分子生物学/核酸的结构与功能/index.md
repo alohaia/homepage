@@ -3,7 +3,6 @@ title: "核酸的结构与功能"
 date: 2023-04-07T19:31:47+08:00
 lastmod: 2023-11-02T15:27:01+08:00
 comments: true
-math: false
 weight: 20
 tags:
     - 生物化学与分子生物学

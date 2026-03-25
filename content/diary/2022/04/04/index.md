@@ -3,7 +3,6 @@ title: 诊断学-腹部体格检查
 date: 2022-04-04T14:11:53+08:00
 lastmod: 2022-04-21T09:29:22+08:00
 comments: true
-math: false
 tags:
     - 体格检查
     - 诊断学

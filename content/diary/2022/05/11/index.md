@@ -3,7 +3,6 @@ title: 影像诊断学-中枢神经系统总论
 date: 2022-05-11T13:07:45+08:00
 lastmod: 2022-06-08T13:26:29+08:00
 comments: true
-math: false
 tags:
     - 医学影像学
     - 影像诊断学

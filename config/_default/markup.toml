@@ -45,8 +45,8 @@ defaultMarkdownHandler = 'goldmark'
     [goldmark.extensions.passthrough]
       enable = true
       [goldmark.extensions.passthrough.delimiters]
-        block = [['[[', ']]'], ['$$', '$$']]
-        inline = [['$', '$']]
+        block = [['\[', '\]'], ['$$', '$$']]
+        inline = [['\(', '\)'], ['$', '$']]
     [goldmark.extensions.typographer]
       apostrophe = '&rsquo;'
       disable = false

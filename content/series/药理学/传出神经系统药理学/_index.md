@@ -2,9 +2,7 @@
 title: "传出神经系统药理学概论"
 date: 2021-10-30T11:04:14+08:00
 lastmod: 2023-07-25T11:20:32+08:00
-draft: false
 comments: true
-math: true
 weight: 50
 tags:
     - 药理学

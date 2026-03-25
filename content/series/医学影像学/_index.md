@@ -3,7 +3,6 @@ title: "医学影像学"
 date: 2022-03-01T16:04:49+08:00
 lastmod: 2022-06-08T19:46:25+08:00
 comments: true
-math: false
 weight: 0
 tags:
     - 医学影像学

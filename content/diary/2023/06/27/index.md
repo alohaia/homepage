@@ -3,7 +3,6 @@ title: 2023-06-27
 date: 2023-06-27T12:17:46+08:00
 lastmod: 2023-06-27T15:09:03+08:00
 comments: true
-math: false
 ---
 
 <!--more-->

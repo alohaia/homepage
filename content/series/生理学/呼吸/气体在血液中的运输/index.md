@@ -3,7 +3,6 @@ title: "气体在血液中的运输"
 date: 2023-07-30T09:49:45+08:00
 lastmod: 2023-11-11T19:00:20+08:00
 comments: true
-math: true
 weight: 53
 tags:
     - 生理学

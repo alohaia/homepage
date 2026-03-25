@@ -3,7 +3,6 @@ title: "呼吸运动的调节"
 date: 2023-07-30T14:29:35+08:00
 lastmod: 2023-11-11T19:00:20+08:00
 comments: true
-math: false
 weight: 54
 tags:
     - 生理学

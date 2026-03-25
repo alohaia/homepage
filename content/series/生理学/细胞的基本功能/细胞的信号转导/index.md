@@ -3,7 +3,6 @@ title: "细胞的信号转导"
 date: 2023-01-25T13:05:44+08:00
 lastmod: 2023-11-10T21:26:26+08:00
 comments: true
-math: false
 weight: 22
 tags:
     - 生理学

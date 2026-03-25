@@ -3,7 +3,6 @@ title: 胃肠道系统影像诊断学，诊断学-血栓与止血
 date: 2022-05-25T10:28:06+08:00
 lastmod: 2022-05-25T16:25:20+08:00
 comments: true
-math: false
 tags:
 ---
 

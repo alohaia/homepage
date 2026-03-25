@@ -6,7 +6,6 @@ aliases:
 date: 2023-04-07T19:27:46+08:00
 lastmod: 2023-10-01T00:20:28+08:00
 comments: true
-math: false
 weight: 0
 tags:
     - 生物化学与分子生物学

@@ -3,7 +3,6 @@ title: "科研工具和资料"
 date: 2026-03-14T11:42:22+08:00
 lastmod: 2026-03-16T14:31:01+08:00
 comments: true
-math: false
 tags:
     - 科研
 ---

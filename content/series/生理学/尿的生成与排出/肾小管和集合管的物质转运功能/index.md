@@ -3,7 +3,6 @@ title: "肾小管和集合管的物质转运功能"
 date: 2023-07-31T20:36:54+08:00
 lastmod: 2023-10-27T14:05:17+08:00
 comments: true
-math: false
 weight: 83
 tags:
     - 生理学

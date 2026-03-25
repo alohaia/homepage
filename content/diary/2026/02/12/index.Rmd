@@ -3,7 +3,6 @@ title: ggplot2 中的尺寸
 date: 2026-02-12T12:05:45+08:00
 lastmod: 2026-02-12T22:42:34+08:00
 comments: true
-math: false
 ---
 
 <!--more-->

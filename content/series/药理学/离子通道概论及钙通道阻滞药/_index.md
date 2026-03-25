@@ -3,7 +3,6 @@ title: "离子通道概论及钙通道阻滞药"
 date: 2021-10-23T14:41:23+08:00
 lastmod: 2023-05-21T18:02:20+08:00
 comments: true
-math: false
 weight: 210
 tags:
     - 药理学

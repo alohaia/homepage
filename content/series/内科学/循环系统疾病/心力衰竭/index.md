@@ -3,7 +3,6 @@ title: "心力衰竭"
 date: 2022-11-19T14:11:20+08:00
 lastmod: 2023-09-19T09:58:15+08:00
 comments: true
-math: false
 weight: 30200
 tags:
     - 内科学

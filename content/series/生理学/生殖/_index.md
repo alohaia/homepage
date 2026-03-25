@@ -3,7 +3,6 @@ title: "生殖"
 date: 2023-08-04T21:03:13+08:00
 lastmod: 2023-08-04T21:05:26+08:00
 comments: true
-math: false
 weight: 120
 tags:
     - 生理学

@@ -3,7 +3,6 @@ title: "认识论"
 date: 2023-11-01T23:11:42+08:00
 lastmod: 2023-11-14T13:49:05+08:00
 comments: true
-math: false
 weight: 113
 tags:
     - 政治

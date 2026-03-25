@@ -3,7 +3,6 @@ title: "耳鼻喉期末"
 date: 2023-08-02T14:57:42+08:00
 lastmod: 2023-08-02T15:11:42+08:00
 comments: true
-math: false
 tags:
     - 耳鼻喉
     - 考试

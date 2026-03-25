@@ -1,7 +1,6 @@
 ---
 title: 病原生物学
 comments: true
-mathjax: false
 date: 2021-03-16 15:49:12
 lastmod: 2023-01-16T20:38:44+08:00
 tags:

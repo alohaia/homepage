@@ -3,7 +3,6 @@ title: 2026-03-02 Linux mt7921e 驱动问题
 date: 2026-03-02T00:24:35+08:00
 lastmod: 2026-03-02T00:31:09+08:00
 comments: true
-math: false
 ---
 
 <!--more-->

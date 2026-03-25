@@ -3,7 +3,6 @@ title: "Vue 学习记录"
 date: 2021-12-30T13:08:28+08:00
 lastmod: 2022-01-23T18:38:47+08:00
 comments: true
-math: false
 weight: 1
 tags:
     - Vue

@@ -3,7 +3,6 @@ title: "肿瘤"
 date: 2023-04-30T11:57:46+08:00
 lastmod: 2023-11-07T22:12:22+08:00
 comments: true
-math: false
 weight: 60
 tags:
     - 病理学

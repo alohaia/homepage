@@ -3,7 +3,6 @@ title: "蛋白质的合成"
 date: 2023-09-29T09:51:59+08:00
 lastmod: 2023-11-04T15:52:46+08:00
 comments: true
-math: true
 weight: 150
 tags:
     - 生物化学与分子生物学

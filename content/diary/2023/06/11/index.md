@@ -4,7 +4,6 @@ date: 2023-06-11T09:08:53+08:00
 lastmod: 2023-06-11T15:46:10+08:00
 draft: true
 comments: true
-math: false
 ---
 
 http://www.won-soft.com/typing/support/wubizixin-4.htm

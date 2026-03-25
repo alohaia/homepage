@@ -3,7 +3,6 @@ title: "新中国时期"
 date: 2023-11-20T15:26:52+08:00
 lastmod: 2023-12-08T16:55:17+08:00
 comments: true
-math: false
 weight: 330
 tags:
     - 政治

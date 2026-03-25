@@ -3,7 +3,6 @@ title: "考研政治"
 date: 2023-07-21T11:05:37+08:00
 lastmod: 2023-11-26T12:30:12+08:00
 comments: true
-math: false
 weight: 0
 tags:
     - 政治

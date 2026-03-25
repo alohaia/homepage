@@ -3,7 +3,6 @@ title: "脂质代谢"
 date: 2023-04-13T22:33:13+08:00
 lastmod: 2024-05-20T12:39:32+08:00
 comments: true
-math: true
 weight: 70
 tags:
     - 生物化学与分子生物学

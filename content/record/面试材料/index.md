@@ -4,7 +4,6 @@ date: 2024-03-30T06:46:47+08:00
 lastmod: 2024-03-30T06:47:58+08:00
 draft: true
 comments: true
-math: false
 tags:
     - TODO
 ---

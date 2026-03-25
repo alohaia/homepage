@@ -2,9 +2,7 @@
 title: "N 胆碱受体阻断药"
 date: 2021-11-07T15:31:09+08:00
 lastmod: 2023-06-29T09:51:37+08:00
-draft: false
 comments: true
-math: false
 weight: 90
 tags:
     - 药理学

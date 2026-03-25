@@ -3,7 +3,6 @@ title: "思想篇"
 date: 2023-11-17T13:23:21+08:00
 lastmod: 2023-12-01T15:55:13+08:00
 comments: true
-math: false
 weight: 210
 tags:
     - 政治

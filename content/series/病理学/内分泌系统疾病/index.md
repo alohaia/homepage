@@ -3,7 +3,6 @@ title: "内分泌系统疾病"
 date: 2023-10-13T23:53:02+08:00
 lastmod: 2023-11-08T21:40:13+08:00
 comments: true
-math: false
 weight: 150
 tags:
     - 病理学

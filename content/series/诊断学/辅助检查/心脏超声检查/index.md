@@ -3,7 +3,6 @@ title: "心脏超声检查"
 date: 2022-06-26T12:02:29+08:00
 lastmod: 2022-06-26T17:28:00+08:00
 comments: true
-math: false
 weight: 1
 tags:
 ---

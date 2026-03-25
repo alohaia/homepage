@@ -3,7 +3,6 @@ title: "损伤修复"
 date: 2023-10-03T22:12:15+08:00
 lastmod: 2023-11-05T16:20:46+08:00
 comments: true
-math: false
 weight: 20
 tags:
     - 病理学

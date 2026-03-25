@@ -3,7 +3,6 @@ title: 2025-02-02 RNA-seq 概览
 date: 2025-02-02T20:05:19+08:00
 lastmod: 2025-02-02T23:43:10+08:00
 comments: true
-math: true
 ---
 
 <!--more-->

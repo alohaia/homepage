@@ -3,7 +3,6 @@ title: "体温及其调节"
 date: 2023-07-31T11:45:37+08:00
 lastmod: 2023-11-12T00:24:16+08:00
 comments: true
-math: false
 weight: 72
 tags:
     - 生理学

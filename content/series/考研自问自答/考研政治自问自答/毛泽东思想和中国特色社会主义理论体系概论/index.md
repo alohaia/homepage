@@ -3,7 +3,6 @@ title: "毛泽东思想和中国特色社会主义理论体系概论"
 date: 2023-11-26T16:19:50+08:00
 lastmod: 2023-12-06T17:00:14+08:00
 comments: true
-math: false
 features:
     - clickableHiddenText
 weight: 340

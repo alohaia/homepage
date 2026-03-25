@@ -3,7 +3,6 @@ title: "适应"
 date: 2023-10-02T23:26:28+08:00
 lastmod: 2023-11-05T14:45:01+08:00
 comments: true
-math: false
 weight: 11
 tags:
     - 病理学

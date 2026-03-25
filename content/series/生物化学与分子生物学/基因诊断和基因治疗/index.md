@@ -3,7 +3,6 @@ title: "基因诊断和基因治疗"
 date: 2023-10-01T21:31:49+08:00
 lastmod: 2023-10-01T21:40:00+08:00
 comments: true
-math: false
 weight: 260
 tags:
     - 生物化学与分子生物学

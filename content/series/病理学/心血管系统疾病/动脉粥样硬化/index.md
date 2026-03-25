@@ -3,7 +3,6 @@ title: "动脉粥样硬化"
 date: 2023-10-08T21:35:00+08:00
 lastmod: 2023-11-07T15:31:57+08:00
 comments: true
-math: false
 weight: 91
 tags:
     - 病理学

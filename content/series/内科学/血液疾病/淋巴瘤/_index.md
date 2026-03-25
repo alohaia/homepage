@@ -3,7 +3,6 @@ title: "淋巴瘤"
 date: 2023-07-16T10:07:21+08:00
 lastmod: 2023-07-16T10:09:33+08:00
 comments: true
-math: false
 weight: 61000
 tags:
     - 内科学

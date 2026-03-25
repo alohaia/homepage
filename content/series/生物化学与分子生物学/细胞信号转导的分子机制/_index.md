@@ -3,7 +3,6 @@ title: "细胞信号转导的分子机制"
 date: 2023-09-29T23:36:06+08:00
 lastmod: 2023-10-31T18:41:39+08:00
 comments: true
-math: false
 weight: 170
 tags:
     - 生物化学与分子生物学

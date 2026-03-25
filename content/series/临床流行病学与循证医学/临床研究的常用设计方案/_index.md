@@ -3,7 +3,6 @@ title: "临床研究的常用设计方案"
 date: 2022-11-12T12:32:32+08:00
 lastmod: 2022-11-13T22:43:00+08:00
 comments: true
-math: false
 weight: 40
 tags:
     - 临床流行病学

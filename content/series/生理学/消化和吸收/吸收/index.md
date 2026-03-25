@@ -3,7 +3,6 @@ title: "吸收"
 date: 2023-07-12T21:23:44+08:00
 lastmod: 2023-10-16T23:46:05+08:00
 comments: true
-math: false
 weight: 67
 tags:
     - 生理学

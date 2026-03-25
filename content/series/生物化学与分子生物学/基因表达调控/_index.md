@@ -3,7 +3,6 @@ title: "基因表达调控"
 date: 2023-09-29T22:30:04+08:00
 lastmod: 2023-10-31T18:11:56+08:00
 comments: true
-math: false
 weight: 160
 tags:
     - 生物化学与分子生物学

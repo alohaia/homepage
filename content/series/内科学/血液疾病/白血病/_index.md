@@ -3,7 +3,6 @@ title: "白血病"
 date: 2023-07-14T13:52:09+08:00
 lastmod: 2023-07-15T19:33:22+08:00
 comments: true
-math: false
 weight: 60900
 tags:
     - 内科学

@@ -3,7 +3,6 @@ title: 2023-06-07
 date: 2023-06-07T08:04:37+08:00
 lastmod: 2023-06-29T09:53:05+08:00
 comments: true
-math: true
 ---
 
     选择题：

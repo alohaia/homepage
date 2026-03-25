@@ -3,7 +3,6 @@ title: "肺部感染性疾病"
 date: 2022-11-06T16:39:10+08:00
 lastmod: 2023-08-18T11:02:18+08:00
 comments: true
-math: false
 weight: 20600
 tags:
     - 内科学

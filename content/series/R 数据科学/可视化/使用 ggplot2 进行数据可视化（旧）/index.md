@@ -3,7 +3,6 @@ title: "使用 ggplot2 进行数据可视化（旧）"
 date: 2024-05-20T17:11:57+08:00
 lastmod: 2024-05-20T18:04:59+08:00
 comments: true
-math: false
 weight: 999
 tags:
     - R
@@ -27,7 +26,7 @@ install.packages("tidyverse")
 使用 `library()` 以 加载 R 包：
 
 
-```r
+``` r
 library(tidyverse)
 ```
 
@@ -40,7 +39,7 @@ library(tidyverse)
 你可以使用 ggplot2 中的 `mpg` 数据框（即 `ggplot2::mpg`）用于练习。
 
 
-```r
+``` r
 ggplot2::mpg
 ```
 
@@ -68,12 +67,12 @@ ggplot2::mpg
 ### 绘制 ggplot 图形
 
 
-```r
+``` r
 ggplot(data = mpg) +
     geom_point(mapping = aes(x = displ, y = hwy))
 ```
 
-{{< figure src="/R-figures/series/R 数据科学/使用 ggplot2 进行数据可视化（旧）/ggplot2-introduction-1.png" group="ggplot2-introduction" alt="ggplot2-introduction" >}}
+{{< figure src="/R-figures/series/R 数据科学/可视化/使用 ggplot2 进行数据可视化（旧）/ggplot2-introduction-1.png" group="ggplot2-introduction" alt="ggplot2-introduction" >}}
 
 `ggplot(data = mpg)` 创建了一个空白的坐标系，`geom_point()` 就向图中添加了一个点层，这样就创建了一个散点图。
 
@@ -93,12 +92,12 @@ ggplot(data = <DATA>) +
 将 `class` 映射为 `color`（或 `colour`），可以清晰地在图中辨别车辆的类型：
 
 
-```r
+``` r
 ggplot(data = mpg) +
     geom_point(mapping = aes(x = displ, y = hwy, color = class))
 ```
 
-{{< figure src="/R-figures/series/R 数据科学/使用 ggplot2 进行数据可视化（旧）/mapping-color-1.png" group="mapping-color" alt="mapping-color" >}}
+{{< figure src="/R-figures/series/R 数据科学/可视化/使用 ggplot2 进行数据可视化（旧）/mapping-color-1.png" group="mapping-color" alt="mapping-color" >}}
 
 用 `aes()` 将图形属性名称关联起来，`ggplot2` 就会自动为每个变量值分配唯一的图形属性*水平*。
 
@@ -109,26 +108,26 @@ ggplot(data = mpg) +
 也可以将 `class` 映射为 `size` 图形属性：
 
 
-```r
+``` r
 ggplot(data = mpg) +
     geom_point(mapping = aes(x = displ, y = hwy, size = class))
 ```
 
-{{< figure src="/R-figures/series/R 数据科学/使用 ggplot2 进行数据可视化（旧）/mapping-size-1.png" group="mapping-size" alt="mapping-size" >}}
+{{< figure src="/R-figures/series/R 数据科学/可视化/使用 ggplot2 进行数据可视化（旧）/mapping-size-1.png" group="mapping-size" alt="mapping-size" >}}
 
 这里出现了一条警告信息，因为将无序变量 `class` 映射为有需变量 `size` 不是一个好主意。
 
 或者将 `class` 映射为点的透明度或形状：
 
 
-```r
+``` r
 ggplot(data = mpg) +
     geom_point(mapping = aes(x = displ, y = hwy, alpha = class))
 ggplot(data = mpg) +
     geom_point(mapping = aes(x = displ, y = hwy, shape = class))
 ```
 
-{{< figure src="/R-figures/series/R 数据科学/使用 ggplot2 进行数据可视化（旧）/mapping-alpha,shape-1.png" group="mapping-alpha,shape" alt="mapping-alpha,shape" >}}{{< figure src="/R-figures/series/R 数据科学/使用 ggplot2 进行数据可视化（旧）/mapping-alpha,shape-2.png" group="mapping-alpha,shape" alt="mapping-alpha,shape" >}}
+{{< figure src="/R-figures/series/R 数据科学/可视化/使用 ggplot2 进行数据可视化（旧）/mapping-alpha,shape-1.png" group="mapping-alpha,shape" alt="mapping-alpha,shape" >}}{{< figure src="/R-figures/series/R 数据科学/可视化/使用 ggplot2 进行数据可视化（旧）/mapping-alpha,shape-2.png" group="mapping-alpha,shape" alt="mapping-alpha,shape" >}}
 
 注意下图中的 “suv” 没有显示，这是因为 `ggplot2` 默认只支持 6 种形状。
 
@@ -137,22 +136,22 @@ ggplot(data = mpg) +
 也可以手动为图形属性指定固定水平：
 
 
-```r
+``` r
 ggplot(data = mpg) +
     geom_point(mapping = aes(x = displ, y = hwy), color = "blue")
 ```
 
-{{< figure src="/R-figures/series/R 数据科学/使用 ggplot2 进行数据可视化（旧）/manual-fixed-value-1.png" group="manual-fixed-value" alt="manual-fixed-value" >}}
+{{< figure src="/R-figures/series/R 数据科学/可视化/使用 ggplot2 进行数据可视化（旧）/manual-fixed-value-1.png" group="manual-fixed-value" alt="manual-fixed-value" >}}
 
 注意不要将固定值放在 `aes()` 函数里，因为此时颜色并不是用来传达变量的信息，而只是改变图的外观。错误示范：
 
 
-```r
+``` r
 ggplot(data = mpg) +
     geom_point(mapping = aes(x = displ, y = hwy, color = "blue"))
 ```
 
-{{< figure src="/R-figures/series/R 数据科学/使用 ggplot2 进行数据可视化（旧）/manual-fixed-value-wrong-1.png" group="manual-fixed-value-wrong" alt="manual-fixed-value-wrong" >}}
+{{< figure src="/R-figures/series/R 数据科学/可视化/使用 ggplot2 进行数据可视化（旧）/manual-fixed-value-wrong-1.png" group="manual-fixed-value-wrong" alt="manual-fixed-value-wrong" >}}
 
 其中的点的颜色都是橙色，这是因为 R 将 `"blue"` 视作数据，而不是颜色值。
 
@@ -164,67 +163,67 @@ ggplot(data = mpg) +
 #### 其他示例
 
 
-```r
+``` r
 ggplot(data = mpg, mapping = aes(displ, hwy)) +
     geom_point(shape = 21, fill = "white", size = 5, stroke = 5)
 ggplot(data = mpg) +
     geom_point(mapping = aes(x = displ, y = hwy, color = displ < 5))
 ```
 
-{{< figure src="/R-figures/series/R 数据科学/使用 ggplot2 进行数据可视化（旧）/other examples-1.png" group="other examples" alt="other examples" >}}{{< figure src="/R-figures/series/R 数据科学/使用 ggplot2 进行数据可视化（旧）/other examples-2.png" group="other examples" alt="other examples" >}}
+{{< figure src="/R-figures/series/R 数据科学/可视化/使用 ggplot2 进行数据可视化（旧）/other examples-1.png" group="other examples" alt="other examples" >}}{{< figure src="/R-figures/series/R 数据科学/可视化/使用 ggplot2 进行数据可视化（旧）/other examples-2.png" group="other examples" alt="other examples" >}}
 
 ### 分面
 
 要在图中添加新的展示变量，除了可以用图形属性，还可以将图分隔成多个**分面**。
 
 
-```r
+``` r
 ggplot(data = mpg) +
     geom_point(mapping = aes(x = displ, y = hwy)) +
     facet_wrap(~class, nrow = 2)
 ```
 
-{{< figure src="/R-figures/series/R 数据科学/使用 ggplot2 进行数据可视化（旧）/facet_wrap-1.png" group="facet_wrap" alt="facet_wrap" >}}
+{{< figure src="/R-figures/series/R 数据科学/可视化/使用 ggplot2 进行数据可视化（旧）/facet_wrap-1.png" group="facet_wrap" alt="facet_wrap" >}}
 
 `facet_wrap()` 函数的第一个参数是一个公式（R 中的一种数据结构，不是数学意义上的公式），传递给 `facet_wrap()` 的参数应该是离散型的。
 
 要通过两个变量对图进行分面，需使用 `facet_grid()` 函数，该函数的公式参数包含由 `~` 分隔的两个变量名。
 
 
-```r
+``` r
 ggplot(data = mpg) +
     geom_point(mapping = aes(x = displ, y = hwy)) +
     facet_grid(drv ~ cyl)
 ```
 
-{{< figure src="/R-figures/series/R 数据科学/使用 ggplot2 进行数据可视化（旧）/facet_grid-1.png" group="facet_grid" alt="facet_grid" >}}
+{{< figure src="/R-figures/series/R 数据科学/可视化/使用 ggplot2 进行数据可视化（旧）/facet_grid-1.png" group="facet_grid" alt="facet_grid" >}}
 
 如果不想在行或列的维度进行分面，可以使用 `.` 代替变量名，如 `. ~ cyl`
 
 ### 几何对象
 
 
-```r
+``` r
 ggplot(data = mpg) +
     geom_point(mapping = aes(x = displ, y = hwy))
 ggplot(data = mpg) +
     geom_smooth(mapping = aes(x = displ, y = hwy))
 ```
 
-{{< figure src="/R-figures/series/R 数据科学/使用 ggplot2 进行数据可视化（旧）/geometry object-1.png" group="geometry object" alt="geometry object" >}}{{< figure src="/R-figures/series/R 数据科学/使用 ggplot2 进行数据可视化（旧）/geometry object-2.png" group="geometry object" alt="geometry object" >}}
+{{< figure src="/R-figures/series/R 数据科学/可视化/使用 ggplot2 进行数据可视化（旧）/geometry object-1.png" group="geometry object" alt="geometry object" >}}{{< figure src="/R-figures/series/R 数据科学/可视化/使用 ggplot2 进行数据可视化（旧）/geometry object-2.png" group="geometry object" alt="geometry object" >}}
 
 两张图使用了同样的数据，但它们使用了不同的可视化对象。在 `ggplot2` 语法中，我们称它们使用了不同的**几何对象**。第一张图使用了点几何对象而第二张图使用了平滑曲线几何对象。
 
 你可以在同一张图中使用多个几何对象：
 
 
-```r
+``` r
 ggplot(data = mpg) +
     geom_point(mapping = aes(x = displ, y = hwy, color = drv), size = 3) +
     geom_smooth(mapping = aes(x = displ, y = hwy, linetype = drv, color = drv))
 ```
 
-{{< figure src="/R-figures/series/R 数据科学/使用 ggplot2 进行数据可视化（旧）/geom_smooth-1.png" group="geom_smooth" alt="geom_smooth" >}}
+{{< figure src="/R-figures/series/R 数据科学/可视化/使用 ggplot2 进行数据可视化（旧）/geom_smooth-1.png" group="geom_smooth" alt="geom_smooth" >}}
 {#geom_smooth}
 
 为避免代码重复，可以将所有几何对象共用的映射写在 `ggplot()` 函数中，这样 ggplot2 会将这些映射作为全局映射应用到图中的每个几何对象中。以下代码与 [上面的代码](#geom_smooth) 等效。
@@ -238,12 +237,12 @@ ggplot(data = mpg, mapping = aes(x = displ, y = hwy, color = drv)) +
 ### 统计变换
 
 
-```r
+``` r
 ggplot(data = diamonds) +
     geom_bar(mapping = aes(x = cut))
 ```
 
-{{< figure src="/R-figures/series/R 数据科学/使用 ggplot2 进行数据可视化（旧）/geom_bar-1.png" group="geom_bar" alt="geom_bar" >}}
+{{< figure src="/R-figures/series/R 数据科学/可视化/使用 ggplot2 进行数据可视化（旧）/geom_bar-1.png" group="geom_bar" alt="geom_bar" >}}
 
 注意到图中出现了一个新的变量 `count`，但是 `count` 不是 `diamonds` 中的变量。之所以会出现新的变量，是因为一些图形（如条形图）不只是绘制数据集的原始数据，而是可以绘制自己计算出的新数据。
 

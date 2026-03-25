@@ -3,7 +3,6 @@ title: "Python 与数据科学"
 date: 2024-11-14T22:47:17+08:00
 lastmod: 2024-11-14T23:17:59+08:00
 comments: true
-math: false
 weight: 0
 tags:
     - Python

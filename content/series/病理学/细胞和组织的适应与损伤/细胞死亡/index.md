@@ -3,7 +3,6 @@ title: "细胞死亡"
 date: 2023-10-03T00:00:28+08:00
 lastmod: 2023-11-05T15:38:55+08:00
 comments: true
-math: false
 weight: 14
 tags:
     - 病理学

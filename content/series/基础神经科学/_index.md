@@ -1,9 +1,7 @@
 ---
 title: 基础神经科学
 date: 2021-08-30 08:31:41
-draft: false
 comments: true
-math: false
 tags:
     - 神经科学
 categories:

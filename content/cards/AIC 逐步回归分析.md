@@ -3,7 +3,6 @@ title: "AIC 逐步回归分析"
 date: 2022-10-26T21:40:44+08:00
 lastmod: 2022-10-26T21:54:01+08:00
 comments: true
-math: false
 tags:
     - 统计学
     - 变量筛选

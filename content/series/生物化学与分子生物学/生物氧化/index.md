@@ -3,7 +3,6 @@ title: "生物氧化"
 date: 2023-09-21T19:15:06+08:00
 lastmod: 2023-11-02T18:45:29+08:00
 comments: true
-math: true
 weight: 60
 tags:
     - 生物化学与分子生物学

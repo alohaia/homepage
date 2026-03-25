@@ -3,7 +3,6 @@ title: "生理性止血"
 date: 2023-07-10T19:35:49+08:00
 lastmod: 2023-11-11T14:10:42+08:00
 comments: true
-math: false
 weight: 33
 tags:
     - 生理学

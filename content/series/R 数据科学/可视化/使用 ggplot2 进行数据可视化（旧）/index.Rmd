@@ -3,7 +3,6 @@ title: "使用 ggplot2 进行数据可视化（旧）"
 date: 2024-05-20T17:11:57+08:00
 lastmod: 2024-05-20T18:04:59+08:00
 comments: true
-math: false
 weight: 999
 tags:
     - R

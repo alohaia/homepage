@@ -2,9 +2,7 @@
 title: 药理学
 date: 2021-09-03 10:15:33
 lastmod: 2023-01-23T17:18:37+08:00
-draft: false
 comments: true
-math: false
 tags:
     - 药理学
 categories:

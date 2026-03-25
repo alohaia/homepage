@@ -1,9 +1,8 @@
 ---
 title: "R Packages"
 date: 2026-03-23T11:57:54+08:00
-lastmod: 2026-03-24T10:32:18+08:00
+lastmod: 2026-03-23T12:26:16+08:00
 comments: true
-math: false
 weight: 1
 tags:
     - "R Packages"
@@ -24,10 +23,12 @@ Free online e-book: [R Packages (2e)](https://r-pkgs.org/).
 - 推荐使用 RStudio。
 - 版本控制工具：Git。
 - `devtools` 包是“the public face of a set of packages that support various aspects of package development”，包括 `usethis` 包。
+    
     ``` r
     library(devtools)
     packageVersion("devtools")
     ```
+    
     ```
     #> [1] '2.4.6'
     ```

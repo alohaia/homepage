@@ -3,7 +3,6 @@ title: "道德篇"
 date: 2023-11-17T13:23:32+08:00
 lastmod: 2023-11-23T11:48:02+08:00
 comments: true
-math: false
 weight: 220
 tags:
     - 政治

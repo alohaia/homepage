@@ -3,7 +3,6 @@ title: "胆汁与胆汁酸的代谢"
 date: 2023-07-13T10:02:10+08:00
 lastmod: 2023-11-04T21:10:32+08:00
 comments: true
-math: false
 weight: 193
 tags:
     - 生物化学与分子生物学

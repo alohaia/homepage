@@ -3,7 +3,6 @@ title: 2025-05-25 shell 脚本语法
 date: 2025-05-25T10:55:25+08:00
 lastmod: 2025-05-25T11:00:15+08:00
 comments: true
-math: false
 ---
 
 <!--more-->

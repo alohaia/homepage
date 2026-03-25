@@ -3,7 +3,6 @@ title: "钾代谢紊乱"
 date: 2023-09-16T15:13:55+08:00
 lastmod: 2024-09-17T09:09:52+08:00
 comments: true
-math: true
 weight: 33
 tags:
     - 外科学

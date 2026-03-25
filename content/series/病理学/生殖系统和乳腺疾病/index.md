@@ -3,7 +3,6 @@ title: "生殖系统和乳腺疾病"
 date: 2023-10-13T23:52:50+08:00
 lastmod: 2023-11-08T18:40:06+08:00
 comments: true
-math: false
 weight: 140
 tags:
     - 病理学

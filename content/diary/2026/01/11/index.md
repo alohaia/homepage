@@ -3,7 +3,6 @@ title: Kitty scrollback intregated with Neovim
 date: 2025-12-05T13:54:14+08:00
 lastmod: 2026-03-21T00:58:07+08:00
 comments: true
-math: false
 ---
 
 Features: https://github.com/mikesmithgh/kitty-scrollback.nvim?tab=readme-ov-file#-features

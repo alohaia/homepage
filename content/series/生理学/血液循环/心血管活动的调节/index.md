@@ -3,7 +3,6 @@ title: "心血管活动的调节"
 date: 2023-03-15T17:46:24+08:00
 lastmod: 2023-11-11T17:54:51+08:00
 comments: true
-math: false
 weight: 44
 tags:
     - 生理学

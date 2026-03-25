@@ -3,7 +3,6 @@ title: 诊断学实习-尿液检查
 date: 2022-05-27T13:57:28+08:00
 lastmod: 2022-05-27T15:51:09+08:00
 comments: true
-math: false
 tags:
 ---
 

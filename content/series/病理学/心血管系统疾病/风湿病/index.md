@@ -3,7 +3,6 @@ title: "风湿病"
 date: 2023-10-08T21:35:49+08:00
 lastmod: 2023-11-07T15:16:42+08:00
 comments: true
-math: false
 weight: 94
 tags:
     - 病理学

@@ -3,7 +3,6 @@ title: "RNA 提取"
 date: 2024-11-29T16:28:38+08:00
 lastmod: 2024-11-29T23:25:51+08:00
 comments: true
-math: false
 tags:
 ---
 

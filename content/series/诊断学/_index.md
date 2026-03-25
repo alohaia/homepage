@@ -3,7 +3,6 @@ title: "诊断学"
 date: 2022-03-01T16:03:00+08:00
 lastmod: 2022-06-26T14:54:06+08:00
 comments: true
-math: false
 weight: 0
 tags:
     - 诊断学

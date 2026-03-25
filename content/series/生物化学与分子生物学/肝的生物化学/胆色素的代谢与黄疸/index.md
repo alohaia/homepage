@@ -3,7 +3,6 @@ title: "胆色素的代谢与黄疸"
 date: 2023-07-13T09:59:35+08:00
 lastmod: 2023-11-01T15:06:40+08:00
 comments: true
-math: false
 weight: 194
 tags:
     - 生物化学与分子生物学

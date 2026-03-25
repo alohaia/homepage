@@ -3,7 +3,6 @@ title: "肌细胞的收缩"
 date: 2023-02-26T18:15:13+08:00
 lastmod: 2023-11-10T22:31:29+08:00
 comments: true
-math: false
 weight: 24
 tags:
     - 生理学

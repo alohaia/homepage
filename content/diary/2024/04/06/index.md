@@ -3,7 +3,6 @@ title: 2024-04-06
 date: 2024-04-06T15:33:46+08:00
 lastmod: 2024-10-07T16:16:35+08:00
 comments: true
-math: false
 ---
 
 ## Vim 小技巧

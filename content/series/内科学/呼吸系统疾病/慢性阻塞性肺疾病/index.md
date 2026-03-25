@@ -5,7 +5,6 @@ aliases:
 date: 2022-11-03T09:13:03+08:00
 lastmod: 2024-01-03T21:29:45+08:00
 comments: true
-math: false
 weight: 20302
 tags:
     - 内科学

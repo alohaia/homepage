@@ -3,7 +3,6 @@ title: "问诊"
 date: 2022-06-26T14:53:49+08:00
 lastmod: 2024-01-08T22:51:04+08:00
 comments: true
-math: false
 weight: 20
 tags:
 ---

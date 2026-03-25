@@ -2,9 +2,7 @@
 title: "实验室常识"
 date: 2024-10-25T09:54:43+08:00
 lastmod: 2024-10-31T21:48:47+08:00
-draft: true
 comments: true
-math: true
 weight: 999
 tags:
 ---

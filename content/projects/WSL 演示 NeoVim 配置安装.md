@@ -3,7 +3,6 @@ title: "WSL 演示 NeoVim 配置安装"
 date: 2022-04-25T23:26:17+08:00
 lastmod: 2023-06-05T09:45:49+08:00
 comments: true
-math: false
 tags:
     - NeoVim
     - WSL

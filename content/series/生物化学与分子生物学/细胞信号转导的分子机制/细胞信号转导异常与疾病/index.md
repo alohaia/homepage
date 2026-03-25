@@ -3,7 +3,6 @@ title: "细胞信号转导异常与疾病"
 date: 2023-09-30T00:14:25+08:00
 lastmod: 2023-10-31T18:32:57+08:00
 comments: true
-math: false
 weight: 175
 tags:
     - 生物化学与分子生物学

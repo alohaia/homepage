@@ -3,7 +3,6 @@ title: "病理学自问自答"
 date: 2023-11-27T22:35:43+08:00
 lastmod: 2023-12-01T20:28:22+08:00
 comments: true
-math: false
 features:
     - clickableHiddenText
 weight: 130

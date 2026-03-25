@@ -3,7 +3,6 @@ title: "雷诺氏综合征"
 date: 2023-07-01T09:12:16+08:00
 lastmod: 2023-07-01T09:24:49+08:00
 comments: true
-math: false
 ---
 
 {{< figure

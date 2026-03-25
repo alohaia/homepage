@@ -1,9 +1,8 @@
 ---
 title: ggplot2 中的尺寸
 date: 2026-02-12T12:05:45+08:00
-lastmod: 2026-03-16T16:11:12+08:00
+lastmod: 2026-02-12T22:42:34+08:00
 comments: true
-math: false
 ---
 
 <!--more-->
@@ -11,12 +10,15 @@ math: false
 ## ggplot2 中的尺寸
 
 `ggplot2` 中 `linewidth` 和 `size` 的单位是 mm，`lwd`（line width）是一个无单位的缩放系数。于是
- `ggplot2` 提供了 `.pt` 和 `.stroke` 两个用于单位转换的常量：
+ `ggplot2` 提供了`.pt` 和 `.stroke` 两个用于单位转换的常量：
 
 - `.pt`：单位为 pt / mm，8 pt 可以表示为 `8 / .pt`。
 - `.stroke`：不推荐用户使用。
 
-{{< section >}}[Aesthetic specifications • ggplot2](https://ggplot2.tidyverse.org/articles/ggplot2-specs.html){{< /section >}}
+
+[测试](https://ggplot2.tidyverse.org/articles/ggplot2-测试specs.html)
+
+https://ggplot2.tidyverse.org/articles/ggplot2-%e6%b5%8b%e8%af%95specs.html
 
 - 线条：
 

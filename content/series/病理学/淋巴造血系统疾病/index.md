@@ -3,7 +3,6 @@ title: "淋巴造血系统疾病"
 date: 2023-10-12T21:35:29+08:00
 lastmod: 2023-11-07T22:41:11+08:00
 comments: true
-math: false
 weight: 120
 tags:
     - 病理学

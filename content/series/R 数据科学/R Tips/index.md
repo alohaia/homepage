@@ -3,7 +3,6 @@ title: "R Tips"
 date: 2024-10-06T15:14:37+08:00
 lastmod: 2025-05-18T17:36:13+08:00
 comments: true
-math: false
 weight: 99
 tags:
     - R
@@ -411,8 +410,8 @@ str(knitr::opts_chunk$get())
 #>  $ size               : chr "normalsize"
 #>  $ background         : chr "#F7F7F7"
 #>  $ strip.white        : 'AsIs' logi TRUE
-#>  $ cache              : logi TRUE
-#>  $ cache.path         : chr "../.cache/series/R 数据科学/R Tips/"
+#>  $ cache              : logi FALSE
+#>  $ cache.path         : chr "cache/"
 #>  $ cache.vars         : NULL
 #>  $ cache.lazy         : logi TRUE
 #>  $ dependson          : NULL
@@ -421,7 +420,7 @@ str(knitr::opts_chunk$get())
 #>  $ fig.keep           : chr "high"
 #>  $ fig.show           : chr "hold"
 #>  $ fig.align          : chr "default"
-#>  $ fig.path           : chr "../static/R-figures/series/R 数据科学/R Tips/"
+#>  $ fig.path           : chr "/home/qihuan/homepage/static/R-figures//series/R 数据科学/R Tips/"
 #>  $ dev                : chr "png"
 #>  $ dev.args           : NULL
 #>  $ dpi                : num 120

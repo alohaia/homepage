@@ -3,7 +3,6 @@ title: "钙调节激素的内分泌"
 date: 2023-08-04T15:05:15+08:00
 lastmod: 2023-10-26T13:31:08+08:00
 comments: true
-math: false
 weight: 114
 tags:
     - 生理学

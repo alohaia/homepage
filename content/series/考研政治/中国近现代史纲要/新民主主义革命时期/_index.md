@@ -3,7 +3,6 @@ title: "新民主主义革命时期"
 date: 2023-11-19T15:29:28+08:00
 lastmod: 2023-11-26T16:45:39+08:00
 comments: true
-math: false
 weight: 320
 tags:
     - 政治

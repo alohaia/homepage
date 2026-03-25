@@ -3,7 +3,6 @@ title: "Western Blot"
 date: 2024-10-31T21:47:18+08:00
 lastmod: 2024-11-11T00:12:10+08:00
 comments: true
-math: true
 tags:
 ---
 

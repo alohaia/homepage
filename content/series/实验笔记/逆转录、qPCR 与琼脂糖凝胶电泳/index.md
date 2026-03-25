@@ -3,7 +3,6 @@ title: "逆转录、qPCR 与琼脂糖凝胶电泳"
 date: 2024-10-25T09:20:56+08:00
 lastmod: 2024-11-29T16:31:50+08:00
 comments: true
-math: true
 tags:
 ---
 

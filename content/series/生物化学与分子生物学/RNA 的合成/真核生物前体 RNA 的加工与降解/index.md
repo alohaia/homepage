@@ -3,7 +3,6 @@ title: "真核生物前体 RNA 的加工与降解"
 date: 2023-08-10T12:47:37+08:00
 lastmod: 2023-11-04T15:14:53+08:00
 comments: true
-math: false
 weight: 144
 tags:
     - 生物化学与分子生物学

@@ -3,7 +3,6 @@ title: 2024-11-29
 date: 2024-11-29T23:38:45+08:00
 lastmod: 2024-11-29T23:43:14+08:00
 comments: true
-math: false
 ---
 
 <!--more-->

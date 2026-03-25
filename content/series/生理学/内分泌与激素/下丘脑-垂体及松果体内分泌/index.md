@@ -3,7 +3,6 @@ title: "下丘脑-垂体及松果体内分泌"
 date: 2023-07-27T20:13:06+08:00
 lastmod: 2023-11-12T19:29:12+08:00
 comments: true
-math: false
 weight: 112
 tags:
     - 生理学

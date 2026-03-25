@@ -3,7 +3,6 @@ title: "酸碱平衡紊乱"
 date: 2023-09-16T21:04:18+08:00
 lastmod: 2023-09-16T22:30:51+08:00
 comments: true
-math: false
 weight: 35
 tags:
     - 外科学

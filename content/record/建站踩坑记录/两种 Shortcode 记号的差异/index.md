@@ -3,7 +3,6 @@ title: "两种 Shortcode 记号的差异"
 date: 2023-02-11T17:56:20+08:00
 lastmod: 2023-05-21T18:02:21+08:00
 comments: true
-math: false
 ---
 
 Hugo 的 Shortcode 可以使用 `{{</* */>}}` 和 `{{%/* */%}}` 两种记号。两者之间存在微妙的差异，有时可能引起问题。

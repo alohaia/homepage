@@ -3,7 +3,6 @@ title: "共产主义崇高理想及其最终实现"
 date: 2023-11-06T23:56:04+08:00
 lastmod: 2023-11-16T23:42:43+08:00
 comments: true
-math: false
 weight: 132
 tags:
     - 政治

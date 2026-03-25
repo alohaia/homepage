@@ -3,7 +3,6 @@ title: "器官循环"
 date: 2023-07-29T20:01:20+08:00
 lastmod: 2023-10-29T15:46:55+08:00
 comments: true
-math: false
 weight: 45
 tags:
     - 生理学

@@ -3,7 +3,6 @@ title: "临床常用免疫学检测"
 date: 2022-06-26T12:06:27+08:00
 lastmod: 2023-05-21T17:03:02+08:00
 comments: true
-math: false
 weight: 1
 tags:
 ---

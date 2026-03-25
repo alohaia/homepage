@@ -1,7 +1,6 @@
 ---
 title: 病毒
 comments: true
-mathjax: false
 date: 2021-03-21 13:18:29
 lastmod: 2023-05-21T18:06:04+08:00
 weight: 80

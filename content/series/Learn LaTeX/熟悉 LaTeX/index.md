@@ -3,7 +3,6 @@ title: "熟悉 LaTeX"
 date: 2026-02-22T11:53:19+08:00
 lastmod: 2026-03-09T11:05:18+08:00
 comments: true
-math: true
 weight: 1
 tags:
     - LaTeX

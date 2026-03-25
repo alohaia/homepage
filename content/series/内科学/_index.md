@@ -3,7 +3,6 @@ title: "内科学"
 date: 2022-08-22T10:40:35+08:00
 lastmod: 2024-01-03T18:54:17+08:00
 comments: true
-math: false
 weight: 0
 tags:
     - 内科学

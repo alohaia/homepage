@@ -3,7 +3,6 @@ title: "男性生殖功能及其调节"
 date: 2023-08-04T21:04:14+08:00
 lastmod: 2023-10-24T22:58:27+08:00
 comments: true
-math: false
 weight: 121
 tags:
     - 生理学

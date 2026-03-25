@@ -3,7 +3,6 @@ title: "临床血液学检查"
 date: 2022-05-11T13:27:56+08:00
 lastmod: 2023-09-19T10:00:55+08:00
 comments: true
-math: true
 weight: 1
 tags:
     - 诊断学

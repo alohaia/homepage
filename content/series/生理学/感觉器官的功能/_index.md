@@ -3,7 +3,6 @@ title: "感觉器官的功能"
 date: 2023-08-01T20:18:49+08:00
 lastmod: 2023-10-25T19:07:36+08:00
 comments: true
-math: false
 weight: 90
 tags:
     - 生理学

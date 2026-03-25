@@ -2,9 +2,7 @@
 title: "细胞膜与物质的穿膜运输"
 date: 2021-10-23T14:54:04+08:00
 lastmod: 2023-02-19T21:33:42+08:00
-draft: false
 comments: true
-math: false
 weight: 1
 tags:
 categories:

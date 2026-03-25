@@ -3,7 +3,6 @@ title: "R Packages"
 date: 2026-03-23T11:57:54+08:00
 lastmod: 2026-03-23T12:26:16+08:00
 comments: true
-math: false
 weight: 1
 tags:
     - "R Packages"

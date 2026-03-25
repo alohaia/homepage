@@ -3,7 +3,6 @@ title: "常用快捷键和基本操作"
 date: 2023-01-11T17:27:26+08:00
 lastmod: 2023-05-21T18:02:21+08:00
 comments: true
-math: false
 tags:
     - Blender
 ---
