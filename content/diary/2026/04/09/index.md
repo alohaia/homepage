@@ -1,7 +1,7 @@
 ---
 title: 2026-04-09
 date: 2026-04-09T19:40:27+08:00
-lastmod: 2026-04-10T11:53:32+08:00
+lastmod: 2026-04-10T12:09:24+08:00
 comments: true
 ---
 
@@ -9,21 +9,22 @@ comments: true
 
 ## 为混合显卡安装驱动
 
-1. `nvidia-utils` 包含一个文件可以禁用 `nouveau` 模块。
-2. Wayland 需要 KMS 来正确运行。560 以后的 NVIDIA 驱动默认启用 DRM（旧驱动需要 `nvidia-drm.modeset=1`），可以让 NVIDIA 支持[自动 KMS 晚加载](https://wiki.archlinux.org/title/Kernel_mode_setting#Late_KMS_start)。
+1. 推荐使用 LTS 版本：`linux-lts` + `nvidia-open-lts`，避免过新导致的各种固件问题。
+2. `nvidia-utils` 包含一个文件可以禁用 `nouveau` 模块。
+3. Wayland 需要 KMS 来正确运行。560 以后的 NVIDIA 驱动默认启用 DRM（旧驱动需要 `nvidia-drm.modeset=1`），可以让 NVIDIA 支持[自动 KMS 晚加载](https://wiki.archlinux.org/title/Kernel_mode_setting#Late_KMS_start)。
     ```bash
     # 检查是否启用 DRM
     cat /sys/module/nvidia_drm/parameters/modeset
     ```
-3. 早期加载：如果发现启动问题，如 `nvidia` 模块晚于显示管理器加载，可以将 `nvidia`，`nvidia_modeset`，`nvidia_uvm` 和 `nvidia_drm` 添加到 initramfs（见[早期内核模块加载](https://wiki.archlinux.org/title/Kernel_module#Early_module_loading)和 [`mkinitcpio` 的 MODULES 小节](https://wiki.archlinux.org/title/Mkinitcpio#MODULES)）。
-4. 可以简单看看 Archwiki NVIDIA 页面的 [Wayland](https://wiki.archlinux.org/title/NVIDIA#Wayland_configuration) 和 [Xorg](https://wiki.archlinux.org/title/NVIDIA#Xorg_configuration) 的配置。
-5. [PRIME render offload](https://wiki.archlinux.org/title/NVIDIA_Optimus#Using_PRIME_render_offload) 是 NVIDIA 官方支持的混合显卡配置方式。
+4. 早期加载：如果发现启动问题，如 `nvidia` 模块晚于显示管理器加载，可以将 `nvidia`，`nvidia_modeset`，`nvidia_uvm` 和 `nvidia_drm` 添加到 initramfs（见[早期内核模块加载](https://wiki.archlinux.org/title/Kernel_module#Early_module_loading)和 [`mkinitcpio` 的 MODULES 小节](https://wiki.archlinux.org/title/Mkinitcpio#MODULES)）。
+5. 可以简单看看 Archwiki NVIDIA 页面的 [Wayland](https://wiki.archlinux.org/title/NVIDIA#Wayland_configuration) 和 [Xorg](https://wiki.archlinux.org/title/NVIDIA#Xorg_configuration) 的配置。
+6. [PRIME render offload](https://wiki.archlinux.org/title/NVIDIA_Optimus#Using_PRIME_render_offload) 是 NVIDIA 官方支持的混合显卡配置方式。
     ```bash
     paru -S nvidia-prime xf86-video-amdgpu # 或 xf86-video-intel
     prime-run glxinfo | grep "OpenGL renderer"
     prime-run vulkaninfo
     ```
-6. 如果需要使用休眠，参阅 [Preserve video memory after suspend](https://wiki.archlinux.org/title/NVIDIA/Tips_and_tricks#Preserve_video_memory_after_suspend)。对于 595+ 驱动，需要添加 `NVreg_UseKernelSuspendNotifiers=1` 内核参数。
+7. 如果需要使用休眠，参阅 [Preserve video memory after suspend](https://wiki.archlinux.org/title/NVIDIA/Tips_and_tricks#Preserve_video_memory_after_suspend)。对于 595+ 驱动，需要添加 `NVreg_UseKernelSuspendNotifiers=1` 内核参数。
     ```bash
     sort /proc/driver/nvidia/params
     # UseKernelSuspendNotifiers: 1
@@ -31,7 +32,7 @@ comments: true
 
 ## 使用鼠标侧键
 
-在 Plasma + Xorg 环境下，使用可以使用 `xbindkeys`：
+在 Plasma + Xorg 环境下，可以使用 `xbindkeys`：
 
 ```bash
 sudo pacman -S xbindkeys xdotool
