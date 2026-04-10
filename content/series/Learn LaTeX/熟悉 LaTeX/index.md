@@ -1,7 +1,7 @@
 ---
 title: "熟悉 LaTeX"
 date: 2026-02-22T11:53:19+08:00
-lastmod: 2026-03-09T11:05:18+08:00
+lastmod: 2026-04-09T17:27:50+08:00
 comments: true
 weight: 1
 tags:
@@ -16,6 +16,7 @@ tags:
 
 - `texlive` 包组
 - `texlive-lang` 包组：包含对中文、CJK 等语言的支持，如 xeCJK 宏包。
+- 其他：`biber`（BibLaTeX 的后端）
 
 {{% tab type="info" %}}
 xeCJK 基于强大的 fontspec 宏包，允许你直接调用操作系统中安装的任何 TrueType 或 OpenType 字体。它不再需要环境包裹，你可以在文档中直接输入中文，引擎会自动识别并处理。

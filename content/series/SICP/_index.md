@@ -1,7 +1,7 @@
 ---
 title: "SICP"
 date: 2026-03-23T11:10:27+08:00
-lastmod: 2026-03-23T11:45:16+08:00
+lastmod: 2026-03-30T18:48:26+08:00
 comments: true
 weight: 1
 tags:
@@ -17,14 +17,14 @@ tags:
 
 ## 配置环境
 
-```sh
+```bash
 paru -S racket
 
 raco pkg install sicp
 raco pkg install racket-langserver
 ```
 
-配合 `racket`（ `scheme` 可选）Treesitter parser。
+配合 `racket`（`scheme` 可选）Treesitter parser。
 
 测试文件（`test.rkt`）：
 

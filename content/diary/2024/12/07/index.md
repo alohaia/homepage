@@ -1,7 +1,7 @@
 ---
 title: 2024-12-07
 date: 2024-12-07T16:59:31+08:00
-lastmod: 2026-03-16T13:52:51+08:00
+lastmod: 2026-04-10T12:03:22+08:00
 comments: true
 ---
 
@@ -100,3 +100,15 @@ No fsck helpers found. fsck will not be run on boot.
 ## 登录卡在 SDDM，不显示 GUI
 
 只需让 SDDM 也使用 Wayland 即可（默认是使用 X Window）,见 [ArchWiki - SDDM#Wayland](https://wiki.archlinux.org/title/SDDM#Wayland)。
+
+/etc/sddm.conf.d/10-wayland.conf
+
+```conf
+# https://wiki.archlinux.org/title/SDDM#Wayland
+[General]
+DisplayServer=wayland
+GreeterEnvironment=QT_WAYLAND_SHELL_INTEGRATION=layer-shell
+
+[Wayland]
+CompositorCommand=kwin_wayland --drm --no-lockscreen --no-global-shortcuts --locale1 --inputmethod plasma-keyboard
+```
