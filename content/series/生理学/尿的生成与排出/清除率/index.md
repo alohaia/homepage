@@ -17,7 +17,7 @@ tags:
 根据清除率的定义，尿中排出该物质的量与血中被清除的该物质的量相等，即
 
 $$U_X \cdot V = P_X \cdot C_X \Longrightarrow C_X = \frac{U_X \cdot V}{P_X}
-\\,.$$
+\,.$$
 
 式中 $U_X$ 为尿中“某种物质”（$X$）的浓度，$P_X$ 为血浆中该物质的浓度，$V$ 为每分钟尿量，$C_X$ 该物质的清除率，即该物质被清除掉的血浆流量。
 
@@ -29,12 +29,12 @@ $$U_X \cdot V = P_X \cdot C_X \Longrightarrow C_X = \frac{U_X \cdot V}{P_X}
 菊粉（inulin），满足上述条件，因而尿中排出该物质的量不仅与血中被清除的该物质的量相等，还与超滤液中该物质的量相等，即
 
 $$U_{In} \cdot V = P_{In} \cdot C_{In} = GFR \cdot F_{In} = GFR \cdot P_{In}
-\\,,$$
+\,,$$
 
 亦即
 
 $$GRF = C_{In} = \frac{U_{In} \cdot V}{P_{In}}
-\\,.$$
+\,.$$
 
 可以用菊粉的清除率来代表肾小球滤过率。
 
@@ -47,14 +47,14 @@ $$GRF = C_{In} = \frac{U_{In} \cdot V}{P_{In}}
 如果 $X$ <mark>可被肾脏完全清除</mark>，如**碘锐特**、**对氨基马尿酸**，则该物质在*终尿*中的排出量应等于肾血浆流量（RFP）与血浆中该物质浓度的乘积，即
 
 $$U_X \cdot V = RPF \cdot P_X = C_X \cdot P_X
-\\,,$$
+\,,$$
 
 可得
 
 $$RFP = C_X
-\\,.$$
+\,.$$
 
 在根据 GFR 和血细胞比容，可分别求出滤过分数（FF）和肾血流量（RBF）：
 
 $$FF = \frac{GFR}{RPF},\\, RBF = \frac{RPF}{1 - FF}
-\\,.$$
+\,.$$

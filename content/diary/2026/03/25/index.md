@@ -1,7 +1,7 @@
 ---
 title: 2026-03-25
 date: 2026-03-25T22:44:15+08:00
-lastmod: 2026-04-14T15:25:46+08:00
+lastmod: 2026-04-14T15:57:19+08:00
 comments: true
 ---
 
@@ -28,6 +28,11 @@ sequenceDiagram
 \[
 a^2 + b^2 = c^2\,.
 \]
+
+$$
+\ce{Hg^2+ ->[I-] HgI2 ->[I-] [Hg^{II}I4]^2-}
+$$
+
 
 ## Graphviz
 

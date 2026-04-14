@@ -328,10 +328,10 @@ ROC 曲线**全称受试者工作特征曲线** （receiver operating characteri
 ROC 曲线的横轴为**特异度**（specificity），即**真阴性率**（true negative rate，TNR）；纵轴为**敏感度**（sensitivity），即**真阳性率**（true postive rate，TPR）、**召回率**（Recall）。
 
 $$Specificity=TNR=\frac{TN}{N}=\frac{TN}{TN+FP}
-\\,.$$
+\,.$$
 
 $$Sensitivity=TPR=Recall=\frac{TP}{P}=\frac{TP}{TP+FN}
-\\,.$$
+\,.$$
 
 AUC 全称**曲线下面积**（Area Under Curve），在 Logistic 回归中，AUC 等同于 C-index（concordance index，一致性指数），可以直观的评价模型的好坏，值越大越好。
 

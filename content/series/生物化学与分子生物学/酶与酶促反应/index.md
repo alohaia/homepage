@@ -151,7 +151,7 @@ tags:
 ### 米-曼氏方程揭示单底物反应的动力学特性
 
 $$v=\frac{V_{max}[S]}{K_m+[S]}
-\\,.$$
+\,.$$
 
 $v$ 为反应速率，$K_m$ 为米氏常数，$V_{max}$ 为最大反应速率。
 
@@ -180,7 +180,7 @@ $v$ 为反应速率，$K_m$ 为米氏常数，$V_{max}$ 为最大反应速率。
 米-曼氏方程通过变式可以得到 $\frac1v$ 与 $\frac1{[S]}$ 的线性关系：
 
 $$\frac1v = \frac1{V_{max}} + \frac{K_m}{V_{max}}\cdot\frac1{[S]}
-\\,.$$
+\,.$$
 
 作图，纵轴上的截距为 $\frac1{V_{max}}$，横轴上的截距为 $-\frac{1}{K_m}$。
 
@@ -280,12 +280,12 @@ $$\frac1v = \frac1{V_{max}} + \frac{K_m}{V_{max}}\cdot\frac1{[S]}
 变构酶的 v-[S] 曲线不符合米-曼方程，而符合别构方程：
 
 $$v=\frac{V_{max}[S]^n}{K+[S]^n}
-\\,.$$
+\,.$$
 
 其中 n 为与酶结合的底物分子数。米-曼方程为 n=1 时的别构方程，而别构方程又是[希尔方程](https://zh.wikipedia.org/wiki/%E5%B8%8C%E5%B0%94%E6%96%B9%E7%A8%8B_(%E7%94%9F%E7%89%A9%E5%8C%96%E5%AD%A6)) 的特殊形式。
 
 $$\theta = \frac{[L]^n}{K_d+[L]^n} = \frac{[L]^n}{(K_A)^n+[L]^n}
-\\,.$$
+\,.$$
 {{< /tab >}}
 
 {{< tab type="warning" summary="构象和构型" details=true open=true >}}

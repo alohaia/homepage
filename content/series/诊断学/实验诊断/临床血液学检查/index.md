@@ -82,13 +82,13 @@ MCHC（mean corpuscular hemoglobin conce）
 : 代表红细胞中的平均血红蛋白浓度，参考值 316～354g/L 。
 
 $$MCV=\frac{HCT\times10^{15}}{RBC\times10^{12}}fL
-\\,.$$
+\,.$$
 
 $$MCH=\frac{Hb\times10^{12}}{RBC\times10^{12}}pg
-\\,.$$
+\,.$$
 
 $$MCV=\frac{Hb}{HCT}g/L
-\\,.$$
+\,.$$
 
 **小细胞低色素性贫血**（Microcytic hypochromic anemia）：血红蛋白的减少得比红细胞明显；
 **大细胞性贫血**（Macrocytic anemia）：红细胞减少得比血红蛋白明显。
