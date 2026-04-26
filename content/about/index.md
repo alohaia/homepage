@@ -1,7 +1,7 @@
 ---
 title: "About"
 date: 2021-09-16T16:29:41+08:00
-lastmod: 2023-12-25T16:20:21+08:00
+lastmod: 2026-04-17T13:49:42+08:00
 type: about
 ---
 
@@ -22,7 +22,7 @@ type: about
     - 给博客写的 NeoVim 插件：[hugowiki.nvim](https://github.com/alohaia/hugowiki.nvim)
 - 我的 NeoVim 配置：[https://github.com/alohaia/nvimcfg](https://github.com/alohaia/nvimcfg)
 
-{{< figure src="https://github-readme-stats.vercel.app/api?username=alohaia&show_icons=true&count_private=true&hide_border=true&locale=cn&icon_color=ff6020&title_color=ff6020" fancybox=false class="float-right" >}}
+![Stone Badge](https://stone.professorlee.work/api/stone/alohaia/homepage)
 
 **What do I wanna do?**
 

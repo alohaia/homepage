@@ -1,7 +1,7 @@
 ---
 title: 2026-03-16
 date: 2026-03-16T14:49:16+08:00
-lastmod: 2026-03-16T16:30:31+08:00
+lastmod: 2026-04-17T14:09:13+08:00
 comments: true
 ---
 
@@ -24,6 +24,7 @@ comments: true
 > [!TIP]
 > Helpful advice for doing things better or more easily.
 
+
 > [!IMPORTANT]
 > Key information users need to know to achieve their goal.
 
@@ -33,3 +34,7 @@ comments: true
 > [!CAUTION]
 > Advises about risks or negative outcomes of certain actions.
 
+扩展语法——[可折叠的 blockquote](https://gohugo.io/render-hooks/blockquotes/#extended-syntax)：
+
+> [!WARNING]+ Radiation hazard
+> Do not approach or handle without protective gear.
