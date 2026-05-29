@@ -1,10 +1,10 @@
 ---
 title: "OpenFOAM 初级入门教程"
 date: 2026-04-21T21:59:39+08:00
-lastmod: 2026-04-23T20:44:47+08:00
+lastmod: 2026-05-30T00:23:50+08:00
 comments: true
 tags:
-    - 流体力学
+    - CFD
     - OpenFOAM
 ---
 
@@ -1142,7 +1142,7 @@ surfaceFeatures
 
 再生成
 
-## snappyHexMesh-GUI 插件
+## Blender snappyHexMesh-GUI 插件
 
 Blender 快捷方式：
 

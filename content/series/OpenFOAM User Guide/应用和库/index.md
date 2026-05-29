@@ -1,11 +1,12 @@
 ---
 title: "应用和库"
 date: 2026-05-01T10:32:55+08:00
-lastmod: 2026-05-02T17:32:43+08:00
+lastmod: 2026-05-06T11:50:21+08:00
 comments: true
 weight: 2
 tags:
     - OpenFOAM
+    - CFD
 ---
 
 OpenFOAM 提供了许多可以在命令行中运行的软件工具，这些工具包括 `foamRun` 和 `blockMesh` 等用 C++ 编写的*应用*（*applications*），可以利用 OpenFOAM 的大量的*库*（*libraries*）来实现实现特定功能。这些应用一般分为两类：

@@ -1,11 +1,12 @@
 ---
 title: "Case 项目结构：Backward-Facing Step"
 date: 2026-04-24T14:07:28+08:00
-lastmod: 2026-04-26T18:46:22+08:00
+lastmod: 2026-05-07T12:30:13+08:00
 comments: true
 weight: 1
 tags:
     - OpenFOAM
+    - CFD
 ---
 
 一个 *case*（*算例*）目录包含一个完整项目的所有设置。推荐将 case 放在一个特定目录的 `run` 子目录下。使用 `run` alias 可以快速切换到 `$FOAM_RUN` 目录。
@@ -18,7 +19,7 @@ echo $FOAM_RUN
 
 <!--more-->
 
-```bash
+```bash {file="NONE"}
 cd $FOAM_RUN
 cp -r $FOAM_TUTORIALS/incompressibleFluid/pitzDailySteady .
 cd pitzDailySteady

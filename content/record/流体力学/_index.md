@@ -1,11 +1,12 @@
 ---
 title: "流体力学"
 date: 2026-04-17T14:24:50+08:00
-lastmod: 2026-04-22T01:16:30+08:00
+lastmod: 2026-05-06T11:48:17+08:00
 comments: true
 tags:
     - 流体力学
     - OpenFOAM
+    - CFD
 ---
 
 <!--more-->

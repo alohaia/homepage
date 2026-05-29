@@ -4,10 +4,10 @@ theme = 'daisilia'
 enableEmoji = true
 
 # language
-languageCode = 'zh-cn'
+locale = 'zh-CN'
 defaultContentLanguage = 'zh'
 [languages.zh]
-  languagedirection = 'zh'
+  direction = 'ltr'
   title = "Aloha's Blog"
   weight = 10
   [pagination]
