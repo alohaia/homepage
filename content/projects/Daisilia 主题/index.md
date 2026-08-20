@@ -1,7 +1,7 @@
 ---
 title: "Daisilia 主题"
 date: 2023-05-21T14:49:37+08:00
-lastmod: 2024-09-17T09:30:56+08:00
+lastmod: 2026-08-19T15:48:07+08:00
 comments: true
 ---
 
@@ -220,3 +220,34 @@ id="fig_linus-torvalds" */>}}
 ## 数学公式
 
 LaTeX 公式编辑器：[Equation Editor for online mathematics](https://editor.codecogs.com/)
+
+## 流程图
+
+
+```mermaid
+graph TD
+    A[习惯性流产] --> B{发生于}
+    B -- 早期 --> C[染色体异常]
+    B -- 晚期 --> D[宫颈内口松弛]
+```
+
+
+```flowchart
+st=>start: Start:>http://www.google.com[blank]
+e=>end:>http://www.google.com
+op1=>operation: My Operation
+sub1=>subroutine: My Subroutine
+cond=>condition: Yes
+or No?:>http://www.google.com
+io=>inputoutput: catch something...
+para=>parallel: parallel tasks
+in=>input: some in
+out=>output: some out
+
+st->op1->cond
+cond(yes)->io->e
+cond(no)->para
+para(path1, bottom)->sub1(right)->op1
+para(path2, top)->op1
+para(path3, right)->in->out->e
+```
