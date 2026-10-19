@@ -1,0 +1,1 @@
+/home/qihuan/hugo_encryptor/hugo-encryptor.py
