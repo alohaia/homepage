@@ -3,6 +3,9 @@ baseURL = 'https://daisilia.com/' # 需要 trailing slash
 theme = 'daisilia'
 enableEmoji = true
 
+# generate robots.txt
+enableRobotsTXT = true
+
 # language
 locale = 'zh-CN'
 defaultContentLanguage = 'zh'
