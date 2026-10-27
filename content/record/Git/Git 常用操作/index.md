@@ -1,7 +1,7 @@
 ---
 title: "Git 常用操作"
 date: 2026-03-16T15:15:34+08:00
-lastmod: 2026-10-27T14:54:30+08:00
+lastmod: 2026-10-27T15:09:32+08:00
 comments: true
 tags:
     - Git
@@ -15,11 +15,11 @@ tags:
 
 ### 四个工作区域
 
-{{< figure src="working_dirs.png.png" title="working_dirs.png" >}}
+{{< figure src="working_dirs.png" title="Git 工作区域" >}}
 
 ### 文件的四种状态
 
-{{< figure src="git_status.png.png" title="git_status.png" >}}
+{{< figure src="git_status.png" title="文件的 Git 状态" >}}
 
 1. `Untracked`（未跟踪）：文件在工作区，但没有加到仓库中
     - 通过 `git add` 变更为 `Staged`
