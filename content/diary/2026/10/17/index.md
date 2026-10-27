@@ -1,11 +1,13 @@
 ---
 title: 2026-10-17 TIFF 压缩
 date: 2026-10-17T21:37:05+08:00
-lastmod: 2026-10-19T11:21:44+08:00
+lastmod: 2026-10-20T10:54:50+08:00
 comments: true
 ---
 
 <!--more-->
+
+[tiffcp 手册页](https://libtiff.gitlab.io/libtiff/tools/tiffcp.html)
 
 ```bash
 #!/usr/bin/env bash
