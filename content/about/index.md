@@ -1,7 +1,7 @@
 ---
 title: "About"
 date: 2021-09-16T16:29:41+08:00
-lastmod: 2026-10-06T22:35:23+08:00
+lastmod: 2026-11-09T15:32:43+08:00
 type: about
 ---
 
@@ -27,7 +27,6 @@ type: about
 **What do I wanna do?**
 
 - 我爱数学 - 数学建模与应用、统计分析
-- 计算机图形学 - OpenGL、Vulkan
 
 **How to contact me?**
 
