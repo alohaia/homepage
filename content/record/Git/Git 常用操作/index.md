@@ -1,7 +1,7 @@
 ---
 title: "Git 常用操作"
 date: 2026-03-16T15:15:34+08:00
-lastmod: 2026-10-27T15:09:32+08:00
+lastmod: 2026-11-11T15:27:38+08:00
 comments: true
 tags:
     - Git
@@ -16,6 +16,11 @@ tags:
 ### 四个工作区域
 
 {{< figure src="working_dirs.png" title="Git 工作区域" >}}
+
+- 暂存/取消暂存：
+    - 暂存文件：`git add -- <filepath>`
+    - 取消暂存已跟踪的文件：`git reset --mixed HEAD -- <filepath>` 或 `git restore --staged --source=HEAD -- <filepath>`
+    - 取消暂存新添加的文件（`HEAD` 中没有该文件，取消后变回未跟踪）：`git rm --cached -- <filepath>`
 
 ### 文件的四种状态
 
