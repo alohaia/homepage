@@ -4,7 +4,8 @@
 
   [build.environment]
     # GO_VERSION = "1.25.6"
-    HUGO_VERSION = "0.160.1"
+    # css.ChromaStyles (used by themes/daisilia style.html) requires Hugo >= 0.164.0
+    HUGO_VERSION = "0.170.1"
     # NODE_VERSION = "24.13.0"
 
 [context.production.environment]
