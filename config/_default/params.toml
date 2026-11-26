@@ -15,7 +15,7 @@ hasCJKLanguage = true
     enable=false
   [daisy.comment]
     enable            = true
-    disable_on_local  = true
+    disable_on_local  = false
     repo              = 'alohaia/alohaia.github.io'
     repo_id           = 'MDEwOlJlcG9zaXRvcnkzNjgxNjY5NTY='
     category          = "Announcements"
@@ -23,7 +23,7 @@ hasCJKLanguage = true
     mapping           = "title"
     reactions_enabled = "1"
     emit_metadata     = "1"
-    theme             = "light"
+    theme             = "noborder_light"
   [daisy.pjax]
     enable = true
   [daisy.fancybox]
